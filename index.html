@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Laila y Noura Snacks</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		window.onload = function() {
+
+			var ln = x=window.navigator.language||navigator.browserLanguage;
+			if(ln == 'en'){
+				window.location.href = 'index-en.html';//si esta en inglés va a ingles
+			}else if(ln == 'es'){
+				window.location.href = 'index-es.html'; // si es es va a español
+			}else{
+				window.location.href = 'index-es.html'; // si no es ninguna de los dos va a español
+			}
+		}
+		</script>
+	</body>
+</html>
