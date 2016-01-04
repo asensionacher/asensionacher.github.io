@@ -10,14 +10,17 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-
 		window.onload = function() {
-
 			var ln = x=window.navigator.language||navigator.browserLanguage;
+			ln = ln.substring(0,2);
 			if(ln == 'en'){
 				window.location.href = 'index-en.html';//si esta en inglés va a ingles
 			}else if(ln == 'es'){
 				window.location.href = 'index-es.html'; // si es es va a español
+			}else if(ln == 'ar'){
+				window.location.href = 'index-ar.html'; //si es en arabe
+			}else if (ln == 'fr'){
+				window.location.href = 'index-fr.html'; //si es en frances
 			}else{
 				window.location.href = 'index-es.error'; // si no es ninguna de los dos va a español
 			}

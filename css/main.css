@@ -182,7 +182,7 @@ nav .block .navbar-default .navbar-nav > li > a:before {
   width: 0;
 }
 nav .block .navbar-default .navbar-nav > li > a:hover:before {
-  background-color: #e94c3d;
+  background-color: #3F51B5;
   content: "";
   width: 100%;
 }
