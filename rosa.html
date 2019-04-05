@@ -84,12 +84,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 tm-flex-center-v tm-section-left">
-                        <form method="POST" action="https://formspree.io/sergi.asensio.nacher@gmail.com" class="tm-contact-form">
-                            <div class="form-group mb-4">
-                                <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-                            </div>
+                        <form method="GET" action="https://api.whatsapp.com/send?phone=658094428" class="tm-contact-form">
                             <div class="form-group mb-5">
-                                <textarea rows="5" id="contact_message" name="contact_message" class="form-control" placeholder="Mensaje..." required></textarea>
+                                <textarea rows="5" id="text" name="text" class="form-control" placeholder="Mensaje..." required></textarea>
                             </div>
                             <div class="form-group mb-0 text-right">
                                 <button type="submit" class="btn tm-btn-primary tm-send-btn">Enviar</button>
