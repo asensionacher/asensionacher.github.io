@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿
 <html lang="en">
 
 <head>
@@ -22,9 +22,9 @@
             var phone = "34658094428";
 
             //var text = document.getElementsByName("text")(0).replace(/ /g,'20');
-            
-            window.open("https://api.whatsapp.com/send?phone=" + phone + "&text=" + document.getElementsByName('text')[0].value);
-            alert(document.getElementsByName('text')[0].value);
+
+            window.open("https://api.whatsapp.com/send?phone=" + phone + "&text=" +
+               document.getElementsByName('text')[0].value.replace(' ', '%20').trim());
         }
 
     </script>
