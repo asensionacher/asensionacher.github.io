@@ -84,9 +84,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 tm-flex-center-v tm-section-left">
-                        <form method="GET" action="https://api.whatsapp.com/send?phone=34658094428" class="tm-contact-form">
+                        <form method="GET" action="https://api.whatsapp.com/send" class="tm-contact-form">
                             <div class="form-group mb-5">
                                 <textarea rows="5" id="text" name="text" class="form-control" placeholder="Mensaje..." required></textarea>
+                            </div>
+                            <div style="visibility: hidden">
+                                <input type="text" id="phone" name="phone" class="form-control" value="34658094428" required />
                             </div>
                             <div class="form-group mb-0 text-right">
                                 <button type="submit" class="btn tm-btn-primary tm-send-btn">Enviar</button>
