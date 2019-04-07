@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\css",
-    "\\js"
+    "\\lavidaderaul",
+    "\\lavidaderaulfake",
+    "\\lavidaderaul\\assets\\css",
+    "\\lavidaderaul\\assets\\js",
+    "\\notifica\\assets",
+    "\\notifica\\assets\\css",
+    "\\rosa\\css"
   ],
+  "SelectedNode": "\\lavidaderaulfake",
   "PreviewInSolutionExplorer": false
 }
