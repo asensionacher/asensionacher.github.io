@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\notifica\\assets",
-    "\\notifica\\assets\\css"
+    "\\elbautizodedaniela\\assets",
+    "\\elbautizodedaniela\\assets\\css",
+    "\\notifica",
+    "\\notifica\\images",
+    "\\rosa",
+    "\\rosa\\assets",
+    "\\rosa\\assets\\css",
+    "\\rosa\\assets\\sass\\base",
+    "\\xavier\\assets\\css"
   ],
   "PreviewInSolutionExplorer": false
 }
