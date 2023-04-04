@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "First steps: Design an Azure Management Group strategy"
-permalink: /first-steps/design-azure-management-groups
-excerpt: "Define and deploy Azure Management group strategy for real architectures."
+title: "First steps: Azure governance"
+permalink: /first-steps/design-azure-governance
+excerpt: "Define and deploy an Azure governance strategy for real architectures."
 categories:
     - Azure
     - Governance
@@ -12,7 +12,6 @@ tags:
     - Subscription
     - Policies
     - Tags
-    - 
     - First steps
 toc: true
 sidebar:

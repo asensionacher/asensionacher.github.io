@@ -5,10 +5,10 @@ main:
   - title: "About"
     url: /about/
 first-steps:
-  - title: Getting Started
+  - title: First steps
     children:
-      - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
+      - title: "Designing Azure Governance"
+        url: /first-steps/design-azure-governance
       - title: "Structure"
         url: /docs/structure/
       - title: "Installation"
