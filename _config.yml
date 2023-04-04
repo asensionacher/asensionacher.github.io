@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : "Discover how real arquitectures on Azure are deployed" # site tagline that appears below site title in masthead
 name                     : "Sergi Asensio"
 description              : "This site is intended for showing how real world architectures are deployed on Azure."
-url                      : "https://asensionacher.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://azurearchitect.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "asensionacher/asensionacher.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
