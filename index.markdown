@@ -14,3 +14,7 @@ Do you want to start a real architecture for a customer and you don't know how t
 5.  Design Azure resource tags
 6.  Design Azure Blueprints
 
+
+{% comment %} AdSense {% endcomment %}
+
+{% include advertisements.html %}
