@@ -57,3 +57,7 @@ Let's explain each **Management group**:
     {% endif %}
   {% endfor %}
 {% endif %}
+
+{% comment %} AdSense {% endcomment %}
+
+{% include advertisements.html %}
