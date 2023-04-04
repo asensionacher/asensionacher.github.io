@@ -17,4 +17,4 @@ Do you want to start a real architecture for a customer and you don't know how t
 
 {% comment %} AdSense {% endcomment %}
 
-{% include advertisements.html %}
+<head>{% include advertisements.html %}</head>
