@@ -8,7 +8,7 @@ first-steps:
   - title: First steps
     children:
       - title: "Designing Azure Governance"
-        url: /first-steps/design-azure-governance
+        url: /governance/design-azure-governance
       - title: "Structure"
         url: /docs/structure/
       - title: "Installation"
