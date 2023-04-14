@@ -40,4 +40,4 @@ Next step would be [designing our Azure Resource Groups](/governance/design-azur
   {% endfor %}
 {% endif %}
 
-{% include advertisements.html %}
+<head>{% include advertisements.html %}</head>

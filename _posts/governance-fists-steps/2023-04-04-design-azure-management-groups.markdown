@@ -69,4 +69,4 @@ Next step would be [designing our Azure Subscriptions](/governance/design-azure-
 
 
 
-{% include advertisements.html %}
+<head>{% include advertisements.html %}</head>

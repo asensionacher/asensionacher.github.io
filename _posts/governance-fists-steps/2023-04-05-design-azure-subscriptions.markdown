@@ -15,11 +15,11 @@ tags:
 sidebar:
   nav: "first-steps"
 gallerysub:
-  - url: /assets/images/getting-started-**subscription**.png
-    image_path: /assets/images/getting-started-**subscription**.png
+  - url: /assets/images/getting-started-subscription.png
+    image_path: /assets/images/getting-started-subscription.png
     alt: "subscriptions design"
     title: "Subscriptions design."
-related_image: /assets/images/getting-started-**subscription**.png
+related_image: /assets/images/getting-started-subscription.png
 ---
 
 ## **subscription** strategy
@@ -56,4 +56,4 @@ Next step would be [designing our Azure Naming Convention](/governance/design-az
   {% endfor %}
 {% endif %}
 
-{% include advertisements.html %}
+<head>{% include advertisements.html %}</head>
