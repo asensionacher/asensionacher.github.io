@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "First steps: Design Azure Subscriptions"
-permalink: /governance/design-azure-subscriptions
+permalink: /governance-design-azure-subscriptions
 excerpt: "Define and deploy an Azure **subscription** strategy for real architectures."
 categories:
     - Azure
@@ -35,7 +35,7 @@ Each **subscription** have an specific goal. Let's see what is used each **subsc
 - Decommissioned subscriptions: Here will be moved those subscriptions that are not used any more until the moment they could be destroyed. 
 - Sandbox subscriptions: Used for deploying resources for tests purposes. This **subscription** must have separated networking and not connected to the *Hub Virtual Network* for security reasons.
 
-Next step would be [designing our Azure Naming Convention](/governance/design-azure-naming-convention)
+Next step would be [designing our Azure Naming Convention](/governance-design-azure-naming-convention)
 
 {% if page.categories %}
   {% assign category = page.categories[0] %}

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "First steps: Design Azure Management Groups"
-permalink: /governance/design-azure-management-groups
+permalink: /governance-design-azure-management-groups
 excerpt: "Define and deploy an Azure Management Group strategy for real architectures."
 categories:
     - Azure
@@ -46,7 +46,7 @@ With this strategy you are going to be able to:
 - Apply policies for our different subscriptions. It's possible that for an application we want more restrictive policies than for another, so we can apply this policies directly on its **Management Group**.
 - Have completely separated infrastructures for decomissioned and sandbox subscriptions.
 
-Next step would be [designing our Azure Subscriptions](/governance/design-azure-subscriptions)
+Next step would be [designing our Azure Subscriptions](/governance-design-azure-subscriptions)
 
 {% if page.categories %}
   {% assign category = page.categories[0] %}
