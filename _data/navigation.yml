@@ -9,9 +9,11 @@ first-steps:
     children:
       - title: "Designing Azure Governance"
         url: /governance-design-azure-governance
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "Design Azure Subscriptions"
+        url: /governance-design-azure-subscriptions
+      - title: "Design Azure Naming Convention"
+        url: /governance-design-azure-naming-convention
+      - title: "Design Azure Resource Groups"
+        url: /governance-design-azure-resource-groups
+      - title: "Design Azure Tags"
+        url: /governance-design-azure-tags

@@ -37,23 +37,6 @@ Each **subscription** have an specific goal. Let's see what is used each **subsc
 
 Next step would be [designing our Azure Naming Convention](/governance-design-azure-naming-convention)
 
-{% if page.categories %}
-  {% assign category = page.categories[0] %}
-  {% assign posts = site.categories[category] %}
-  {% for post in posts %}
-    {% if post.url == page.url %}
-      {% assign post_index0 = forloop.index0 %}
-      {% assign post_index1 = forloop.index %}
-    {% endif %}
-  {% endfor %}
-  {% for post in posts %}
-    {% if post_index0 == forloop.index %}
-      {% assign next_post = post %}
-    {% endif %}
-    {% if post_index1 == forloop.index0 %}
-      {% assign prev_post = post %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+
 
 <head>{% include advertisements.html %}</head>

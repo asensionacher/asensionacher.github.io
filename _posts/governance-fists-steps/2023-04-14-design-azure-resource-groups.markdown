@@ -33,23 +33,6 @@ As you can see, there are three **Resource Groups** with its resource type added
 
 Next step would be [designing our Azure Resource Tags strategy](/governance-design-azure-resource-tags)
 
-{% if page.categories %}
-  {% assign category = page.categories[0] %}
-  {% assign posts = site.categories[category] %}
-  {% for post in posts %}
-    {% if post.url == page.url %}
-      {% assign post_index0 = forloop.index0 %}
-      {% assign post_index1 = forloop.index %}
-    {% endif %}
-  {% endfor %}
-  {% for post in posts %}
-    {% if post_index0 == forloop.index %}
-      {% assign next_post = post %}
-    {% endif %}
-    {% if post_index1 == forloop.index0 %}
-      {% assign prev_post = post %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+
 
 <head>{% include advertisements.html %}</head>
