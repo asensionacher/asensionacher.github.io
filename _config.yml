@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Helping @HitachiVantara to design and deploy Azure architectures."
   location         : "Barcelona, Spain"
-  email            : "sergi.asensio.nacher@gmail.com"
+  # email            : "sergi.asensio.nacher@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -128,6 +128,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/asensionacher"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/asensionacher/"
 
 # Site Footer
 footer:
