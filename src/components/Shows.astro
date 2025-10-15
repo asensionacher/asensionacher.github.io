@@ -1,0 +1,161 @@
+---
+import background from '../assets/background.svg';
+const shows = [
+    {
+        date: "October 20, 2025",
+        venue: "The Grand Theater",
+        city: "Madrid",
+        tickets: "https://tickets.example.com/show1"
+    },
+    {
+        date: "November 5, 2025",
+        venue: "Music Hall",
+        city: "Barcelona",
+        tickets: "https://tickets.example.com/show2"
+    },
+    {
+        date: "November 15, 2025",
+        venue: "Jazz Club",
+        city: "Valencia",
+        tickets: "https://tickets.example.com/show3"
+    }
+];
+---
+
+<section class="shows-section" id="shows">
+    <img class="background-svg" src={background.src} alt="" />
+    <h2>Upcoming Shows</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>City</th>
+                    <th>Tickets</th>
+                </tr>
+            </thead>
+            <tbody>
+                {shows.map(show => (
+                    <tr>
+                        <td>{show.date}</td>
+                        <td>{show.venue}</td>
+                        <td>{show.city}</td>
+                        <td>
+                            <a href={show.tickets} target="_blank" rel="noopener noreferrer" class="ticket-button">
+                                Get Tickets
+                            </a>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<style>
+    .shows-section {
+        height: 100vh;
+        background-color: black;
+        color: white;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .background-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    h2, .table-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-style: italic;
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 1000px;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+
+    th, td {
+        padding: 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    td {
+        font-size: 1.1rem;
+    }
+
+    .ticket-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: transform 0.2s ease;
+    }
+
+    .ticket-button:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .shows-section {
+            padding: 3rem 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            padding: 1rem;
+        }
+
+        th {
+            font-size: 1rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+    }
+</style>

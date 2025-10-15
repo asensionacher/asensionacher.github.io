@@ -1,210 +1,353 @@
 ---
-import astroLogo from '../assets/astro.svg';
+import introVideo from '../assets/intro.mp4';
+import youtubeIcon from '../assets/youtube.png';
+import spotifyIcon from '../assets/spotify.png';
+import instagramIcon from '../assets/instagram.png';
+import Shows from './Shows.astro';
 import background from '../assets/background.svg';
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
-
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
-</div>
+<main class="main-container">
+    <div class="container">
+        <div class="video-half">
+            <video autoplay loop muted playsinline>
+                <source src={introVideo} type="video/mp4" />
+            </video>
+        </div>
+        <div class="text-half">
+            <img class="background-svg" src={background.src} alt="" />
+            <div class="text-container">
+                <h1 class="fancy-text">Cía Díaz</h1>
+                <h2 class="fancy-text subtitle">Singer artist</h2>
+                <div class="spotify-embed">
+					<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/44aWiK6EMuu6rrNdUK3xEf?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="social-buttons">
+                    <a href="https://www.youtube.com/@patriciadiaz8943" class="social-button" target="_blank" rel="noopener noreferrer">
+                        <img src={youtubeIcon.src} alt="YouTube" />
+                    </a>
+                    <a href="https://open.spotify.com/artist/0uUpImhCPw1wXuTgmNOUST" class="social-button" target="_blank" rel="noopener noreferrer">
+                        <img src={spotifyIcon.src} alt="Spotify" />
+                    </a>
+                    <a href="https://www.instagram.com/cia_diaz_" class="social-button" target="_blank" rel="noopener noreferrer">
+                        <img src={instagramIcon.src} alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#shows" class="scroll-link">
+                    <span class="scroll-text">Upcoming Shows</span>
+                    <div class="scroll-arrow"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <Shows />
+</main>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+    .main-container {
+        height: 100vh;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+    }
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        scroll-snap-align: start;
+    }
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
+    .video-half {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background: #000;
+    }
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
+    .video-half video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
 
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
+    .text-half {
+        width: 50%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
 
-	#links {
-		display: flex;
-		gap: 16px;
-	}
+    .background-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+        z-index: 1;
+    }
 
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
+    .text-container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
+    .fancy-text {
+        color: white;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+        font-family: "Playfair Display", serif;
+        letter-spacing: 0.02em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
+    h1.fancy-text {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
 
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
+    h2.fancy-text.subtitle {
+        font-size: 2.2rem;
+        font-weight: normal;
+        animation-delay: 0.3s;
+        letter-spacing: 0.04em;
+    }
 
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
+    .spotify-embed {
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 400px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 0.6s forwards;
+        position: relative;
+        z-index: 2;
+    }
 
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
+    .social-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-top: 2rem;
+    }
 
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
+    .social-button {
+        transition: transform 0.2s ease;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
+    .social-button:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.2);
+    }
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
+    .social-button img {
+        width: 32px;
+        height: 32px;
+    }
 
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+    }
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
+    .scroll-link {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 1.5s forwards;
+    }
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
+    .scroll-text {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+    }
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
+    .scroll-arrow {
+        width: 20px;
+        height: 20px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: rotate(45deg);
+        animation: bounce 2s infinite;
+    }
 
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0) rotate(45deg);
+        }
+        40% {
+            transform: translateY(-10px) rotate(45deg);
+        }
+        60% {
+            transform: translateY(-5px) rotate(45deg);
+        }
+    }
 
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
-		#links {
-			flex-wrap: wrap;
-		}
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-		#links a.button {
-			padding: 14px 18px;
-		}
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
 
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
+        .video-half,
+        .text-half {
+            width: 100%;
+            height: 50vh;
+        }
 
-		h1 {
-			line-height: 1.5;
-		}
-	}
+        h1.fancy-text {
+            font-size: 3rem;
+        }
+
+        h2.fancy-text.subtitle {
+            font-size: 1.8rem;
+        }
+
+        .social-buttons {
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .social-button {
+            padding: 8px;
+        }
+
+        .social-button img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .scroll-indicator {
+            bottom: 1rem;
+        }
+    }
+
+    .shows-section {
+        scroll-snap-align: start;
+    }
 </style>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mainContainer = document.querySelector('.main-container');
+        if (!mainContainer) return;
+
+        let lastScrollTime = 0;
+        const scrollCooldown = 1000; // ms between scroll events
+
+        function smoothScroll(target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        mainContainer.addEventListener('wheel', (e) => {
+            const now = Date.now();
+            if (now - lastScrollTime < scrollCooldown) {
+                e.preventDefault();
+                return;
+            }
+
+            const sections = [...document.querySelectorAll('.container, .shows-section')];
+            const currentSection = sections.findIndex(section => {
+                const rect = section.getBoundingClientRect();
+                return rect.top >= 0 && rect.top <= window.innerHeight / 2;
+            });
+
+            if (currentSection === -1) return;
+
+            const direction = e.deltaY > 0 ? 1 : -1;
+            const targetIndex = Math.max(0, Math.min(currentSection + direction, sections.length - 1));
+            
+            if (targetIndex !== currentSection) {
+                e.preventDefault();
+                smoothScroll(sections[targetIndex]);
+                lastScrollTime = now;
+            }
+        }, { passive: false });
+
+        // Handle touch events for mobile
+        let touchStartY = 0;
+        mainContainer.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        mainContainer.addEventListener('touchmove', (e) => {
+            const now = Date.now();
+            if (now - lastScrollTime < scrollCooldown) {
+                return;
+            }
+
+            const touchEndY = e.touches[0].clientY;
+            const delta = touchStartY - touchEndY;
+            
+            if (Math.abs(delta) > 50) { // Minimum swipe distance
+                const sections = [...document.querySelectorAll('.container, .shows-section')];
+                const currentSection = sections.findIndex(section => {
+                    const rect = section.getBoundingClientRect();
+                    return rect.top >= -50 && rect.top <= 50;
+                });
+
+                if (currentSection === -1) return;
+
+                const direction = delta > 0 ? 1 : -1;
+                const targetIndex = Math.max(0, Math.min(currentSection + direction, sections.length - 1));
+                
+                if (targetIndex !== currentSection) {
+                    smoothScroll(sections[targetIndex]);
+                    lastScrollTime = now;
+                }
+            }
+        }, { passive: true });
+    });
+</script>
