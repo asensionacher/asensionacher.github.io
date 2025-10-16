@@ -1,92 +1,116 @@
 ---
-import introVideo from '../assets/intro.mp4';
-import youtubeIcon from '../assets/youtube.png';
-import spotifyIcon from '../assets/spotify.png';
-import instagramIcon from '../assets/instagram.png';
-import Shows from './Shows.astro';
-import background from '../assets/background.svg';
+import background from "../assets/background.svg";
+import showsTexture from "../assets/shows-texture.svg";
+const shows = [
+    {
+        date: "October 20, 2025",
+        venue: "The Grand Theater",
+        city: "Madrid",
+        tickets: "https://tickets.example.com/show1",
+    },
+    {
+        date: "November 5, 2025",
+        venue: "Music Hall",
+        city: "Barcelona",
+        tickets: "https://tickets.example.com/show2",
+    },
+    {
+        date: "November 15, 2025",
+        venue: "Jazz Club",
+        city: "Valencia",
+        tickets: "https://tickets.example.com/show3",
+    },
+];
 ---
 
-<main class="main-container">
-    <div class="container">
-        <div class="video-half">
-            <video autoplay loop muted playsinline>
-                <source src={introVideo} type="video/mp4" />
-            </video>
-        </div>
-        <div class="text-half">
-            <img class="background-svg" src={background.src} alt="" />
-            <div class="text-container">
-                <h1 class="fancy-text">Cía Díaz</h1>
-                <h2 class="fancy-text subtitle">Singer artist</h2>
-                <div class="spotify-embed">
-					<!-- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/44aWiK6EMuu6rrNdUK3xEf?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
-                </div>
-                <div class="social-buttons">
-                    <a href="https://www.youtube.com/@patriciadiaz8943" class="social-button" target="_blank" rel="noopener noreferrer">
-                        <img src={youtubeIcon.src} alt="YouTube" />
-                    </a>
-                    <a href="https://open.spotify.com/artist/0uUpImhCPw1wXuTgmNOUST" class="social-button" target="_blank" rel="noopener noreferrer">
-                        <img src={spotifyIcon.src} alt="Spotify" />
-                    </a>
-                    <a href="https://www.instagram.com/cia_diaz_" class="social-button" target="_blank" rel="noopener noreferrer">
-                        <img src={instagramIcon.src} alt="Instagram" />
-                    </a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <a href="#shows" class="scroll-link">
-                    <span class="scroll-text">Upcoming Shows</span>
-                    <div class="scroll-arrow"></div>
-                </a>
-            </div>
+<section class="shows-section" id="shows">
+    <img class="background-svg" src={background.src} alt="" />
+    <img class="texture-overlay" src={showsTexture.src} alt="" />
+    <div class="content-wrapper">
+        <h2>Upcoming Shows</h2>
+        <p class="subtitle">Join us for an unforgettable experience</p>
+
+        <div class="shows-grid">
+            {
+                shows.map((show, index) => (
+                    <div
+                        class="show-card"
+                        style={`animation-delay: ${index * 0.1}s`}
+                    >
+                        <div class="show-date">
+                            <span class="date-day">
+                                {show.date.split(" ")[1].replace(",", "")}
+                            </span>
+                            <span class="date-month">
+                                {show.date.split(" ")[0].substring(0, 3)}
+                            </span>
+                            <span class="date-year">
+                                {show.date.split(" ")[2]}
+                            </span>
+                        </div>
+                        <div class="show-details">
+                            <h3 class="venue-name">{show.venue}</h3>
+                            <p class="city-name">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                {show.city}
+                            </p>
+                        </div>
+                        <a
+                            href={show.tickets}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="ticket-button"
+                        >
+                            <span>Get Tickets</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
+                    </div>
+                ))
+            }
         </div>
     </div>
-    <Shows />
-</main>
+</section>
 
 <style>
-    .main-container {
-        height: 100vh;
-        overflow-y: auto;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        position: relative;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .container {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        position: relative;
-        scroll-snap-align: start;
-    }
-
-    .video-half {
-        width: 50%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        background: #000;
-    }
-
-    .video-half video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.8;
-    }
-
-    .text-half {
-        width: 50%;
-        height: 100%;
+    .shows-section {
+        min-height: 100vh;
         background-color: black;
+        color: white;
+        padding: 4rem 2rem;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        box-sizing: border-box;
         position: relative;
-        overflow: hidden;
     }
 
     .background-svg {
@@ -94,260 +118,285 @@ import background from '../assets/background.svg';
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.3;
+        opacity: 0.15;
         z-index: 1;
+        top: 0;
+        left: 0;
     }
 
-    .text-container {
-        text-align: center;
+    .texture-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .content-wrapper {
         position: relative;
         z-index: 2;
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
     }
 
-    .fancy-text {
-        color: white;
-        margin: 0;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 1s ease-out forwards;
+    h2 {
         font-family: "Playfair Display", serif;
-        letter-spacing: 0.02em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    h1.fancy-text {
-        font-size: 4.5rem;
-        font-weight: bold;
+        font-size: 3.5rem;
         margin-bottom: 1rem;
         font-style: italic;
+        background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    h2.fancy-text.subtitle {
-        font-size: 2.2rem;
-        font-weight: normal;
-        animation-delay: 0.3s;
-        letter-spacing: 0.04em;
+    .subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 3rem;
+        font-weight: 300;
+        letter-spacing: 0.05em;
     }
 
-    .spotify-embed {
-        margin: 2rem auto;
-        width: 90%;
-        max-width: 400px;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 0.6s forwards;
-        position: relative;
-        z-index: 2;
-    }
-
-    .social-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
+    .shows-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
         margin-top: 2rem;
     }
 
-    .social-button {
-        transition: transform 0.2s ease;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .social-button:hover {
-        transform: scale(1.1);
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .social-button img {
-        width: 32px;
-        height: 32px;
-    }
-
-    .scroll-indicator {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        z-index: 2;
-    }
-
-    .scroll-link {
-        color: white;
-        text-decoration: none;
+    .show-card {
+        background: linear-gradient(
+            135deg,
+            rgba(50, 69, 255, 0.1) 0%,
+            rgba(188, 82, 238, 0.1) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        gap: 1.5rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
         opacity: 0;
-        animation: fadeIn 1s ease-out 1.5s forwards;
+        animation: fadeInUp 0.6s ease forwards;
+        position: relative;
+        overflow: hidden;
     }
 
-    .scroll-text {
-        font-family: "Playfair Display", serif;
-        font-size: 1rem;
-        letter-spacing: 0.1em;
+    .show-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(50, 69, 255, 0.2) 0%,
+            rgba(188, 82, 238, 0.2) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 16px;
     }
 
-    .scroll-arrow {
-        width: 20px;
-        height: 20px;
-        border-right: 2px solid white;
-        border-bottom: 2px solid white;
-        transform: rotate(45deg);
-        animation: bounce 2s infinite;
+    .show-card:hover::before {
+        opacity: 1;
     }
 
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0) rotate(45deg);
-        }
-        40% {
-            transform: translateY(-10px) rotate(45deg);
-        }
-        60% {
-            transform: translateY(-5px) rotate(45deg);
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    .show-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(50, 69, 255, 0.3);
     }
 
     @keyframes fadeInUp {
-        0% {
+        from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
         }
-        100% {
+        to {
             opacity: 1;
             transform: translateY(0);
         }
     }
 
+    .show-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 100px;
+        align-self: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .date-day {
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1;
+        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .date-month {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .date-year {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 300;
+    }
+
+    .show-details {
+        flex: 1;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .venue-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+
+    .city-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+    }
+
+    .city-name svg {
+        opacity: 0.7;
+    }
+
+    .ticket-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .ticket-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(83.21deg, #bc52ee 0%, #3245ff 100%);
+        transition: left 0.3s ease;
+        z-index: -1;
+    }
+
+    .ticket-button:hover::before {
+        left: 0;
+    }
+
+    .ticket-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(50, 69, 255, 0.4);
+    }
+
+    .ticket-button svg {
+        transition: transform 0.3s ease;
+    }
+
+    .ticket-button:hover svg {
+        transform: translateX(4px);
+    }
+
     @media (max-width: 768px) {
-        .container {
-            flex-direction: column;
+        .shows-section {
+            padding: 3rem 1rem;
         }
 
-        .video-half,
-        .text-half {
-            width: 100%;
-            height: 50vh;
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        h1.fancy-text {
-            font-size: 3rem;
+        .subtitle {
+            font-size: 1rem;
+            margin-bottom: 2rem;
         }
 
-        h2.fancy-text.subtitle {
-            font-size: 1.8rem;
+        .shows-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
-        .social-buttons {
-            gap: 2rem;
-            margin-top: 2.5rem;
+        .show-card {
+            padding: 1.5rem;
         }
 
-        .social-button {
-            padding: 8px;
+        .date-day {
+            font-size: 2rem;
         }
 
-        .social-button img {
-            width: 28px;
-            height: 28px;
+        .venue-name {
+            font-size: 1.3rem;
         }
 
-        .scroll-indicator {
-            bottom: 1rem;
+        .city-name {
+            font-size: 1rem;
+        }
+
+        .ticket-button {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.95rem;
         }
     }
 
-    .shows-section {
-        scroll-snap-align: start;
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+        }
+
+        .show-card {
+            padding: 1.25rem;
+        }
     }
 </style>
-
-<script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mainContainer = document.querySelector('.main-container');
-        if (!mainContainer) return;
-
-        let lastScrollTime = 0;
-        const scrollCooldown = 1000; // ms between scroll events
-
-        function smoothScroll(target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-
-        mainContainer.addEventListener('wheel', (e) => {
-            const now = Date.now();
-            if (now - lastScrollTime < scrollCooldown) {
-                e.preventDefault();
-                return;
-            }
-
-            const sections = [...document.querySelectorAll('.container, .shows-section')];
-            const currentSection = sections.findIndex(section => {
-                const rect = section.getBoundingClientRect();
-                return rect.top >= 0 && rect.top <= window.innerHeight / 2;
-            });
-
-            if (currentSection === -1) return;
-
-            const direction = e.deltaY > 0 ? 1 : -1;
-            const targetIndex = Math.max(0, Math.min(currentSection + direction, sections.length - 1));
-            
-            if (targetIndex !== currentSection) {
-                e.preventDefault();
-                smoothScroll(sections[targetIndex]);
-                lastScrollTime = now;
-            }
-        }, { passive: false });
-
-        // Handle touch events for mobile
-        let touchStartY = 0;
-        mainContainer.addEventListener('touchstart', (e) => {
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-
-        mainContainer.addEventListener('touchmove', (e) => {
-            const now = Date.now();
-            if (now - lastScrollTime < scrollCooldown) {
-                return;
-            }
-
-            const touchEndY = e.touches[0].clientY;
-            const delta = touchStartY - touchEndY;
-            
-            if (Math.abs(delta) > 50) { // Minimum swipe distance
-                const sections = [...document.querySelectorAll('.container, .shows-section')];
-                const currentSection = sections.findIndex(section => {
-                    const rect = section.getBoundingClientRect();
-                    return rect.top >= -50 && rect.top <= 50;
-                });
-
-                if (currentSection === -1) return;
-
-                const direction = delta > 0 ? 1 : -1;
-                const targetIndex = Math.max(0, Math.min(currentSection + direction, sections.length - 1));
-                
-                if (targetIndex !== currentSection) {
-                    smoothScroll(sections[targetIndex]);
-                    lastScrollTime = now;
-                }
-            }
-        }, { passive: true });
-    });
-</script>
