@@ -1,5 +1,5 @@
 ---
-import background from "../assets/background.svg";
+import background from "../assets/shows-texture.svg";
 const shows = [
     {
         date: "October 20, 2025",
@@ -97,14 +97,13 @@ const shows = [
 
 <style>
     .shows-section {
-        min-height: 100vh;
+        height: 100vh;
         background-color: black;
         color: white;
         padding: 4rem 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         scroll-snap-align: start;
         scroll-snap-stop: always;
         box-sizing: border-box;
@@ -116,218 +115,69 @@ const shows = [
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.2;
+        opacity: 0.3;
         z-index: 1;
         top: 0;
         left: 0;
     }
 
-    .content-wrapper {
+    h2,
+    .table-container {
         position: relative;
         z-index: 2;
-        width: 100%;
-        max-width: 1200px;
-        text-align: center;
     }
 
     h2 {
         font-family: "Playfair Display", serif;
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        font-style: italic;
-        background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.7);
+        font-size: 3rem;
         margin-bottom: 3rem;
-        font-weight: 300;
-        letter-spacing: 0.05em;
+        font-style: italic;
     }
 
-    .shows-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+    .table-container {
+        width: 100%;
+        max-width: 1000px;
+        overflow-x: auto;
     }
 
-    .show-card {
-        background: linear-gradient(
-            135deg,
-            rgba(50, 69, 255, 0.1) 0%,
-            rgba(188, 82, 238, 0.1) 100%
-        );
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        opacity: 0;
-        animation: fadeInUp 0.6s ease forwards;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .show-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-            135deg,
-            rgba(50, 69, 255, 0.2) 0%,
-            rgba(188, 82, 238, 0.2) 100%
-        );
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 16px;
-    }
-
-    .show-card:hover::before {
-        opacity: 1;
-    }
-
-    .show-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 20px 40px rgba(50, 69, 255, 0.3);
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .show-date {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.25rem;
-        padding: 1.5rem;
+    table {
+        width: 100%;
+        border-collapse: collapse;
         background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        min-width: 100px;
-        align-self: center;
-        position: relative;
-        z-index: 1;
+        border-radius: 10px;
     }
 
-    .date-day {
-        font-size: 2.5rem;
+    th,
+    td {
+        padding: 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
         font-weight: bold;
-        line-height: 1;
-        background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .date-month {
-        font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.8);
     }
 
-    .date-year {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.5);
-        font-weight: 300;
-    }
-
-    .show-details {
-        flex: 1;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .venue-name {
-        font-family: "Playfair Display", serif;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: white;
-    }
-
-    .city-name {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
+    td {
         font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0;
-    }
-
-    .city-name svg {
-        opacity: 0.7;
     }
 
     .ticket-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 1rem 2rem;
+        display: inline-block;
+        padding: 0.5rem 1rem;
         background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
         color: white;
         text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 1rem;
-        letter-spacing: 0.05em;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-    }
-
-    .ticket-button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(83.21deg, #bc52ee 0%, #3245ff 100%);
-        transition: left 0.3s ease;
-        z-index: -1;
-    }
-
-    .ticket-button:hover::before {
-        left: 0;
+        border-radius: 5px;
+        transition: transform 0.2s ease;
     }
 
     .ticket-button:hover {
         transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(50, 69, 255, 0.4);
-    }
-
-    .ticket-button svg {
-        transition: transform 0.3s ease;
-    }
-
-    .ticket-button:hover svg {
-        transform: translateX(4px);
     }
 
     @media (max-width: 768px) {
@@ -337,52 +187,20 @@ const shows = [
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1rem;
             margin-bottom: 2rem;
         }
 
-        .shows-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+        th,
+        td {
+            padding: 1rem;
         }
 
-        .show-card {
-            padding: 1.5rem;
-        }
-
-        .date-day {
-            font-size: 2rem;
-        }
-
-        .venue-name {
-            font-size: 1.3rem;
-        }
-
-        .city-name {
+        th {
             font-size: 1rem;
         }
 
-        .ticket-button {
-            padding: 0.875rem 1.5rem;
-            font-size: 0.95rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        h2 {
-            font-size: 2rem;
-        }
-
-        .subtitle {
+        td {
             font-size: 0.9rem;
-        }
-
-        .show-card {
-            padding: 1.25rem;
         }
     }
 </style>
