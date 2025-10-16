@@ -1,0 +1,92 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3245ff;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#bc52ee;stop-opacity:0.15" />
+    </linearGradient>
+    
+    <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#bc52ee;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#3245ff;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Radial gradient for glow effects -->
+    <radialGradient id="glow1">
+      <stop offset="0%" style="stop-color:#3245ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3245ff;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="glow2">
+      <stop offset="0%" style="stop-color:#bc52ee;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#bc52ee;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.03)" />
+      <circle cx="22" cy="22" r="1" fill="rgba(255,255,255,0.03)" />
+    </pattern>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+    
+    <!-- Diagonal lines pattern -->
+    <pattern id="lines" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="60" stroke="rgba(255,255,255,0.015)" stroke-width="1"/>
+      <line x1="30" y1="0" x2="30" y2="60" stroke="rgba(255,255,255,0.015)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="#000000"/>
+  
+  <!-- Gradient overlay blobs -->
+  <ellipse cx="300" cy="200" rx="400" ry="300" fill="url(#glow1)" opacity="0.6">
+    <animate attributeName="cx" values="300;400;300" dur="20s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="200;300;200" dur="15s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="1600" cy="800" rx="450" ry="350" fill="url(#glow2)" opacity="0.6">
+    <animate attributeName="cx" values="1600;1500;1600" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="800;700;800" dur="22s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="960" cy="540" rx="300" ry="250" fill="url(#glow1)" opacity="0.4">
+    <animate attributeName="rx" values="300;350;300" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="250;280;250" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Geometric shapes -->
+  <circle cx="1700" cy="150" r="80" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.3"/>
+  <circle cx="1700" cy="150" r="60" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.2"/>
+  
+  <circle cx="200" cy="900" r="100" fill="none" stroke="url(#grad2)" stroke-width="2" opacity="0.3"/>
+  <circle cx="200" cy="900" r="75" fill="none" stroke="url(#grad2)" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Hexagons -->
+  <polygon points="1500,950 1550,925 1600,950 1600,1000 1550,1025 1500,1000" 
+           fill="none" stroke="rgba(50,69,255,0.15)" stroke-width="2"/>
+  <polygon points="300,100 340,80 380,100 380,140 340,160 300,140" 
+           fill="none" stroke="rgba(188,82,238,0.15)" stroke-width="2"/>
+  
+  <!-- Curved lines -->
+  <path d="M 0 400 Q 480 350, 960 450 T 1920 400" 
+        fill="none" stroke="url(#grad1)" stroke-width="1.5" opacity="0.2"/>
+  <path d="M 0 700 Q 480 650, 960 750 T 1920 700" 
+        fill="none" stroke="url(#grad2)" stroke-width="1.5" opacity="0.2"/>
+  
+  <!-- Patterns overlay -->
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#lines)"/>
+  
+  <!-- Subtle noise/grain effect -->
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <rect width="1920" height="1080" filter="url(#noise)" opacity="0.015"/>
+</svg>
