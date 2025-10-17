@@ -47,6 +47,18 @@ import Layout from "../layouts/Layout.astro";
 			});
 		}
 
+		// Intercept clicks on the "Back to Home" button
+		const homeLink = document.querySelector('.scroll-link-top[href="/"]');
+		if (homeLink) {
+			homeLink.addEventListener("click", (e) => {
+				e.preventDefault();
+				if (sections[0]) {
+					sections[0].scrollIntoView({ behavior: "smooth" });
+					window.history.pushState({}, "", "/");
+				}
+			});
+		}
+
 		// Create intersection observer to detect which section is visible
 		const observerOptions = {
 			root: pageWrapper,
