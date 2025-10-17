@@ -81,10 +81,14 @@ import Layout from "../layouts/Layout.astro";
 
 		// Check initial URL and scroll to appropriate section
 		const initialPath = window.location.pathname;
-		if (initialPath === "/shows" && sections[1]) {
+		const urlParams = new URLSearchParams(window.location.search);
+		const section = urlParams.get("section");
+
+		if ((initialPath === "/shows" || section === "shows") && sections[1]) {
 			// Small delay to ensure page is fully loaded
 			setTimeout(() => {
 				sections[1].scrollIntoView({ behavior: "instant" });
+				window.history.replaceState({}, "", "/shows");
 			}, 100);
 		}
 	});
