@@ -7,17 +7,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Redirecting...</title>
+        <meta http-equiv="refresh" content="0; url=/?section=shows" />
+        <title>Cía Díaz - Shows</title>
         <script>
-            // Instant client-side redirect
+            // Immediate redirect before page renders
             window.location.replace("/?section=shows");
         </script>
+        <style>
+            body {
+                margin: 0;
+                background: #000;
+                visibility: hidden;
+            }
+        </style>
     </head>
-    <body>
-        <!-- Fallback for users with JavaScript disabled -->
-        <p>Redirecting to shows...</p>
-        <a href="/?section=shows"
-            >Click here if you are not redirected automatically</a
-        >
-    </body>
+    <body></body>
 </html>
