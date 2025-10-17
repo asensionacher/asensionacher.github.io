@@ -20,7 +20,11 @@ import showsTexture from "../assets/shows-texture.svg";
             <img class="texture-overlay" src={showsTexture.src} alt="" />
             <div class="text-container">
                 <h1 class="fancy-text">Cía Díaz</h1>
-                <h2 class="fancy-text subtitle">Singer artist</h2>
+                <h2 class="fancy-text subtitle">Spanish Singer & Artist</h2>
+                <p class="artist-description">
+                    Experience live performances and discover original music
+                    from one of Spain's emerging talents.
+                </p>
                 <div class="spotify-embed">
                     <!-- <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/44aWiK6EMuu6rrNdUK3xEf?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
                 </div>
@@ -163,6 +167,16 @@ import showsTexture from "../assets/shows-texture.svg";
         letter-spacing: 0.04em;
     }
 
+    .artist-description {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin: 1.5rem auto 0;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 0.5s forwards;
+    }
+
     .spotify-embed {
         margin: 2rem auto;
         width: 90%;
@@ -288,6 +302,11 @@ import showsTexture from "../assets/shows-texture.svg";
 
         h2.fancy-text.subtitle {
             font-size: 1.8rem;
+        }
+
+        .artist-description {
+            font-size: 1rem;
+            padding: 0 1rem;
         }
 
         .social-buttons {

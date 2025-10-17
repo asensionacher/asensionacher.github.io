@@ -96,6 +96,37 @@ const shows = [
     </div>
 </section>
 
+<!-- Structured Data for Events -->
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(
+        shows.map((show) => ({
+            "@context": "https://schema.org",
+            "@type": "MusicEvent",
+            name: `Cía Díaz Live at ${show.venue}`,
+            startDate: new Date(show.date).toISOString(),
+            location: {
+                "@type": "Place",
+                name: show.venue,
+                address: {
+                    "@type": "PostalAddress",
+                    addressLocality: show.city,
+                    addressCountry: "Spain",
+                },
+            },
+            performer: {
+                "@type": "MusicGroup",
+                name: "Cía Díaz",
+            },
+            offers: {
+                "@type": "Offer",
+                url: show.tickets,
+                availability: "https://schema.org/InStock",
+            },
+        })),
+    )}
+/>
+
 <style>
     .shows-section {
         min-height: 100vh;
