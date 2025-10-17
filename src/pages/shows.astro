@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ShowsSection from "../components/Shows.astro";
+
+const pageTitle = "Upcoming Shows - Cía Díaz | Live Concerts & Events";
+const pageDescription =
+    "Check out Cía Díaz's upcoming live shows and concerts in Madrid, Barcelona, Valencia and across Spain. Get tickets for upcoming performances.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <ShowsSection />
+</Layout>
+
+<style>
+    :global(html, body) {
+        height: 100vh;
+        overflow: hidden;
+    }
+</style>

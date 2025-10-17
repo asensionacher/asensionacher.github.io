@@ -25,6 +25,25 @@ const shows = [
 
 <section class="shows-section" id="shows">
     <img class="texture-overlay" src={showsTexture.src} alt="" />
+
+    <!-- Back to Home Link -->
+    <a href="/" class="back-home">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M19 12H5M12 19l-7-7 7-7"></path>
+        </svg>
+        <span>Home</span>
+    </a>
+
     <div class="content-wrapper">
         <h2>Upcoming Shows</h2>
         <p class="subtitle">Join us for an unforgettable experience</p>
@@ -153,6 +172,40 @@ const shows = [
         top: 0;
         left: 0;
         pointer-events: none;
+    }
+
+    .back-home {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        text-decoration: none;
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateX(-4px);
+    }
+
+    .back-home svg {
+        transition: transform 0.3s ease;
+    }
+
+    .back-home:hover svg {
+        transform: translateX(-4px);
     }
 
     .content-wrapper {
@@ -366,6 +419,17 @@ const shows = [
     @media (max-width: 768px) {
         .shows-section {
             padding: 3rem 1rem;
+        }
+
+        .back-home {
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .back-home span {
+            display: none;
         }
 
         h2 {

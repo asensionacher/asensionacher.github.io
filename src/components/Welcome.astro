@@ -5,7 +5,6 @@ import spotifyIcon from "../assets/spotify.webp";
 import instagramIcon from "../assets/instagram.webp";
 import soundcloudIcon from "../assets/soundcloud.webp";
 import tikTokIcon from "../assets/tiktok.webp";
-import Shows from "./Shows.astro";
 import showsTexture from "../assets/shows-texture.svg";
 ---
 
@@ -72,24 +71,20 @@ import showsTexture from "../assets/shows-texture.svg";
                 </div>
             </div>
             <div class="scroll-indicator">
-                <a href="#shows" class="scroll-link">
+                <a href="/shows" class="scroll-link">
                     <span class="scroll-text">Upcoming Shows</span>
                     <div class="scroll-arrow"></div>
                 </a>
             </div>
         </div>
     </div>
-    <Shows />
 </main>
 
 <style>
     .main-container {
         height: 100vh;
-        overflow-y: auto;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
+        display: flex;
         position: relative;
-        -webkit-overflow-scrolling: touch;
     }
 
     .container {
@@ -97,7 +92,6 @@ import showsTexture from "../assets/shows-texture.svg";
         height: 100vh;
         display: flex;
         position: relative;
-        scroll-snap-align: start;
     }
 
     .video-half {
@@ -327,112 +321,4 @@ import showsTexture from "../assets/shows-texture.svg";
             bottom: 1rem;
         }
     }
-
-    .shows-section {
-        scroll-snap-align: start;
-    }
 </style>
-
-<script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-        const mainContainer = document.querySelector(".main-container");
-        if (!mainContainer) return;
-
-        let lastScrollTime = 0;
-        const scrollCooldown = 1000; // ms between scroll events
-
-        function smoothScroll(target) {
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }
-
-        mainContainer.addEventListener(
-            "wheel",
-            (e) => {
-                const now = Date.now();
-                if (now - lastScrollTime < scrollCooldown) {
-                    e.preventDefault();
-                    return;
-                }
-
-                const sections = [
-                    ...document.querySelectorAll(".container, .shows-section"),
-                ];
-                const currentSection = sections.findIndex((section) => {
-                    const rect = section.getBoundingClientRect();
-                    return rect.top >= 0 && rect.top <= window.innerHeight / 2;
-                });
-
-                if (currentSection === -1) return;
-
-                const direction = e.deltaY > 0 ? 1 : -1;
-                const targetIndex = Math.max(
-                    0,
-                    Math.min(currentSection + direction, sections.length - 1),
-                );
-
-                if (targetIndex !== currentSection) {
-                    e.preventDefault();
-                    smoothScroll(sections[targetIndex]);
-                    lastScrollTime = now;
-                }
-            },
-            { passive: false },
-        );
-
-        // Handle touch events for mobile
-        let touchStartY = 0;
-        mainContainer.addEventListener(
-            "touchstart",
-            (e) => {
-                touchStartY = e.touches[0].clientY;
-            },
-            { passive: true },
-        );
-
-        mainContainer.addEventListener(
-            "touchmove",
-            (e) => {
-                const now = Date.now();
-                if (now - lastScrollTime < scrollCooldown) {
-                    return;
-                }
-
-                const touchEndY = e.touches[0].clientY;
-                const delta = touchStartY - touchEndY;
-
-                if (Math.abs(delta) > 50) {
-                    // Minimum swipe distance
-                    const sections = [
-                        ...document.querySelectorAll(
-                            ".container, .shows-section",
-                        ),
-                    ];
-                    const currentSection = sections.findIndex((section) => {
-                        const rect = section.getBoundingClientRect();
-                        return rect.top >= -50 && rect.top <= 50;
-                    });
-
-                    if (currentSection === -1) return;
-
-                    const direction = delta > 0 ? 1 : -1;
-                    const targetIndex = Math.max(
-                        0,
-                        Math.min(
-                            currentSection + direction,
-                            sections.length - 1,
-                        ),
-                    );
-
-                    if (targetIndex !== currentSection) {
-                        smoothScroll(sections[targetIndex]);
-                        lastScrollTime = now;
-                    }
-                }
-            },
-            { passive: true },
-        );
-    });
-</script>
