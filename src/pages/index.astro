@@ -19,3 +19,73 @@ import Layout from "../layouts/Layout.astro";
 		scroll-snap-type: y mandatory;
 	}
 </style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const sections = document.querySelectorAll(
+			".main-container, .shows-section",
+		);
+		const pageWrapper = document.querySelector(".page-wrapper");
+
+		if (!pageWrapper || sections.length === 0) return;
+
+		// Map sections to their URLs
+		const sectionUrls = new Map([
+			[sections[0], "/"],
+			[sections[1], "/shows"],
+		]);
+
+		// Intercept clicks on the "Upcoming Shows" button
+		const showsLink = document.querySelector('a[href="/shows"]');
+		if (showsLink) {
+			showsLink.addEventListener("click", (e) => {
+				e.preventDefault();
+				if (sections[1]) {
+					sections[1].scrollIntoView({ behavior: "smooth" });
+					window.history.pushState({}, "", "/shows");
+				}
+			});
+		}
+
+		// Create intersection observer to detect which section is visible
+		const observerOptions = {
+			root: pageWrapper,
+			threshold: 0.5, // Trigger when 50% of section is visible
+			rootMargin: "0px",
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const url = sectionUrls.get(entry.target);
+					if (url && window.location.pathname !== url) {
+						// Update URL without page reload
+						window.history.pushState({}, "", url);
+					}
+				}
+			});
+		}, observerOptions);
+
+		// Observe all sections
+		sections.forEach((section) => observer.observe(section));
+
+		// Handle browser back/forward buttons
+		window.addEventListener("popstate", () => {
+			const path = window.location.pathname;
+			if (path === "/" && sections[0]) {
+				sections[0].scrollIntoView({ behavior: "smooth" });
+			} else if (path === "/shows" && sections[1]) {
+				sections[1].scrollIntoView({ behavior: "smooth" });
+			}
+		});
+
+		// Check initial URL and scroll to appropriate section
+		const initialPath = window.location.pathname;
+		if (initialPath === "/shows" && sections[1]) {
+			// Small delay to ensure page is fully loaded
+			setTimeout(() => {
+				sections[1].scrollIntoView({ behavior: "instant" });
+			}, 100);
+		}
+	});
+</script>
