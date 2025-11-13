@@ -56,14 +56,28 @@
                 <div class="footer-section">
                     <h4>Segueix-nos</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Email">✉️</a>
+                        <a href="https://www.facebook.com/profile.php?id=100080273986818" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ '/assets/images/facebook.png' | relative_url }}" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/ampaescolabernatdesclot" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ '/assets/images/instagram.webp' | relative_url }}" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://t.me/escolabernatdesclot" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ '/assets/images/telegram.svg' | relative_url }}" alt="Telegram" class="social-icon">
+                        </a>
+                        <a href="https://x.com/adesclot" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ '/assets/images/x.svg' | relative_url }}" alt="X" class="social-icon">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ 'now' | date: "%Y" }} AFA Bernat Desclot. Fet amb molt amor 💚</p>
+                <p>{{ 'now' | date: "%Y" }} AFA Bernat Desclot · Fet amb molt amor 💚</p>
+                <p class="opensource-note">
+                    <a href="https://github.com/asensionacher/asensionacher.github.io" target="_blank" rel="noopener noreferrer">
+                        Codi font obert amb llicència MIT
+                    </a> · Lliure per usar i modificar
+                </p>
             </div>
         </div>
     </footer>
