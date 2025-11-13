@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <div class="container">
+            <div class="post-meta">
+                <span class="post-date">📅 {{ page.date | date: "%d/%m/%Y" }}</span>
+                {% if page.author %}
+                <span class="post-author">✍️ {{ page.author }}</span>
+                {% endif %}
+            </div>
+            <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+            {% if page.tags %}
+            <div class="post-tags">
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="post-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </div>
+
+    <div class="post-footer">
+        <div class="container">
+            <a href="{{ '/blog/' | relative_url }}" class="back-link">← Torna al blog</a>
+        </div>
+    </div>
+</article>

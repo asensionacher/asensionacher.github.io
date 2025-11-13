@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+description: Notícies, activitats i esdeveniments de l'AFA
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>📝 Blog de l'AFA</h1>
+        <p class="page-subtitle">Notícies, activitats i esdeveniments</p>
+    </div>
+</div>
+
+<div class="blog-main">
+    <div class="container">
+        <div class="blog-grid">
+            {% for post in site.posts %}
+            <article class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-date">📅 {{ post.date | date: "%d/%m/%Y" }}</span>
+                    {% if post.tags %}
+                    <div class="blog-tags">
+                        {% for tag in post.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <h2 class="blog-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <p class="blog-card-excerpt">
+                    {{ post.description | default: post.excerpt | strip_html | truncate: 150 }}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="read-more">Llegir més →</a>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+        <div class="no-posts">
+            <p>🎈 Aviat publicarem notícies i activitats!</p>
+        </div>
+        {% endif %}
+    </div>
+</div>

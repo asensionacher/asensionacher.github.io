@@ -1,0 +1,48 @@
+# Configuració del lloc Jekyll
+title: "AFA Bernat Desclot"
+description: "Associació de Famílies d'Alumnes - Junts per als nostres fills"
+baseurl: ""
+url: "https://asensionacher.github.io"
+lang: ca
+
+# Autor
+author:
+  name: "AFA Bernat Desclot"
+  email: "afa@exemple.cat"
+
+# Configuració de construcció
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: Europe/Madrid
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Col·leccions
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "AFA"
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/

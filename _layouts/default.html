@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ '/' | relative_url }}" class="logo">
+                <img src="{{ '/assets/images/logo-bernat-desclot-camiseta-amarilla.png' | relative_url }}" alt="Logo Bernat Desclot" class="logo-image">
+                <span class="logo-text">AFA Bernat Desclot</span>
+            </a>
+            <button class="menu-toggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="{{ '/' | relative_url }}#qui-som">Qui som</a></li>
+                <li><a href="{{ '/' | relative_url }}#activitats">Activitats</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                <li><a href="{{ '/' | relative_url }}#contacte">Contacte</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎈 AFA Bernat Desclot</h3>
+                    <p>Associació de Famílies d'Alumnes</p>
+                    <p>Junts per als nostres fills ❤️</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enllaços</h4>
+                    <ul>
+                        <li><a href="{{ '/' | relative_url }}#qui-som">Qui som</a></li>
+                        <li><a href="{{ '/' | relative_url }}#activitats">Activitats</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                        <li><a href="{{ '/' | relative_url }}#contacte">Contacte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Segueix-nos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 'now' | date: "%Y" }} AFA Bernat Desclot. Fet amb molt amor 💚</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
