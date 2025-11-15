@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ site.active_lang | default: site.lang }}" {% if site.active_lang == 'ar' or site.active_lang == 'ur' %}dir="rtl"{% endif %}>
+<html lang="ca" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/logo-bernat-desclot-camiseta-amarilla.ico' | relative_url }}">
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- RTL Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="{{ '/' | relative_url }}" class="logo">
-                <img src="{{ '/assets/images/logo-bernat-desclot-camiseta-amarilla.png' | relative_url }}" alt="Logo Bernat Desclot" class="logo-image">
+                <img src="{{ '/assets/images/logo-bernat-desclot-camiseta-amarilla.webp' | relative_url }}" alt="Logo Bernat Desclot" class="logo-image">
                 <span class="logo-text">AFA Bernat Desclot</span>
             </a>
             <button class="menu-toggle" aria-label="Menú">
@@ -24,12 +27,34 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="{{ '/' | relative_url }}#qui-som">{% include t.html key="nav.about" %}</a></li>
-                <li><a href="{{ '/' | relative_url }}#activitats">{% include t.html key="nav.activities" %}</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}">{% include t.html key="nav.blog" %}</a></li>
-                <li><a href="{{ '/' | relative_url }}#contacte">{% include t.html key="nav.contact" %}</a></li>
+                <li><a href="{{ '/' | relative_url }}#qui-som" data-i18n="nav.about">Qui som</a></li>
+                <li><a href="{{ '/' | relative_url }}#activitats" data-i18n="nav.activities">Activitats</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}" data-i18n="nav.blog">Blog</a></li>
+                <li><a href="{{ '/' | relative_url }}#contacte" data-i18n="nav.contact">Contacte</a></li>
+                <li class="language-selector">
+                    <button class="language-btn" aria-label="Language" aria-haspopup="true" aria-expanded="false">
+                        <span class="current-lang-code">CA</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <ul class="language-dropdown" role="menu">
+                        <li role="menuitem" data-lang="ca">
+                            <span class="lang-name">Català</span>
+                        </li>
+                        <li role="menuitem" data-lang="es">
+                            <span class="lang-name">Español</span>
+                        </li>
+                        <li role="menuitem" data-lang="en">
+                            <span class="lang-name">English</span>
+                        </li>
+                        <li role="menuitem" data-lang="ar">
+                            <span class="lang-name">العربية</span>
+                        </li>
+                        <li role="menuitem" data-lang="ur">
+                            <span class="lang-name">اردو</span>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-            {% include language-switcher.html %}
         </div>
     </nav>
 
@@ -42,20 +67,20 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>🎈 AFA Bernat Desclot</h3>
-                    <p>{% include t.html key="hero.subtitle" %}</p>
-                    <p>{% include t.html key="footer.tagline" %}</p>
+                    <p data-i18n="footer.subtitle">Associació de Famílies d'Alumnes</p>
+                    <p data-i18n="footer.tagline">Junts per als nostres fills ❤️</p>
                 </div>
                 <div class="footer-section">
-                    <h4>{% include t.html key="footer.links" %}</h4>
+                    <h4 data-i18n="footer.links_title">Enllaços</h4>
                     <ul>
-                        <li><a href="{{ '/' | relative_url }}#qui-som">{% include t.html key="nav.about" %}</a></li>
-                        <li><a href="{{ '/' | relative_url }}#activitats">{% include t.html key="nav.activities" %}</a></li>
-                        <li><a href="{{ '/blog/' | relative_url }}">{% include t.html key="nav.blog" %}</a></li>
-                        <li><a href="{{ '/' | relative_url }}#contacte">{% include t.html key="nav.contact" %}</a></li>
+                        <li><a href="{{ '/' | relative_url }}#qui-som" data-i18n="nav.about">Qui som</a></li>
+                        <li><a href="{{ '/' | relative_url }}#activitats" data-i18n="nav.activities">Activitats</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="{{ '/' | relative_url }}#contacte" data-i18n="nav.contact">Contacte</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>{% include t.html key="footer.follow" %}</h4>
+                    <h4 data-i18n="footer.follow_us">Segueix-nos</h4>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100080273986818" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <img src="{{ '/assets/images/facebook.png' | relative_url }}" alt="Facebook" class="social-icon">
@@ -73,11 +98,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>{{ 'now' | date: "%Y" }} {% include t.html key="footer.copyright" %}</p>
+                <p>{{ 'now' | date: "%Y" }} AFA Bernat Desclot · <span data-i18n="footer.made_with_love">Fet amb molt amor</span> 💚 <span data-i18n="footer.ai_assistant">i l'ajuda de Claude Sonnet 4.5</span></p>
                 <p class="opensource-note">
                     <a href="https://github.com/asensionacher/asensionacher.github.io" target="_blank" rel="noopener noreferrer">
-                        {% include t.html key="footer.opensource" %}
-                    </a> · {% include t.html key="footer.opensource_text" %}
+                        <span data-i18n="footer.open_source">Codi font obert amb llicència MIT</span>
+                    </a> · <span data-i18n="footer.free_to_use">Lliure per usar i modificar</span>
                 </p>
             </div>
         </div>

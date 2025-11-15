@@ -8,15 +8,15 @@ layout: default
             <div class="post-meta">
                 <span class="post-date">📅 {{ page.date | date: "%d/%m/%Y" }}</span>
                 {% if page.author %}
-                <span class="post-author">✍️ {{ page.author }}</span>
+                <span class="post-author">✍️ <span class="post-author-text">{{ page.author }}</span></span>
                 {% endif %}
             </div>
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h1 class="post-title" id="post-title">{{ page.title }}</h1>
             {% if page.description %}
-            <p class="post-description">{{ page.description }}</p>
+            <p class="post-description" id="post-description">{{ page.description }}</p>
             {% endif %}
             {% if page.tags %}
-            <div class="post-tags">
+            <div class="post-tags" id="post-tags">
                 {% for tag in page.tags %}
                 <span class="tag">{{ tag }}</span>
                 {% endfor %}
@@ -26,14 +26,76 @@ layout: default
     </header>
 
     <div class="post-content">
-        <div class="container">
+        <div class="container" id="post-content">
             {{ content }}
         </div>
     </div>
 
     <div class="post-footer">
         <div class="container">
-            <a href="{{ '/blog/' | relative_url }}" class="back-link">{% include t.html key="blog.back_to_blog" %}</a>
+            <a href="{{ '/blog/' | relative_url }}" class="back-link" data-i18n="blog.back">← Torna al blog</a>
         </div>
     </div>
 </article>
+
+<script>
+// Store multilingual post data if available
+{% if page.translations %}
+window.postTranslations = {
+    {% for lang in site.languages %}
+    "{{ lang }}": {
+        title: {{ page.translations[lang].title | jsonify }},
+        description: {{ page.translations[lang].description | jsonify }},
+        content: {{ page.translations[lang].content | jsonify }},
+        author: {{ page.translations[lang].author | default: page.author | jsonify }},
+        tags: {{ page.translations[lang].tags | default: page.tags | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+};
+
+// Function to update post content based on language
+function updatePostContent(lang) {
+    if (window.postTranslations && window.postTranslations[lang]) {
+        const trans = window.postTranslations[lang];
+        const titleEl = document.getElementById('post-title');
+        const descEl = document.getElementById('post-description');
+        const contentEl = document.getElementById('post-content');
+        const tagsEl = document.getElementById('post-tags');
+        const authorEl = document.querySelector('.post-author-text');
+        
+        if (titleEl && trans.title) titleEl.textContent = trans.title;
+        if (descEl && trans.description) descEl.textContent = trans.description;
+        if (contentEl && trans.content) {
+            // Convert markdown-style content to HTML
+            contentEl.innerHTML = trans.content.replace(/\n/g, '<br>');
+        }
+        if (authorEl && trans.author) authorEl.textContent = trans.author;
+        if (tagsEl && trans.tags) {
+            tagsEl.innerHTML = trans.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        }
+    }
+}
+
+// Listen for language changes
+document.addEventListener('DOMContentLoaded', function() {
+    // Update post when language changes
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'lang') {
+                const newLang = document.documentElement.getAttribute('lang');
+                updatePostContent(newLang);
+            }
+        });
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['lang']
+    });
+    
+    // Initial update based on stored language
+    const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+    updatePostContent(currentLang);
+});
+{% endif %}
+</script>

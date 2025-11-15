@@ -9,15 +9,15 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="wave">👋</span>
-                {% include t.html key="hero.title" %}
+                <span data-i18n="hero.title">Benvinguts a l'AFA!</span>
             </h1>
-            <p class="hero-subtitle">{% include t.html key="hero.subtitle" %}</p>
-            <p class="hero-description">
-                {% include t.html key="hero.description" %}
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Associació de Famílies d'Alumnes</p>
+            <p class="hero-description" data-i18n="hero.description">
+                Som una comunitat de famílies compromeses amb l'educació i el benestar dels nostres fills. Junts organitzem activitats, esdeveniments i projectes que fan del Bernat Desclot un lloc millor! 🌟
             </p>
             <div class="hero-buttons">
-                <a href="#activitats" class="btn btn-primary">{% include t.html key="hero.btn_activities" %}</a>
-                <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">{% include t.html key="hero.btn_blog" %}</a>
+                <a href="#esdeveniments" class="btn btn-primary" data-i18n="hero.btn_activities">Veure Activitats 🎉</a>
+                <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary" data-i18n="hero.btn_blog">Llegir Blog 📚</a>
             </div>
         </div>
         <div class="hero-image">
@@ -32,60 +32,54 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
 
 <section id="qui-som" class="section">
     <div class="container">
-        <h2 class="section-title">{% include t.html key="about.title" %}</h2>
+        <h2 class="section-title" data-i18n="about.title">🌈 Qui Som?</h2>
         <div class="about-grid">
             <div class="about-card">
                 <div class="card-icon">👨‍👩‍👧‍👦</div>
-                <h3>{% include t.html key="about.united_families.title" %}</h3>
-                <p>{% include t.html key="about.united_families.description" %}</p>
+                <h3 data-i18n="about.united_families_title">Famílies Unides</h3>
+                <p data-i18n="about.united_families_desc">Som pares i mares que treballem junts per millorar l'experiència educativa dels nostres fills.</p>
             </div>
             <div class="about-card">
                 <div class="card-icon">🎯</div>
-                <h3>{% include t.html key="about.clear_goals.title" %}</h3>
-                <p>{% include t.html key="about.clear_goals.description" %}</p>
+                <h3 data-i18n="about.clear_goals_title">Objectius Clars</h3>
+                <p data-i18n="about.clear_goals_desc">Fomentar la participació, organitzar activitats i col·laborar amb el Bernat Desclot per al benestar dels alumnes.</p>
             </div>
             <div class="about-card">
                 <div class="card-icon">💪</div>
-                <h3>{% include t.html key="about.commitment.title" %}</h3>
-                <p>{% include t.html key="about.commitment.description" %}</p>
+                <h3 data-i18n="about.commitment_title">Compromís</h3>
+                <p data-i18n="about.commitment_desc">Estem compromesos amb l'educació de qualitat i un ambient escolar positiu i enriquidor.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="activitats" class="section section-alt">
+<section id="esdeveniments" class="section">
     <div class="container">
-        <h2 class="section-title">{% include t.html key="activities.title" %}</h2>
+        <h2 class="section-title" data-i18n="events.title">📅 Propers Esdeveniments</h2>
         <div class="activities-grid">
             <div class="activity-card">
-                <div class="activity-icon">🎨</div>
-                <h3>{% include t.html key="activities.creative_workshops.title" %}</h3>
-                <p>{% include t.html key="activities.creative_workshops.description" %}</p>
+                <div class="event-date-badge">
+                    <div class="event-day">25</div>
+                    <div class="event-month" data-i18n="events.november">Nov</div>
+                </div>
+                <h3 data-i18n="events.theater_title">Sortida al Teatre</h3>
+                <p data-i18n="events.theater_desc">Veurem l'obra "El Petit Príncep" al Teatre Nacional de Catalunya. Sortida des de l'escola a les 10:00h.</p>
             </div>
             <div class="activity-card">
-                <div class="activity-icon">⚽</div>
-                <h3>{% include t.html key="activities.sports.title" %}</h3>
-                <p>{% include t.html key="activities.sports.description" %}</p>
+                <div class="event-date-badge">
+                    <div class="event-day">15</div>
+                    <div class="event-month" data-i18n="events.december">Des</div>
+                </div>
+                <h3 data-i18n="events.workshop_title">Taller de Manualitats Nadalenques</h3>
+                <p data-i18n="events.workshop_desc">Vine a crear decoracions nadalenques amb materials reciclats. A l'escola de 16:00h a 18:00h.</p>
             </div>
             <div class="activity-card">
-                <div class="activity-icon">🎭</div>
-                <h3>{% include t.html key="activities.theater.title" %}</h3>
-                <p>{% include t.html key="activities.theater.description" %}</p>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">📚</div>
-                <h3>{% include t.html key="activities.reading_club.title" %}</h3>
-                <p>{% include t.html key="activities.reading_club.description" %}</p>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">🌳</div>
-                <h3>{% include t.html key="activities.excursions.title" %}</h3>
-                <p>{% include t.html key="activities.excursions.description" %}</p>
-            </div>
-            <div class="activity-card">
-                <div class="activity-icon">🎪</div>
-                <h3>{% include t.html key="activities.themed_parties.title" %}</h3>
-                <p>{% include t.html key="activities.themed_parties.description" %}</p>
+                <div class="event-date-badge">
+                    <div class="event-day">20</div>
+                    <div class="event-month" data-i18n="events.december">Des</div>
+                </div>
+                <h3 data-i18n="events.party_title">Festa de Fi d'Any</h3>
+                <p data-i18n="events.party_desc">Celebrem junts l'any amb jocs, música i berenar per a totes les famílies. Al pati de l'escola a les 17:00h.</p>
             </div>
         </div>
     </div>
@@ -94,8 +88,8 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
 <section class="section blog-preview">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">{% include t.html key="blog.title" %}</h2>
-            <a href="{{ '/blog/' | relative_url }}" class="view-all">{% include t.html key="blog.view_all" %}</a>
+            <h2 class="section-title" data-i18n="blog.latest_title">📝 Últimes Notícies del Blog</h2>
+            <a href="{{ '/blog/' | relative_url }}" class="view-all" data-i18n="blog.view_all">Veure tots els articles →</a>
         </div>
         <div class="blog-grid">
             {% for post in site.posts limit:3 %}
@@ -107,7 +101,7 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h3>
                 <p class="blog-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-                <a href="{{ post.url | relative_url }}" class="read-more">{% include t.html key="blog.read_more" %}</a>
+                <a href="{{ post.url | relative_url }}" class="read-more" data-i18n="blog.read_more">Llegir més →</a>
             </article>
             {% endfor %}
         </div>
@@ -116,29 +110,21 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
 
 <section id="contacte" class="section section-alt">
     <div class="container">
-        <h2 class="section-title">{% include t.html key="contact.title" %}</h2>
+        <h2 class="section-title" data-i18n="contact.title">📮 Contacta amb Nosaltres</h2>
         <div class="contact-content">
-            <p class="contact-intro">
-                {% include t.html key="contact.intro" %}
+            <p class="contact-intro" data-i18n="contact.intro">
+                T'agradaria col·laborar amb l'AFA? Tens idees per a noves activitats? Escriu-nos! Sempre estem contents de rebre suggeriments i noves famílies. 💌
             </p>
             <div class="contact-methods">
                 <div class="contact-card">
                     <div class="contact-icon">✉️</div>
-                    <h3>{% include t.html key="contact.email" %}</h3>
-                    <a href="mailto:afa@exemple.cat">afa@exemple.cat</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>{% include t.html key="contact.social" %}</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
-                    </div>
+                    <h3 data-i18n="contact.email_title">Email</h3>
+                    <a href="mailto:afaescolabernatdesclot@gmail.com">afaescolabernatdesclot@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">🏫</div>
-                    <h3>{% include t.html key="contact.school" %}</h3>
-                    <p>{% include t.html key="contact.school_text" %}</p>
+                    <h3 data-i18n="contact.school_title">A l'Escola</h3>
+                    <p data-i18n="contact.school_desc">Pregunta al despatx per l'AFA!</p>
                 </div>
             </div>
         </div>

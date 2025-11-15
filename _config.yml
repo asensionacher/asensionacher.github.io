@@ -8,7 +8,7 @@ lang: ca
 # Autor
 author:
   name: "AFA Bernat Desclot"
-  email: "afa@exemple.cat"
+  email: "afaescolabernatdesclot@gmail.com"
 
 # Configuració de construcció
 markdown: kramdown
@@ -20,13 +20,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-polyglot
 
-# Multi-language configuration
-languages: ["ca", "en", "es", "ar", "ur"]
+# Multi-language configuration (handled by JavaScript)
+languages: ["ca", "es", "en", "ar", "ur"]
 default_lang: "ca"
-exclude_from_localization: ["assets", "vendor", "blog"]
-parallel_localization: false
 
 # Col·leccions
 collections:

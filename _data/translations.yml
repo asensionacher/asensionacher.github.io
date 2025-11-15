@@ -38,8 +38,8 @@ nav:
 hero:
   title:
     ca: "Benvinguts a l'AFA!"
-    en: "Welcome to the PTA!"
-    es: "¡Bienvenidos a la AMPA!"
+    en: "Welcome to the AFA!"
+    es: "¡Bienvenidos a la AFA!"
     ar: "مرحبًا بكم في جمعية أولياء الأمور!"
     ur: "والدین ایسوسی ایشن میں خوش آمدید!"
   subtitle:
@@ -230,8 +230,8 @@ blog:
     ur: "→ بلاگ پر واپس"
   page_title:
     ca: "📝 Blog de l'AFA"
-    en: "📝 PTA Blog"
-    es: "📝 Blog de la AMPA"
+    en: "📝 AFA Blog"
+    es: "📝 Blog de la AFA"
     ar: "📝 مدونة جمعية أولياء الأمور"
     ur: "📝 والدین ایسوسی ایشن کا بلاگ"
   page_subtitle:
@@ -257,8 +257,8 @@ contact:
     ur: "📮 ہم سے رابطہ کریں"
   intro:
     ca: "T'agradaria col·laborar amb l'AFA? Tens idees per a noves activitats? Escriu-nos! Sempre estem contents de rebre suggeriments i noves famílies. 💌"
-    en: "Would you like to collaborate with the PTA? Do you have ideas for new activities? Write to us! We are always happy to receive suggestions and new families. 💌"
-    es: "¿Te gustaría colaborar con la AMPA? ¿Tienes ideas para nuevas actividades? ¡Escríbenos! Siempre estamos contentos de recibir sugerencias y nuevas familias. 💌"
+    en: "Would you like to collaborate with the AFA? Do you have ideas for new activities? Write to us! We are always happy to receive suggestions and new families. 💌"
+    es: "¿Te gustaría colaborar con la AFA? ¿Tienes ideas para nuevas actividades? ¡Escríbenos! Siempre estamos contentos de recibir sugerencias y nuevas familias. 💌"
     ar: "هل ترغب في التعاون مع جمعية أولياء الأمور؟ هل لديك أفكار لأنشطة جديدة؟ اكتب لنا! نحن دائمًا سعداء بتلقي الاقتراحات والعائلات الجديدة. 💌"
     ur: "کیا آپ والدین ایسوسی ایشن کے ساتھ تعاون کرنا چاہتے ہیں؟ کیا آپ کے پاس نئی سرگرمیوں کے لیے خیالات ہیں؟ ہمیں لکھیں! ہم ہمیشہ تجاویز اور نئے خاندانوں کا استقبال کرتے ہیں۔ 💌"
   email:
@@ -267,12 +267,6 @@ contact:
     es: "Correo"
     ar: "البريد الإلكتروني"
     ur: "ای میل"
-  social:
-    ca: "Xarxes Socials"
-    en: "Social Media"
-    es: "Redes Sociales"
-    ar: "وسائل التواصل الاجتماعي"
-    ur: "سوشل میڈیا"
   school:
     ca: "A l'Escola"
     en: "At School"
@@ -281,8 +275,8 @@ contact:
     ur: "اسکول میں"
   school_text:
     ca: "Pregunta al despatx per l'AFA!"
-    en: "Ask at the office for the PTA!"
-    es: "¡Pregunta en la oficina por la AMPA!"
+    en: "Ask at the office for the AFA!"
+    es: "¡Pregunta en la oficina por la AFA!"
     ar: "اسأل في المكتب عن جمعية أولياء الأمور!"
     ur: "والدین ایسوسی ایشن کے لیے دفتر میں پوچھیں!"
 
@@ -308,8 +302,8 @@ footer:
     ur: "ہمیں فالو کریں"
   copyright:
     ca: "AFA Bernat Desclot · Fet amb molt amor 💚"
-    en: "PTA Bernat Desclot · Made with love 💚"
-    es: "AMPA Bernat Desclot · Hecho con amor 💚"
+    en: "AFA Bernat Desclot · Made with love 💚"
+    es: "AFA Bernat Desclot · Hecho con amor 💚"
     ar: "جمعية بيرنات ديسكلوت · صُنع بحب 💚"
     ur: "برنات ڈیسکلوٹ ایسوسی ایشن · محبت سے بنایا گیا 💚"
   opensource:

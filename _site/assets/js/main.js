@@ -1,4 +1,470 @@
+// ============================================
+// Translations Data
+// ============================================
+const translations = {
+    ca: {
+        nav: {
+            about: "Qui som",
+            activities: "Activitats",
+            blog: "Blog",
+            contact: "Contacte"
+        },
+        hero: {
+            title: "Benvinguts a l'AFA!",
+            subtitle: "Associació de Famílies d'Alumnes",
+            description: "Som una comunitat de famílies compromeses amb l'educació i el benestar dels nostres fills. Junts organitzem activitats, esdeveniments i projectes que fan del Bernat Desclot un lloc millor! 🌟",
+            btn_activities: "Veure Activitats 🎉",
+            btn_blog: "Llegir Blog 📚"
+        },
+        about: {
+            title: "🌈 Qui Som?",
+            united_families_title: "Famílies Unides",
+            united_families_desc: "Som pares i mares que treballem junts per millorar l'experiència educativa dels nostres fills.",
+            clear_goals_title: "Objectius Clars",
+            clear_goals_desc: "Fomentar la participació, organitzar activitats i col·laborar amb el Bernat Desclot per al benestar dels alumnes.",
+            commitment_title: "Compromís",
+            commitment_desc: "Estem compromesos amb l'educació de qualitat i un ambient escolar positiu i enriquidor."
+        },
+        events: {
+            title: "📅 Propers Esdeveniments",
+            no_events: "Properament publicarem els propers esdeveniments i activitats!",
+            november: "Nov",
+            december: "Des",
+            date_label: "Data:",
+            theater_title: "Sortida al Teatre",
+            theater_date: "25 de novembre, 2025",
+            theater_desc: "Veurem l'obra \"El Petit Príncep\" al Teatre Nacional de Catalunya. Sortida des de l'escola a les 10:00h.",
+            workshop_title: "Taller de Manualitats Nadalenques",
+            workshop_date: "15 de desembre, 2025",
+            workshop_desc: "Vine a crear decoracions nadalenques amb materials reciclats. A l'escola de 16:00h a 18:00h.",
+            party_title: "Festa de Fi d'Any",
+            party_date: "20 de desembre, 2025",
+            party_desc: "Celebrem junts l'any amb jocs, música i berenar per a totes les famílies. Al pati de l'escola a les 17:00h."
+        },
+        activities: {
+            title: "🎉 Les Nostres Activitats",
+            creative_title: "Tallers Creatius",
+            creative_desc: "Manualitats, pintura i art per desenvolupar la creativitat dels petits artistes.",
+            sports_title: "Esports i Jocs",
+            sports_desc: "Activitats físiques i esportives per mantenir-se actius i saludables mentre es diverteixen.",
+            theater_title: "Teatre i Música",
+            theater_desc: "Expressions artístiques que desenvolupen la confiança i habilitats comunicatives.",
+            reading_title: "Club de Lectura",
+            reading_desc: "Foment de la lectura amb contes i llibres adaptats a cada edat.",
+            excursions_title: "Excursions",
+            excursions_desc: "Sortides educatives a museus, granges escola i espais naturals.",
+            parties_title: "Festes Temàtiques",
+            parties_desc: "Celebracions especials durant l'any: Carnestoltes, Sant Jordi, Final de curs..."
+        },
+        blog: {
+            latest_title: "📝 Últimes Notícies del Blog",
+            view_all: "Veure tots els articles →",
+            read_more: "Llegir més →",
+            back: "← Torna al blog"
+        },
+        contact: {
+            title: "📮 Contacta amb Nosaltres",
+            intro: "T'agradaria col·laborar amb l'AFA? Tens idees per a noves activitats? Escriu-nos! Sempre estem contents de rebre suggeriments i noves famílies. 💌",
+            email_title: "Email",
+            school_title: "A l'Escola",
+            school_desc: "Pregunta al despatx per l'AFA!"
+        },
+        footer: {
+            subtitle: "Associació de Famílies d'Alumnes",
+            tagline: "Junts per als nostres fills ❤️",
+            links_title: "Enllaços",
+            follow_us: "Segueix-nos",
+            made_with_love: "Fet amb molt amor",
+            ai_assistant: "i l'ajuda de Claude Sonnet 4.5",
+            open_source: "Codi font obert amb llicència MIT",
+            free_to_use: "Lliure per usar i modificar"
+        }
+    },
+    es: {
+        nav: {
+            about: "Quiénes somos",
+            activities: "Actividades",
+            blog: "Blog",
+            contact: "Contacto"
+        },
+        hero: {
+            title: "¡Bienvenidos a la AFA!",
+            subtitle: "Asociación de Familias de Alumnos",
+            description: "Somos una comunidad de familias comprometidas con la educación y el bienestar de nuestros hijos. ¡Juntos organizamos actividades, eventos y proyectos que hacen de Bernat Desclot un lugar mejor! 🌟",
+            btn_activities: "Ver Actividades 🎉",
+            btn_blog: "Leer Blog 📚"
+        },
+        about: {
+            title: "🌈 ¿Quiénes Somos?",
+            united_families_title: "Familias Unidas",
+            united_families_desc: "Somos padres y madres que trabajamos juntos para mejorar la experiencia educativa de nuestros hijos.",
+            clear_goals_title: "Objetivos Claros",
+            clear_goals_desc: "Fomentar la participación, organizar actividades y colaborar con Bernat Desclot para el bienestar de los alumnos.",
+            commitment_title: "Compromiso",
+            commitment_desc: "Estamos comprometidos con la educación de calidad y un ambiente escolar positivo y enriquecedor."
+        },
+        events: {
+            title: "📅 Próximos Eventos",
+            no_events: "¡Próximamente publicaremos los próximos eventos y actividades!",
+            november: "Nov",
+            december: "Dic",
+            date_label: "Fecha:",
+            theater_title: "Salida al Teatro",
+            theater_date: "25 de noviembre, 2025",
+            theater_desc: "Veremos la obra \"El Principito\" en el Teatro Nacional de Cataluña. Salida desde la escuela a las 10:00h.",
+            workshop_title: "Taller de Manualidades Navideñas",
+            workshop_date: "15 de diciembre, 2025",
+            workshop_desc: "Ven a crear decoraciones navideñas con materiales reciclados. En la escuela de 16:00h a 18:00h.",
+            party_title: "Fiesta de Fin de Año",
+            party_date: "20 de diciembre, 2025",
+            party_desc: "Celebremos juntos el año con juegos, música y merienda para todas las familias. En el patio de la escuela a las 17:00h."
+        },
+        activities: {
+            title: "🎉 Nuestras Actividades",
+            creative_title: "Talleres Creativos",
+            creative_desc: "Manualidades, pintura y arte para desarrollar la creatividad de los pequeños artistas.",
+            sports_title: "Deportes y Juegos",
+            sports_desc: "Actividades físicas y deportivas para mantenerse activos y saludables mientras se divierten.",
+            theater_title: "Teatro y Música",
+            theater_desc: "Expresiones artísticas que desarrollan la confianza y habilidades comunicativas.",
+            reading_title: "Club de Lectura",
+            reading_desc: "Fomento de la lectura con cuentos y libros adaptados a cada edad.",
+            excursions_title: "Excursiones",
+            excursions_desc: "Salidas educativas a museos, granjas escuela y espacios naturales.",
+            parties_title: "Fiestas Temáticas",
+            parties_desc: "Celebraciones especiales durante el año: Carnaval, Sant Jordi, Fin de curso..."
+        },
+        blog: {
+            latest_title: "📝 Últimas Noticias del Blog",
+            view_all: "Ver todos los artículos →",
+            read_more: "Leer más →",
+            back: "← Volver al blog"
+        },
+        contact: {
+            title: "📮 Contáctanos",
+            intro: "¿Te gustaría colaborar con la AFA? ¿Tienes ideas para nuevas actividades? ¡Escríbenos! Siempre estamos contentos de recibir sugerencias y nuevas familias. 💌",
+            email_title: "Email",
+            school_title: "En la Escuela",
+            school_desc: "¡Pregunta en la oficina por la AFA!"
+        },
+        footer: {
+            subtitle: "Asociación de Familias de Alumnos",
+            tagline: "Juntos por nuestros hijos ❤️",
+            links_title: "Enlaces",
+            follow_us: "Síguenos",
+            made_with_love: "Hecho con mucho amor",
+            ai_assistant: "y la ayuda de Claude Sonnet 4.5",
+            open_source: "Código fuente abierto con licencia MIT",
+            free_to_use: "Libre para usar y modificar"
+        }
+    },
+    en: {
+        nav: {
+            about: "About Us",
+            activities: "Activities",
+            blog: "Blog",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Welcome to the AFA!",
+            subtitle: "Parent-Teacher Association",
+            description: "We are a community of families committed to the education and well-being of our children. Together we organize activities, events and projects that make Bernat Desclot a better place! 🌟",
+            btn_activities: "See Activities 🎉",
+            btn_blog: "Read Blog 📚"
+        },
+        about: {
+            title: "🌈 Who Are We?",
+            united_families_title: "United Families",
+            united_families_desc: "We are parents who work together to improve our children's educational experience.",
+            clear_goals_title: "Clear Goals",
+            clear_goals_desc: "Promote participation, organize activities and collaborate with Bernat Desclot for the well-being of students.",
+            commitment_title: "Commitment",
+            commitment_desc: "We are committed to quality education and a positive and enriching school environment."
+        },
+        events: {
+            title: "📅 Upcoming Events",
+            no_events: "We will soon publish upcoming events and activities!",
+            november: "Nov",
+            december: "Dec",
+            date_label: "Date:",
+            theater_title: "Theater Trip",
+            theater_date: "November 25, 2025",
+            theater_desc: "We will see the play \"The Little Prince\" at the National Theater of Catalonia. Departure from school at 10:00am.",
+            workshop_title: "Christmas Crafts Workshop",
+            workshop_date: "December 15, 2025",
+            workshop_desc: "Come create Christmas decorations with recycled materials. At school from 4:00pm to 6:00pm.",
+            party_title: "Year-End Party",
+            party_date: "December 20, 2025",
+            party_desc: "Let's celebrate the year together with games, music and snacks for all families. In the school courtyard at 5:00pm."
+        },
+        activities: {
+            title: "🎉 Our Activities",
+            creative_title: "Creative Workshops",
+            creative_desc: "Crafts, painting and art to develop the creativity of young artists.",
+            sports_title: "Sports and Games",
+            sports_desc: "Physical and sports activities to stay active and healthy while having fun.",
+            theater_title: "Theater and Music",
+            theater_desc: "Artistic expressions that develop confidence and communication skills.",
+            reading_title: "Reading Club",
+            reading_desc: "Promoting reading with stories and books adapted to each age.",
+            excursions_title: "Excursions",
+            excursions_desc: "Educational outings to museums, school farms and natural spaces.",
+            parties_title: "Themed Parties",
+            parties_desc: "Special celebrations throughout the year: Carnival, Sant Jordi, End of school..."
+        },
+        blog: {
+            latest_title: "📝 Latest Blog News",
+            view_all: "View all articles →",
+            read_more: "Read more →",
+            back: "← Back to blog"
+        },
+        contact: {
+            title: "📮 Contact Us",
+            intro: "Would you like to collaborate with the AFA? Do you have ideas for new activities? Write to us! We are always happy to receive suggestions and new families. 💌",
+            email_title: "Email",
+            school_title: "At School",
+            school_desc: "Ask at the office for the AFA!"
+        },
+        footer: {
+            subtitle: "Parent-Teacher Association",
+            tagline: "Together for our children ❤️",
+            links_title: "Links",
+            follow_us: "Follow us",
+            made_with_love: "Made with lots of love",
+            ai_assistant: "and the help of Claude Sonnet 4.5",
+            open_source: "Open source code with MIT license",
+            free_to_use: "Free to use and modify"
+        }
+    },
+    ar: {
+        nav: {
+            about: "من نحن",
+            activities: "الأنشطة",
+            blog: "المدونة",
+            contact: "اتصل بنا"
+        },
+        hero: {
+            title: "مرحبًا بكم في جمعية أولياء الأمور!",
+            subtitle: "جمعية أولياء أمور الطلاب",
+            description: "نحن مجتمع من العائلات الملتزمة بتعليم ورفاهية أطفالنا. معًا ننظم الأنشطة والفعاليات والمشاريع التي تجعل مدرسة بيرنات ديسكلوت مكانًا أفضل! 🌟",
+            btn_activities: "شاهد الأنشطة 🎉",
+            btn_blog: "اقرأ المدونة 📚"
+        },
+        about: {
+            title: "🌈 من نحن؟",
+            united_families_title: "عائلات متحدة",
+            united_families_desc: "نحن آباء وأمهات نعمل معًا لتحسين التجربة التعليمية لأطفالنا.",
+            clear_goals_title: "أهداف واضحة",
+            clear_goals_desc: "تعزيز المشاركة وتنظيم الأنشطة والتعاون مع مدرسة بيرنات ديسكلوت من أجل رفاهية الطلاب.",
+            commitment_title: "التزام",
+            commitment_desc: "نحن ملتزمون بالتعليم الجيد وبيئة مدرسية إيجابية ومثرية."
+        },
+        events: {
+            title: "📅 الأحداث القادمة",
+            no_events: "سننشر قريبًا الأحداث والأنشطة القادمة!",
+            november: "نوفمبر",
+            december: "ديسمبر",
+            date_label: "التاريخ:",
+            theater_title: "رحلة إلى المسرح",
+            theater_date: "25 نوفمبر 2025",
+            theater_desc: "سنشاهد مسرحية \"الأمير الصغير\" في المسرح الوطني لكتالونيا. المغادرة من المدرسة الساعة 10:00 صباحًا.",
+            workshop_title: "ورشة الأعمال اليدوية لعيد الميلاد",
+            workshop_date: "15 ديسمبر 2025",
+            workshop_desc: "تعال لإنشاء زينة عيد الميلاد بمواد معاد تدويرها. في المدرسة من الساعة 4:00 مساءً إلى 6:00 مساءً.",
+            party_title: "حفلة نهاية العام",
+            party_date: "20 ديسمبر 2025",
+            party_desc: "لنحتفل معًا بالعام مع الألعاب والموسيقى والوجبات الخفيفة لجميع العائلات. في فناء المدرسة الساعة 5:00 مساءً."
+        },
+        activities: {
+            title: "🎉 أنشطتنا",
+            creative_title: "ورش عمل إبداعية",
+            creative_desc: "الحرف اليدوية والرسم والفن لتطوير إبداع الفنانين الصغار.",
+            sports_title: "الرياضة والألعاب",
+            sports_desc: "أنشطة بدنية ورياضية للبقاء نشيطين وبصحة جيدة أثناء الاستمتاع.",
+            theater_title: "المسرح والموسيقى",
+            theater_desc: "تعبيرات فنية تطور الثقة ومهارات التواصل.",
+            reading_title: "نادي القراءة",
+            reading_desc: "تعزيز القراءة بالقصص والكتب المناسبة لكل عمر.",
+            excursions_title: "الرحلات",
+            excursions_desc: "رحلات تعليمية إلى المتاحف والمزارع المدرسية والمساحات الطبيعية.",
+            parties_title: "حفلات موضوعية",
+            parties_desc: "احتفالات خاصة على مدار العام: الكرنفال، سانت جوردي، نهاية العام الدراسي..."
+        },
+        blog: {
+            latest_title: "📝 آخر أخبار المدونة",
+            view_all: "عرض جميع المقالات ←",
+            read_more: "اقرأ المزيد ←",
+            back: "→ العودة إلى المدونة"
+        },
+        contact: {
+            title: "📮 اتصل بنا",
+            intro: "هل ترغب في التعاون مع جمعية أولياء الأمور؟ هل لديك أفكار لأنشطة جديدة؟ اكتب لنا! نحن دائمًا سعداء بتلقي الاقتراحات والعائلات الجديدة. 💌",
+            email_title: "البريد الإلكتروني",
+            school_title: "في المدرسة",
+            school_desc: "اسأل في المكتب عن جمعية أولياء الأمور!"
+        },
+        footer: {
+            subtitle: "جمعية أولياء أمور الطلاب",
+            tagline: "معاً من أجل أطفالنا ❤️",
+            links_title: "روابط",
+            follow_us: "تابعنا",
+            made_with_love: "صنع بالكثير من الحب",
+            ai_assistant: "وبمساعدة Claude Sonnet 4.5",
+            open_source: "كود مفتوح المصدر برخصة MIT",
+            free_to_use: "مجاني للاستخدام والتعديل"
+        }
+    },
+    ur: {
+        nav: {
+            about: "کون ہیں ہم",
+            activities: "سرگرمیاں",
+            blog: "بلاگ",
+            contact: "رابطہ"
+        },
+        hero: {
+            title: "والدین ایسوسی ایشن میں خوش آمدید!",
+            subtitle: "طلباء کے والدین کی ایسوسی ایشن",
+            description: "ہم خاندانوں کی ایک برادری ہیں جو اپنے بچوں کی تعلیم اور فلاح و بہبود کے لیے پرعزم ہیں۔ ہم مل کر سرگرمیاں، تقریبات اور منصوبے منظم کرتے ہیں جو برنات ڈیسکلوٹ کو ایک بہتر جگہ بناتے ہیں! 🌟",
+            btn_activities: "سرگرمیاں دیکھیں 🎉",
+            btn_blog: "بلاگ پڑھیں 📚"
+        },
+        about: {
+            title: "🌈 ہم کون ہیں؟",
+            united_families_title: "متحد خاندان",
+            united_families_desc: "ہم والدین ہیں جو اپنے بچوں کے تعلیمی تجربے کو بہتر بنانے کے لیے مل کر کام کرتے ہیں۔",
+            clear_goals_title: "واضح اہداف",
+            clear_goals_desc: "شرکت کو فروغ دینا، سرگرمیوں کا اہتمام کرنا اور طلباء کی فلاح و بہبود کے لیے برنات ڈیسکلوٹ کے ساتھ تعاون کرنا۔",
+            commitment_title: "عزم",
+            commitment_desc: "ہم معیاری تعلیم اور مثبت اور فائدہ مند اسکول ماحول کے لیے پرعزم ہیں۔"
+        },
+        events: {
+            title: "📅 آنے والے واقعات",
+            no_events: "ہم جلد ہی آنے والے واقعات اور سرگرمیاں شائع کریں گے!",
+            november: "نومبر",
+            december: "دسمبر",
+            date_label: "تاریخ:",
+            theater_title: "تھیٹر کا دورہ",
+            theater_date: "25 نومبر، 2025",
+            theater_desc: "ہم کیٹالونیا کے نیشنل تھیٹر میں \"چھوٹا شہزادہ\" ڈرامہ دیکھیں گے۔ اسکول سے صبح 10:00 بجے روانگی۔",
+            workshop_title: "کرسمس کرافٹ ورکشاپ",
+            workshop_date: "15 دسمبر، 2025",
+            workshop_desc: "ری سائیکل شدہ مواد سے کرسمس کی سجاوٹ بنائیں۔ اسکول میں شام 4:00 سے 6:00 بجے تک۔",
+            party_title: "سال کے اختتام کی تقریب",
+            party_date: "20 دسمبر، 2025",
+            party_desc: "آئیے کھیلوں، موسیقی اور تمام خاندانوں کے لیے ناشتے کے ساتھ سال کا جشن منائیں۔ اسکول کے صحن میں شام 5:00 بجے۔"
+        },
+        activities: {
+            title: "🎉 ہماری سرگرمیاں",
+            creative_title: "تخلیقی ورکشاپس",
+            creative_desc: "نوجوان فنکاروں کی تخلیقی صلاحیتوں کو فروغ دینے کے لیے دستکاری، پینٹنگ اور فن۔",
+            sports_title: "کھیل اور گیمز",
+            sports_desc: "لطف اندوز ہوتے ہوئے فعال اور صحت مند رہنے کے لیے جسمانی اور کھیلوں کی سرگرمیاں۔",
+            theater_title: "تھیٹر اور موسیقی",
+            theater_desc: "فنی اظہار جو اعتماد اور رابطے کی مہارتوں کو فروغ دیتے ہیں۔",
+            reading_title: "ریڈنگ کلب",
+            reading_desc: "ہر عمر کے مطابق کہانیوں اور کتابوں کے ساتھ پڑھنے کو فروغ دینا۔",
+            excursions_title: "سیر",
+            excursions_desc: "عجائب گھروں، اسکول فارموں اور قدرتی جگہوں کے تعلیمی دورے۔",
+            parties_title: "تھیمڈ پارٹیز",
+            parties_desc: "سال بھر خاص تقریبات: کارنیول، سانٹ جوردی، سال کا اختتام..."
+        },
+        blog: {
+            latest_title: "📝 بلاگ کی تازہ ترین خبریں",
+            view_all: "تمام مضامین دیکھیں ←",
+            read_more: "مزید پڑھیں ←",
+            back: "→ بلاگ پر واپس"
+        },
+        contact: {
+            title: "📮 ہم سے رابطہ کریں",
+            intro: "کیا آپ والدین ایسوسی ایشن کے ساتھ تعاون کرنا چاہیں گے؟ کیا آپ کے پاس نئی سرگرمیوں کے لیے خیالات ہیں؟ ہمیں لکھیں! ہم ہمیشہ تجاویز اور نئے خاندانوں کو حاصل کرنے سے خوش ہوتے ہیں۔ 💌",
+            email_title: "ای میل",
+            school_title: "اسکول میں",
+            school_desc: "دفتر میں والدین ایسوسی ایشن کے بارے میں پوچھیں!"
+        },
+        footer: {
+            subtitle: "طلباء کے والدین کی ایسوسی ایشن",
+            tagline: "ہمارے بچوں کے لیے مل کر ❤️",
+            links_title: "لنکس",
+            follow_us: "ہمیں فالو کریں",
+            made_with_love: "بہت محبت سے بنایا گیا",
+            ai_assistant: "اور Claude Sonnet 4.5 کی مدد سے",
+            open_source: "MIT لائسنس کے ساتھ اوپن سورس کوڈ",
+            free_to_use: "استعمال اور ترمیم کے لیے مفت"
+        }
+    }
+};
+
+// ============================================
+// Language Management
+// ============================================
+let currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Update HTML lang and dir attributes
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr');
+    
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key, lang);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+    
+    // Update language button
+    updateLanguageButton(lang);
+    
+    // Update active state in dropdown
+    updateLanguageDropdown(lang);
+}
+
+function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    for (const k of keys) {
+        if (value && value[k]) {
+            value = value[k];
+        } else {
+            return translations.ca[keys[0]]?.[keys[1]] || key; // fallback to Catalan
+        }
+    }
+    return value;
+}
+
+function updateLanguageButton(lang) {
+    const langCodes = {
+        ca: 'CA',
+        es: 'ES',
+        en: 'EN',
+        ar: 'AR',
+        ur: 'UR'
+    };
+    
+    const codeElement = document.querySelector('.current-lang-code');
+    
+    if (codeElement) codeElement.textContent = langCodes[lang] || 'CA';
+}
+
+function updateLanguageDropdown(lang) {
+    document.querySelectorAll('.language-dropdown li').forEach(li => {
+        const liLang = li.getAttribute('data-lang');
+        if (liLang === lang) {
+            li.classList.add('active');
+        } else {
+            li.classList.remove('active');
+        }
+    });
+}
+
+// ============================================
 // Mobile menu toggle
+// ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -25,7 +491,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ============================================
 // Smooth scrolling for anchor links
+// ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -42,7 +510,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ============================================
 // Add animation on scroll
+// ============================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -81,120 +551,33 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             const isExpanded = languageBtn.getAttribute('aria-expanded') === 'true';
             languageBtn.setAttribute('aria-expanded', !isExpanded);
-            languageDropdown.classList.toggle('show');
         });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', function(event) {
             if (!languageBtn.contains(event.target) && !languageDropdown.contains(event.target)) {
                 languageBtn.setAttribute('aria-expanded', 'false');
-                languageDropdown.classList.remove('show');
             }
         });
         
         // Close dropdown on escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && languageDropdown.classList.contains('show')) {
+            if (e.key === 'Escape') {
                 languageBtn.setAttribute('aria-expanded', 'false');
-                languageDropdown.classList.remove('show');
                 languageBtn.focus();
             }
         });
         
-        // Store language preference when changed
-        const langLinks = languageDropdown.querySelectorAll('.lang-link');
-        langLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                const href = this.getAttribute('href');
-                // Extract language from URL
-                const langMatch = href.match(/\/([a-z]{2})\//);
-                const lang = langMatch ? langMatch[1] : 'ca'; // default to Catalan
-                localStorage.setItem('preferredLanguage', lang);
+        // Handle language selection
+        languageDropdown.querySelectorAll('li[data-lang]').forEach(li => {
+            li.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+                languageBtn.setAttribute('aria-expanded', 'false');
             });
         });
     }
-});
-
-// ============================================
-// Browser Language Detection
-// ============================================
-(function() {
-    // Only run on first visit or if no language preference is stored
-    const hasVisited = localStorage.getItem('hasVisitedBefore');
-    const preferredLang = localStorage.getItem('preferredLanguage');
     
-    if (!hasVisited && !preferredLang) {
-        // Mark that user has visited
-        localStorage.setItem('hasVisitedBefore', 'true');
-        
-        // Get browser language
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.split('-')[0].toLowerCase();
-        
-        // Supported languages
-        const supportedLangs = ['ca', 'en', 'es', 'ar', 'ur'];
-        
-        // Check if current page is already in user's preferred language
-        const currentPath = window.location.pathname;
-        const currentLang = getCurrentLanguageFromPath(currentPath);
-        
-        // If browser language is supported and different from current page
-        if (supportedLangs.includes(langCode) && langCode !== currentLang) {
-            // Store preference
-            localStorage.setItem('preferredLanguage', langCode);
-            
-            // Optionally redirect (commented out for less intrusive UX)
-            // redirectToLanguage(langCode);
-            
-            // Show a subtle notification instead (you can implement this)
-            // showLanguageNotification(langCode);
-        }
-    }
-    
-    function getCurrentLanguageFromPath(path) {
-        // Extract language from path like /en/, /es/, etc.
-        const match = path.match(/^\/([a-z]{2})\//);
-        return match ? match[1] : 'ca'; // default to Catalan
-    }
-    
-    function redirectToLanguage(lang) {
-        // Only redirect if not already on the correct language
-        const currentPath = window.location.pathname;
-        const currentLang = getCurrentLanguageFromPath(currentPath);
-        
-        if (currentLang !== lang) {
-            if (lang === 'ca') {
-                // Catalan is the default, redirect to root
-                window.location.href = '/';
-            } else {
-                // Other languages have their prefix
-                window.location.href = '/' + lang + '/';
-            }
-        }
-    }
-})();
-
-// ============================================
-// Persist Language Selection
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    // When user manually selects a language, it's already stored by the click handler above
-    // This just ensures the preference is respected on navigation
-    
-    const preferredLang = localStorage.getItem('preferredLanguage');
-    if (preferredLang) {
-        // Could add visual indication that this is user's preferred language
-        const currentPath = window.location.pathname;
-        const currentLang = getCurrentLanguageFromPath(currentPath);
-        
-        // Add a class to indicate this matches user preference
-        if (preferredLang === currentLang) {
-            document.body.classList.add('preferred-language');
-        }
-    }
-    
-    function getCurrentLanguageFromPath(path) {
-        const match = path.match(/^\/([a-z]{2})\//);
-        return match ? match[1] : 'ca';
-    }
+    // Initialize with saved language
+    setLanguage(currentLang);
 });
