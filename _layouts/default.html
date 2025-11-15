@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="{{ site.active_lang | default: site.lang }}" {% if site.active_lang == 'ar' or site.active_lang == 'ur' %}dir="rtl"{% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,12 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="{{ '/' | relative_url }}#qui-som">Qui som</a></li>
-                <li><a href="{{ '/' | relative_url }}#activitats">Activitats</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-                <li><a href="{{ '/' | relative_url }}#contacte">Contacte</a></li>
+                <li><a href="{{ '/' | relative_url }}#qui-som">{% include t.html key="nav.about" %}</a></li>
+                <li><a href="{{ '/' | relative_url }}#activitats">{% include t.html key="nav.activities" %}</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">{% include t.html key="nav.blog" %}</a></li>
+                <li><a href="{{ '/' | relative_url }}#contacte">{% include t.html key="nav.contact" %}</a></li>
             </ul>
+            {% include language-switcher.html %}
         </div>
     </nav>
 
@@ -41,20 +42,20 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>🎈 AFA Bernat Desclot</h3>
-                    <p>Associació de Famílies d'Alumnes</p>
-                    <p>Junts per als nostres fills ❤️</p>
+                    <p>{% include t.html key="hero.subtitle" %}</p>
+                    <p>{% include t.html key="footer.tagline" %}</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Enllaços</h4>
+                    <h4>{% include t.html key="footer.links" %}</h4>
                     <ul>
-                        <li><a href="{{ '/' | relative_url }}#qui-som">Qui som</a></li>
-                        <li><a href="{{ '/' | relative_url }}#activitats">Activitats</a></li>
-                        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-                        <li><a href="{{ '/' | relative_url }}#contacte">Contacte</a></li>
+                        <li><a href="{{ '/' | relative_url }}#qui-som">{% include t.html key="nav.about" %}</a></li>
+                        <li><a href="{{ '/' | relative_url }}#activitats">{% include t.html key="nav.activities" %}</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}">{% include t.html key="nav.blog" %}</a></li>
+                        <li><a href="{{ '/' | relative_url }}#contacte">{% include t.html key="nav.contact" %}</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Segueix-nos</h4>
+                    <h4>{% include t.html key="footer.follow" %}</h4>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100080273986818" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <img src="{{ '/assets/images/facebook.png' | relative_url }}" alt="Facebook" class="social-icon">
@@ -72,11 +73,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>{{ 'now' | date: "%Y" }} AFA Bernat Desclot · Fet amb molt amor 💚</p>
+                <p>{{ 'now' | date: "%Y" }} {% include t.html key="footer.copyright" %}</p>
                 <p class="opensource-note">
                     <a href="https://github.com/asensionacher/asensionacher.github.io" target="_blank" rel="noopener noreferrer">
-                        Codi font obert amb llicència MIT
-                    </a> · Lliure per usar i modificar
+                        {% include t.html key="footer.opensource" %}
+                    </a> · {% include t.html key="footer.opensource_text" %}
                 </p>
             </div>
         </div>

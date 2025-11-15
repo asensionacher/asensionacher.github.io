@@ -1,0 +1,48 @@
+<div class="language-switcher">
+    <button class="language-btn" aria-label="Language" aria-haspopup="true" aria-expanded="false">
+        <span class="current-lang">{{ site.active_lang | default: "CA" | upcase }}</span>
+        <span class="lang-arrow">▼</span>
+    </button>
+    <ul class="language-dropdown" role="menu">
+        {% for lang in site.languages %}
+            {% if lang == site.active_lang %}
+                <li role="menuitem" class="active">
+                    <span class="lang-flag">
+                        {% if lang == 'ca' %}🇪🇸{% endif %}
+                        {% if lang == 'en' %}🇬🇧{% endif %}
+                        {% if lang == 'es' %}🇪🇸{% endif %}
+                        {% if lang == 'ar' %}🇸🇦{% endif %}
+                        {% if lang == 'ur' %}🇵🇰{% endif %}
+                    </span>
+                    <span class="lang-name">
+                        {% if lang == 'ca' %}Català{% endif %}
+                        {% if lang == 'en' %}English{% endif %}
+                        {% if lang == 'es' %}Español{% endif %}
+                        {% if lang == 'ar' %}العربية{% endif %}
+                        {% if lang == 'ur' %}اردو{% endif %}
+                    </span>
+                    <span class="check-mark">✓</span>
+                </li>
+            {% else %}
+                <li role="menuitem">
+                    <a href="{% if lang == site.default_lang %}/{% else %}/{{ lang }}/{% endif %}" class="lang-link">
+                        <span class="lang-flag">
+                            {% if lang == 'ca' %}🇪🇸{% endif %}
+                            {% if lang == 'en' %}🇬🇧{% endif %}
+                            {% if lang == 'es' %}🇪🇸{% endif %}
+                            {% if lang == 'ar' %}🇸🇦{% endif %}
+                            {% if lang == 'ur' %}🇵🇰{% endif %}
+                        </span>
+                        <span class="lang-name">
+                            {% if lang == 'ca' %}Català{% endif %}
+                            {% if lang == 'en' %}English{% endif %}
+                            {% if lang == 'es' %}Español{% endif %}
+                            {% if lang == 'ar' %}العربية{% endif %}
+                            {% if lang == 'ur' %}اردو{% endif %}
+                        </span>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

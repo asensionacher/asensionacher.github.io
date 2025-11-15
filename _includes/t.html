@@ -1,0 +1,16 @@
+{% comment %}
+  Translation helper - Usage: {% include t.html key="nav.about" %}
+  Looks up translation in site.data.translations based on current language
+{% endcomment %}
+{% assign keys = include.key | split: "." %}
+{% assign value = site.data.translations %}
+{% for key in keys %}
+  {% assign value = value[key] %}
+{% endfor %}
+{% if value[site.active_lang] %}
+  {{ value[site.active_lang] }}
+{% elsif value["ca"] %}
+  {{ value["ca"] }}
+{% else %}
+  {{ include.default | default: include.key }}
+{% endif %}

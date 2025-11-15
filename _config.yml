@@ -20,6 +20,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-polyglot
+
+# Multi-language configuration
+languages: ["ca", "en", "es", "ar", "ur"]
+default_lang: "ca"
+exclude_from_localization: ["assets", "vendor", "blog"]
+parallel_localization: false
 
 # Col·leccions
 collections:
