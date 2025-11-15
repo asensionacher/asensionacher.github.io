@@ -6,8 +6,8 @@ description: Notícies, activitats i esdeveniments de l'AFA
 
 <div class="page-header">
     <div class="container">
-        <h1>📝 Blog de l'AFA</h1>
-        <p class="page-subtitle">Notícies, activitats i esdeveniments</p>
+        <h1>{% include t.html key="blog.page_title" %}</h1>
+        <p class="page-subtitle">{% include t.html key="blog.page_subtitle" %}</p>
     </div>
 </div>
 
@@ -32,14 +32,14 @@ description: Notícies, activitats i esdeveniments de l'AFA
                 <p class="blog-card-excerpt">
                     {{ post.description | default: post.excerpt | strip_html | truncate: 150 }}
                 </p>
-                <a href="{{ post.url | relative_url }}" class="read-more">Llegir més →</a>
+                <a href="{{ post.url | relative_url }}" class="read-more">{% include t.html key="blog.read_more" %}</a>
             </article>
             {% endfor %}
         </div>
 
         {% if site.posts.size == 0 %}
         <div class="no-posts">
-            <p>🎈 Aviat publicarem notícies i activitats!</p>
+            <p>{% include t.html key="blog.no_posts" %}</p>
         </div>
         {% endif %}
     </div>

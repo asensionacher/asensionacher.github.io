@@ -809,3 +809,247 @@ img {
         text-align: center;
     }
 }
+
+/* ============================================
+   Language Switcher
+   ============================================ */
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.language-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.language-btn:hover {
+    background: var(--color-secondary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.current-lang {
+    font-weight: 700;
+}
+
+.lang-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.language-btn[aria-expanded="true"] .lang-arrow {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    min-width: 200px;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown li {
+    padding: 0;
+    margin: 0;
+}
+
+.language-dropdown li.active {
+    background: var(--color-bg);
+}
+
+.language-dropdown a,
+.language-dropdown span {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.language-dropdown a:hover {
+    background: var(--color-bg);
+    color: var(--color-primary);
+}
+
+.lang-flag {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.lang-name {
+    flex: 1;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.check-mark {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+/* ============================================
+   RTL Support for Arabic and Urdu
+   ============================================ */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .navbar .container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .logo {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-switcher {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .language-dropdown {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .hero .container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-buttons {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .about-grid,
+[dir="rtl"] .activities-grid,
+[dir="rtl"] .blog-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-content {
+    direction: rtl;
+}
+
+[dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-methods {
+    direction: rtl;
+}
+
+/* RTL Typography fixes */
+[dir="rtl"] body {
+    font-family: var(--font-secondary), 'Noto Sans Arabic', 'Noto Nastaliq Urdu', sans-serif;
+}
+
+/* Ensure emojis and icons remain LTR */
+[dir="rtl"] .wave,
+[dir="rtl"] .floating-emoji,
+[dir="rtl"] .card-icon,
+[dir="rtl"] .activity-icon,
+[dir="rtl"] .contact-icon {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* Fix arrow directions in RTL */
+[dir="rtl"] .read-more::after,
+[dir="rtl"] .view-all::after {
+    content: '←';
+}
+
+[dir="rtl"] .back-link::before {
+    content: '→';
+}
+
+/* Mobile RTL fixes */
+@media (max-width: 768px) {
+    [dir="rtl"] .navbar .container {
+        flex-direction: row-reverse;
+    }
+    
+    [dir="rtl"] .menu-toggle {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    [dir="rtl"] .language-switcher {
+        margin-right: 0.5rem;
+    }
+}
+
+/* ============================================
+   Font Loading for Arabic and Urdu
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap');
+
+/* Apply specific fonts for Arabic and Urdu */
+html[lang="ar"] body,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+    font-family: 'Noto Sans Arabic', var(--font-secondary), sans-serif;
+}
+
+html[lang="ur"] body,
+html[lang="ur"] h1,
+html[lang="ur"] h2,
+html[lang="ur"] h3,
+html[lang="ur"] h4,
+html[lang="ur"] h5,
+html[lang="ur"] h6 {
+    font-family: 'Noto Nastaliq Urdu', var(--font-secondary), sans-serif;
+}
+
+/* Adjust line-height for better readability in RTL languages */
+html[lang="ar"] body,
+html[lang="ur"] body {
+    line-height: 1.8;
+}
+
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3,
+html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3 {
+    line-height: 1.4;
+}

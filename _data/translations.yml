@@ -1,0 +1,350 @@
+# Translations for the AFA Bernat Desclot website
+# Languages: Catalan (ca), English (en), Spanish (es), Arabic (ar), Urdu (ur)
+
+# Navigation
+nav:
+  home:
+    ca: "Inici"
+    en: "Home"
+    es: "Inicio"
+    ar: "الرئيسية"
+    ur: "ہوم"
+  about:
+    ca: "Qui som"
+    en: "About Us"
+    es: "Quiénes somos"
+    ar: "من نحن"
+    ur: "کون ہیں ہم"
+  activities:
+    ca: "Activitats"
+    en: "Activities"
+    es: "Actividades"
+    ar: "الأنشطة"
+    ur: "سرگرمیاں"
+  blog:
+    ca: "Blog"
+    en: "Blog"
+    es: "Blog"
+    ar: "المدونة"
+    ur: "بلاگ"
+  contact:
+    ca: "Contacte"
+    en: "Contact"
+    es: "Contacto"
+    ar: "اتصل بنا"
+    ur: "رابطہ"
+
+# Hero section
+hero:
+  title:
+    ca: "Benvinguts a l'AFA!"
+    en: "Welcome to the PTA!"
+    es: "¡Bienvenidos a la AMPA!"
+    ar: "مرحبًا بكم في جمعية أولياء الأمور!"
+    ur: "والدین ایسوسی ایشن میں خوش آمدید!"
+  subtitle:
+    ca: "Associació de Famílies d'Alumnes"
+    en: "Parent-Teacher Association"
+    es: "Asociación de Familias de Alumnos"
+    ar: "جمعية أولياء أمور الطلاب"
+    ur: "طلباء کے والدین کی ایسوسی ایشن"
+  description:
+    ca: "Som una comunitat de famílies compromeses amb l'educació i el benestar dels nostres fills. Junts organitzem activitats, esdeveniments i projectes que fan del Bernat Desclot un lloc millor! 🌟"
+    en: "We are a community of families committed to the education and well-being of our children. Together we organize activities, events and projects that make Bernat Desclot a better place! 🌟"
+    es: "Somos una comunidad de familias comprometidas con la educación y el bienestar de nuestros hijos. ¡Juntos organizamos actividades, eventos y proyectos que hacen de Bernat Desclot un lugar mejor! 🌟"
+    ar: "نحن مجتمع من العائلات الملتزمة بتعليم ورفاهية أطفالنا. معًا ننظم الأنشطة والفعاليات والمشاريع التي تجعل مدرسة بيرنات ديسكلوت مكانًا أفضل! 🌟"
+    ur: "ہم خاندانوں کی ایک برادری ہیں جو اپنے بچوں کی تعلیم اور فلاح و بہبود کے لیے پرعزم ہیں۔ ہم مل کر سرگرمیاں، تقریبات اور منصوبے منظم کرتے ہیں جو برنات ڈیسکلوٹ کو ایک بہتر جگہ بناتے ہیں! 🌟"
+  btn_activities:
+    ca: "Veure Activitats 🎉"
+    en: "See Activities 🎉"
+    es: "Ver Actividades 🎉"
+    ar: "شاهد الأنشطة 🎉"
+    ur: "سرگرمیاں دیکھیں 🎉"
+  btn_blog:
+    ca: "Llegir Blog 📚"
+    en: "Read Blog 📚"
+    es: "Leer Blog 📚"
+    ar: "اقرأ المدونة 📚"
+    ur: "بلاگ پڑھیں 📚"
+
+# About section
+about:
+  title:
+    ca: "🌈 Qui Som?"
+    en: "🌈 Who Are We?"
+    es: "🌈 ¿Quiénes Somos?"
+    ar: "🌈 من نحن؟"
+    ur: "🌈 ہم کون ہیں؟"
+  united_families:
+    title:
+      ca: "Famílies Unides"
+      en: "United Families"
+      es: "Familias Unidas"
+      ar: "عائلات متحدة"
+      ur: "متحدہ خاندان"
+    description:
+      ca: "Som pares i mares que treballem junts per millorar l'experiència educativa dels nostres fills."
+      en: "We are parents who work together to improve our children's educational experience."
+      es: "Somos padres y madres que trabajamos juntos para mejorar la experiencia educativa de nuestros hijos."
+      ar: "نحن آباء وأمهات نعمل معًا لتحسين التجربة التعليمية لأطفالنا."
+      ur: "ہم والدین ہیں جو اپنے بچوں کے تعلیمی تجربے کو بہتر بنانے کے لیے مل کر کام کرتے ہیں۔"
+  clear_goals:
+    title:
+      ca: "Objectius Clars"
+      en: "Clear Goals"
+      es: "Objetivos Claros"
+      ar: "أهداف واضحة"
+      ur: "واضح مقاصد"
+    description:
+      ca: "Fomentar la participació, organitzar activitats i col·laborar amb el Bernat Desclot per al benestar dels alumnes."
+      en: "Promote participation, organize activities and collaborate with Bernat Desclot for the well-being of students."
+      es: "Fomentar la participación, organizar actividades y colaborar con Bernat Desclot para el bienestar de los alumnos."
+      ar: "تعزيز المشاركة وتنظيم الأنشطة والتعاون مع مدرسة بيرنات ديسكلوت من أجل رفاهية الطلاب."
+      ur: "شرکت کو فروغ دینا، سرگرمیاں منظم کرنا اور طلباء کی فلاح کے لیے برنات ڈیسکلوٹ کے ساتھ تعاون کرنا۔"
+  commitment:
+    title:
+      ca: "Compromís"
+      en: "Commitment"
+      es: "Compromiso"
+      ar: "التزام"
+      ur: "عزم"
+    description:
+      ca: "Estem compromesos amb l'educació de qualitat i un ambient escolar positiu i enriquidor."
+      en: "We are committed to quality education and a positive and enriching school environment."
+      es: "Estamos comprometidos con la educación de calidad y un ambiente escolar positivo y enriquecedor."
+      ar: "نحن ملتزمون بالتعليم الجيد وبيئة مدرسية إيجابية ومثرية."
+      ur: "ہم معیاری تعلیم اور مثبت اور بھرپور اسکولی ماحول کے لیے پرعزم ہیں۔"
+
+# Activities section
+activities:
+  title:
+    ca: "🎉 Les Nostres Activitats"
+    en: "🎉 Our Activities"
+    es: "🎉 Nuestras Actividades"
+    ar: "🎉 أنشطتنا"
+    ur: "🎉 ہماری سرگرمیاں"
+  creative_workshops:
+    title:
+      ca: "Tallers Creatius"
+      en: "Creative Workshops"
+      es: "Talleres Creativos"
+      ar: "ورش عمل إبداعية"
+      ur: "تخلیقی ورکشاپس"
+    description:
+      ca: "Manualitats, pintura i art per desenvolupar la creativitat dels petits artistes."
+      en: "Crafts, painting and art to develop the creativity of little artists."
+      es: "Manualidades, pintura y arte para desarrollar la creatividad de los pequeños artistas."
+      ar: "الحرف اليدوية والرسم والفن لتطوير إبداع الفنانين الصغار."
+      ur: "چھوٹے فنکاروں کی تخلیقی صلاحیت کو فروغ دینے کے لیے دستکاری، پینٹنگ اور آرٹ۔"
+  sports:
+    title:
+      ca: "Esports i Jocs"
+      en: "Sports and Games"
+      es: "Deportes y Juegos"
+      ar: "الرياضة والألعاب"
+      ur: "کھیل اور کھیل"
+    description:
+      ca: "Activitats físiques i esportives per mantenir-se actius i saludables mentre es diverteixen."
+      en: "Physical and sports activities to stay active and healthy while having fun."
+      es: "Actividades físicas y deportivas para mantenerse activos y saludables mientras se divierten."
+      ar: "الأنشطة البدنية والرياضية للبقاء نشيطًا وصحيًا أثناء المرح."
+      ur: "تفریح کرتے ہوئے فعال اور صحت مند رہنے کے لیے جسمانی اور کھیلوں کی سرگرمیاں۔"
+  theater:
+    title:
+      ca: "Teatre i Música"
+      en: "Theater and Music"
+      es: "Teatro y Música"
+      ar: "المسرح والموسيقى"
+      ur: "تھیٹر اور موسیقی"
+    description:
+      ca: "Expressions artístiques que desenvolupen la confiança i habilitats comunicatives."
+      en: "Artistic expressions that develop confidence and communication skills."
+      es: "Expresiones artísticas que desarrollan la confianza y habilidades comunicativas."
+      ar: "التعبيرات الفنية التي تطور الثقة ومهارات التواصل."
+      ur: "فنکارانہ اظہار جو اعتماد اور مواصلاتی مہارتوں کو فروغ دیتے ہیں۔"
+  reading_club:
+    title:
+      ca: "Club de Lectura"
+      en: "Reading Club"
+      es: "Club de Lectura"
+      ar: "نادي القراءة"
+      ur: "ریڈنگ کلب"
+    description:
+      ca: "Foment de la lectura amb contes i llibres adaptats a cada edat."
+      en: "Promoting reading with stories and books adapted to each age."
+      es: "Fomento de la lectura con cuentos y libros adaptados a cada edad."
+      ar: "تعزيز القراءة بالقصص والكتب المناسبة لكل عمر."
+      ur: "ہر عمر کے لیے موزوں کہانیوں اور کتابوں کے ساتھ پڑھنے کو فروغ دینا۔"
+  excursions:
+    title:
+      ca: "Excursions"
+      en: "Excursions"
+      es: "Excursiones"
+      ar: "رحلات"
+      ur: "سیر و تفریح"
+    description:
+      ca: "Sortides educatives a museus, granges escola i espais naturals."
+      en: "Educational trips to museums, school farms and natural spaces."
+      es: "Salidas educativas a museos, granjas escuela y espacios naturales."
+      ar: "رحلات تعليمية إلى المتاحف والمزارع المدرسية والمساحات الطبيعية."
+      ur: "عجائب گھروں، اسکول فارموں اور قدرتی جگہوں کے تعلیمی دورے۔"
+  themed_parties:
+    title:
+      ca: "Festes Temàtiques"
+      en: "Themed Parties"
+      es: "Fiestas Temáticas"
+      ar: "حفلات موضوعية"
+      ur: "تھیمڈ پارٹیاں"
+    description:
+      ca: "Celebracions especials durant l'any: Carnestoltes, Sant Jordi, Final de curs..."
+      en: "Special celebrations during the year: Carnival, Sant Jordi, End of year..."
+      es: "Celebraciones especiales durante el año: Carnaval, Sant Jordi, Fin de curso..."
+      ar: "احتفالات خاصة خلال العام: الكرنفال، سانت جوردي، نهاية العام..."
+      ur: "سال کے دوران خاص تقریبات: کارنیول، سانت جورڈی، سال کا اختتام..."
+
+# Blog section
+blog:
+  title:
+    ca: "📝 Últimes Notícies del Blog"
+    en: "📝 Latest Blog News"
+    es: "📝 Últimas Noticias del Blog"
+    ar: "📝 آخر أخبار المدونة"
+    ur: "📝 بلاگ کی تازہ ترین خبریں"
+  view_all:
+    ca: "Veure tots els articles →"
+    en: "View all articles →"
+    es: "Ver todos los artículos →"
+    ar: "عرض جميع المقالات ←"
+    ur: "تمام مضامین دیکھیں ←"
+  read_more:
+    ca: "Llegir més →"
+    en: "Read more →"
+    es: "Leer más →"
+    ar: "اقرأ المزيد ←"
+    ur: "مزید پڑھیں ←"
+  back_to_blog:
+    ca: "← Torna al blog"
+    en: "← Back to blog"
+    es: "← Volver al blog"
+    ar: "→ العودة إلى المدونة"
+    ur: "→ بلاگ پر واپس"
+  page_title:
+    ca: "📝 Blog de l'AFA"
+    en: "📝 PTA Blog"
+    es: "📝 Blog de la AMPA"
+    ar: "📝 مدونة جمعية أولياء الأمور"
+    ur: "📝 والدین ایسوسی ایشن کا بلاگ"
+  page_subtitle:
+    ca: "Notícies, activitats i esdeveniments"
+    en: "News, activities and events"
+    es: "Noticias, actividades y eventos"
+    ar: "الأخبار والأنشطة والفعاليات"
+    ur: "خبریں، سرگرمیاں اور واقعات"
+  no_posts:
+    ca: "🎈 Aviat publicarem notícies i activitats!"
+    en: "🎈 We will publish news and activities soon!"
+    es: "🎈 ¡Pronto publicaremos noticias y actividades!"
+    ar: "🎈 سننشر الأخبار والأنشطة قريبًا!"
+    ur: "🎈 ہم جلد ہی خبریں اور سرگرمیاں شائع کریں گے!"
+
+# Contact section
+contact:
+  title:
+    ca: "📮 Contacta amb Nosaltres"
+    en: "📮 Contact Us"
+    es: "📮 Contáctanos"
+    ar: "📮 اتصل بنا"
+    ur: "📮 ہم سے رابطہ کریں"
+  intro:
+    ca: "T'agradaria col·laborar amb l'AFA? Tens idees per a noves activitats? Escriu-nos! Sempre estem contents de rebre suggeriments i noves famílies. 💌"
+    en: "Would you like to collaborate with the PTA? Do you have ideas for new activities? Write to us! We are always happy to receive suggestions and new families. 💌"
+    es: "¿Te gustaría colaborar con la AMPA? ¿Tienes ideas para nuevas actividades? ¡Escríbenos! Siempre estamos contentos de recibir sugerencias y nuevas familias. 💌"
+    ar: "هل ترغب في التعاون مع جمعية أولياء الأمور؟ هل لديك أفكار لأنشطة جديدة؟ اكتب لنا! نحن دائمًا سعداء بتلقي الاقتراحات والعائلات الجديدة. 💌"
+    ur: "کیا آپ والدین ایسوسی ایشن کے ساتھ تعاون کرنا چاہتے ہیں؟ کیا آپ کے پاس نئی سرگرمیوں کے لیے خیالات ہیں؟ ہمیں لکھیں! ہم ہمیشہ تجاویز اور نئے خاندانوں کا استقبال کرتے ہیں۔ 💌"
+  email:
+    ca: "Email"
+    en: "Email"
+    es: "Correo"
+    ar: "البريد الإلكتروني"
+    ur: "ای میل"
+  social:
+    ca: "Xarxes Socials"
+    en: "Social Media"
+    es: "Redes Sociales"
+    ar: "وسائل التواصل الاجتماعي"
+    ur: "سوشل میڈیا"
+  school:
+    ca: "A l'Escola"
+    en: "At School"
+    es: "En la Escuela"
+    ar: "في المدرسة"
+    ur: "اسکول میں"
+  school_text:
+    ca: "Pregunta al despatx per l'AFA!"
+    en: "Ask at the office for the PTA!"
+    es: "¡Pregunta en la oficina por la AMPA!"
+    ar: "اسأل في المكتب عن جمعية أولياء الأمور!"
+    ur: "والدین ایسوسی ایشن کے لیے دفتر میں پوچھیں!"
+
+# Footer
+footer:
+  tagline:
+    ca: "Junts per als nostres fills ❤️"
+    en: "Together for our children ❤️"
+    es: "Juntos por nuestros hijos ❤️"
+    ar: "معًا من أجل أطفالنا ❤️"
+    ur: "ہمارے بچوں کے لیے مل کر ❤️"
+  links:
+    ca: "Enllaços"
+    en: "Links"
+    es: "Enlaces"
+    ar: "الروابط"
+    ur: "لنکس"
+  follow:
+    ca: "Segueix-nos"
+    en: "Follow us"
+    es: "Síguenos"
+    ar: "تابعنا"
+    ur: "ہمیں فالو کریں"
+  copyright:
+    ca: "AFA Bernat Desclot · Fet amb molt amor 💚"
+    en: "PTA Bernat Desclot · Made with love 💚"
+    es: "AMPA Bernat Desclot · Hecho con amor 💚"
+    ar: "جمعية بيرنات ديسكلوت · صُنع بحب 💚"
+    ur: "برنات ڈیسکلوٹ ایسوسی ایشن · محبت سے بنایا گیا 💚"
+  opensource:
+    ca: "Codi font obert amb llicència MIT"
+    en: "Open source code with MIT license"
+    es: "Código fuente abierto con licencia MIT"
+    ar: "كود مفتوح المصدر مع ترخيص MIT"
+    ur: "MIT لائسنس کے ساتھ اوپن سورس کوڈ"
+  opensource_text:
+    ca: "Lliure per usar i modificar"
+    en: "Free to use and modify"
+    es: "Libre de usar y modificar"
+    ar: "مجاني للاستخدام والتعديل"
+    ur: "استعمال اور ترمیم کے لیے مفت"
+
+# Language switcher
+language_switcher:
+  label:
+    ca: "Idioma"
+    en: "Language"
+    es: "Idioma"
+    ar: "اللغة"
+    ur: "زبان"
+  current:
+    ca: "Català"
+    en: "English"
+    es: "Español"
+    ar: "العربية"
+    ur: "اردو"
+
+# Date formats
+date:
+  format:
+    ca: "%d/%m/%Y"
+    en: "%m/%d/%Y"
+    es: "%d/%m/%Y"
+    ar: "%d/%m/%Y"
+    ur: "%d/%m/%Y"
