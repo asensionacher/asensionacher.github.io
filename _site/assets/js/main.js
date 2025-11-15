@@ -57,10 +57,13 @@ const translations = {
             parties_desc: "Celebracions especials durant l'any: Carnestoltes, Sant Jordi, Final de curs..."
         },
         blog: {
+            page_title: "Blog",
+            page_subtitle: "Notícies, activitats i esdeveniments de l'AFA",
             latest_title: "📝 Últimes Notícies del Blog",
             view_all: "Veure tots els articles →",
             read_more: "Llegir més →",
-            back: "← Torna al blog"
+            back: "← Torna al blog",
+            no_posts: "Encara no hi ha articles al blog."
         },
         contact: {
             title: "📮 Contacta amb Nosaltres",
@@ -135,10 +138,13 @@ const translations = {
             parties_desc: "Celebraciones especiales durante el año: Carnaval, Sant Jordi, Fin de curso..."
         },
         blog: {
-            latest_title: "📝 Últimas Noticias del Blog",
+            page_title: "Blog",
+            page_subtitle: "Notícias, actividades y eventos de la AFA",
+            latest_title: "📝 Últimas Notícias del Blog",
             view_all: "Ver todos los artículos →",
             read_more: "Leer más →",
-            back: "← Volver al blog"
+            back: "← Volver al blog",
+            no_posts: "Todavía no hay artículos en el blog."
         },
         contact: {
             title: "📮 Contáctanos",
@@ -213,10 +219,13 @@ const translations = {
             parties_desc: "Special celebrations throughout the year: Carnival, Sant Jordi, End of school..."
         },
         blog: {
+            page_title: "Blog",
+            page_subtitle: "News, activities and events from the PTA",
             latest_title: "📝 Latest Blog News",
             view_all: "View all articles →",
             read_more: "Read more →",
-            back: "← Back to blog"
+            back: "← Back to blog",
+            no_posts: "There are no articles in the blog yet."
         },
         contact: {
             title: "📮 Contact Us",
@@ -291,10 +300,13 @@ const translations = {
             parties_desc: "احتفالات خاصة على مدار العام: الكرنفال، سانت جوردي، نهاية العام الدراسي..."
         },
         blog: {
+            page_title: "المدونة",
+            page_subtitle: "الأخبار والأنشطة والفعاليات من جمعية أولياء الأمور",
             latest_title: "📝 آخر أخبار المدونة",
             view_all: "عرض جميع المقالات ←",
             read_more: "اقرأ المزيد ←",
-            back: "→ العودة إلى المدونة"
+            back: "→ العودة إلى المدونة",
+            no_posts: "لا توجد مقالات في المدونة بعد."
         },
         contact: {
             title: "📮 اتصل بنا",
@@ -369,10 +381,13 @@ const translations = {
             parties_desc: "سال بھر خاص تقریبات: کارنیول، سانٹ جوردی، سال کا اختتام..."
         },
         blog: {
+            page_title: "بلاگ",
+            page_subtitle: "والدین ایسوسی ایشن کی خبریں، سرگرمیاں اور تقریبات",
             latest_title: "📝 بلاگ کی تازہ ترین خبریں",
             view_all: "تمام مضامین دیکھیں ←",
             read_more: "مزید پڑھیں ←",
-            back: "→ بلاگ پر واپس"
+            back: "→ بلاگ پر واپس",
+            no_posts: "ابھی بلاگ میں کوئی مضامین نہیں ہیں۔"
         },
         contact: {
             title: "📮 ہم سے رابطہ کریں",
@@ -397,9 +412,28 @@ const translations = {
 // ============================================
 // Language Management
 // ============================================
-let currentLang = localStorage.getItem('preferredLanguage') || 'ca';
 
-function setLanguage(lang) {
+// Function to detect browser language
+function getBrowserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const langCode = browserLang.toLowerCase().split('-')[0]; // Get just the language code (e.g., 'es' from 'es-ES')
+    
+    // Map browser language to our supported languages
+    const supportedLangs = ['ca', 'es', 'en', 'ar', 'ur'];
+    
+    // If browser language is directly supported, use it
+    if (supportedLangs.includes(langCode)) {
+        return langCode;
+    }
+    
+    // Default to Catalan
+    return 'ca';
+}
+
+// Initialize language: use saved preference, or detect from browser, or default to Catalan
+let currentLang = localStorage.getItem('preferredLanguage') || getBrowserLanguage();
+
+window.setLanguage = function(lang) {
     currentLang = lang;
     localStorage.setItem('preferredLanguage', lang);
     
@@ -422,7 +456,12 @@ function setLanguage(lang) {
     
     // Update active state in dropdown
     updateLanguageDropdown(lang);
-}
+    
+    // Call post translations update if available (for blog page)
+    if (typeof window.updatePostTranslations === 'function') {
+        window.updatePostTranslations(lang);
+    }
+};
 
 function getTranslation(key, lang) {
     const keys = key.split('.');

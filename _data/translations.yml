@@ -207,7 +207,7 @@ blog:
   title:
     ca: "📝 Últimes Notícies del Blog"
     en: "📝 Latest Blog News"
-    es: "📝 Últimas Noticias del Blog"
+    es: "📝 Últimas Notícias del Blog"
     ar: "📝 آخر أخبار المدونة"
     ur: "📝 بلاگ کی تازہ ترین خبریں"
   view_all:
@@ -237,13 +237,13 @@ blog:
   page_subtitle:
     ca: "Notícies, activitats i esdeveniments"
     en: "News, activities and events"
-    es: "Noticias, actividades y eventos"
+    es: "Notícias, actividades y eventos"
     ar: "الأخبار والأنشطة والفعاليات"
     ur: "خبریں، سرگرمیاں اور واقعات"
   no_posts:
     ca: "🎈 Aviat publicarem notícies i activitats!"
     en: "🎈 We will publish news and activities soon!"
-    es: "🎈 ¡Pronto publicaremos noticias y actividades!"
+    es: "🎈 ¡Pronto publicaremos notícias y actividades!"
     ar: "🎈 سننشر الأخبار والأنشطة قريبًا!"
     ur: "🎈 ہم جلد ہی خبریں اور سرگرمیاں شائع کریں گے!"
 

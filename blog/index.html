@@ -6,8 +6,8 @@ description: Notícies, activitats i esdeveniments de l'AFA
 
 <div class="page-header">
     <div class="container">
-        <h1>{% include t.html key="blog.page_title" %}</h1>
-        <p class="page-subtitle">{% include t.html key="blog.page_subtitle" %}</p>
+        <h1 data-i18n="blog.page_title">Blog</h1>
+        <p class="page-subtitle" data-i18n="blog.page_subtitle">Notícies, activitats i esdeveniments de l'AFA</p>
     </div>
 </div>
 
@@ -15,7 +15,7 @@ description: Notícies, activitats i esdeveniments de l'AFA
     <div class="container">
         <div class="blog-grid">
             {% for post in site.posts %}
-            <article class="blog-card">
+            <article class="blog-card" data-post-id="{{ post.id | slugify }}">
                 <div class="blog-card-header">
                     <span class="blog-date">📅 {{ post.date | date: "%d/%m/%Y" }}</span>
                     {% if post.tags %}
@@ -27,20 +27,65 @@ description: Notícies, activitats i esdeveniments de l'AFA
                     {% endif %}
                 </div>
                 <h2 class="blog-card-title">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    <a href="{{ post.url | relative_url }}" class="post-title-link">{{ post.title }}</a>
                 </h2>
-                <p class="blog-card-excerpt">
+                <p class="blog-card-excerpt post-description">
                     {{ post.description | default: post.excerpt | strip_html | truncate: 150 }}
                 </p>
-                <a href="{{ post.url | relative_url }}" class="read-more">{% include t.html key="blog.read_more" %}</a>
+                <a href="{{ post.url | relative_url }}" class="read-more" data-i18n="blog.read_more">Llegir més →</a>
             </article>
             {% endfor %}
         </div>
 
         {% if site.posts.size == 0 %}
         <div class="no-posts">
-            <p>{% include t.html key="blog.no_posts" %}</p>
+            <p data-i18n="blog.no_posts">Encara no hi ha articles al blog.</p>
         </div>
         {% endif %}
     </div>
 </div>
+
+<script>
+// Post translations
+window.postTranslations = {
+    {% for post in site.posts %}
+    "{{ post.id | slugify }}": {
+        {% if post.translations %}
+        {% for lang_data in post.translations %}
+        "{{ lang_data[0] }}": {
+            "title": {{ lang_data[1].title | jsonify }},
+            "description": {{ lang_data[1].description | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+        {% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+};
+
+// Function to update post titles and descriptions based on language
+window.updatePostTranslations = function(lang) {
+    document.querySelectorAll('[data-post-id]').forEach(card => {
+        const postId = card.getAttribute('data-post-id');
+        const translations = window.postTranslations[postId];
+        
+        if (translations && translations[lang]) {
+            const titleLink = card.querySelector('.post-title-link');
+            const description = card.querySelector('.post-description');
+            
+            if (titleLink && translations[lang].title) {
+                titleLink.textContent = translations[lang].title;
+            }
+            
+            if (description && translations[lang].description) {
+                description.textContent = translations[lang].description;
+            }
+        }
+    });
+};
+
+// Update posts on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+    updatePostTranslations(currentLang);
+});
+</script>

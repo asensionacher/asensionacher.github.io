@@ -32,9 +32,9 @@ translations:
       <p><em>Equip de l'AFA</em></p>
   es:
     title: "¡Bienvenidos al Nuevo Blog de la AFA Bernat Desclot!"
-    description: "Estrenamos nuestro nuevo blog donde compartiremos todas las actividades, noticias y eventos de la asociación."
+    description: "Estrenamos nuestro nuevo blog donde compartiremos todas las actividades, notícias y eventos de la asociación."
     author: "Equipo AFA"
-    tags: ["noticias", "bienvenida"]
+    tags: ["notícias", "bienvenida"]
     content: |
       <h2>¡Hola familias! 👋</h2>
       <p>Estamos muy contentos de estrenar este nuevo espacio digital donde podremos compartir con vosotros todas las novedades, actividades y eventos de nuestra AFA.</p>
@@ -44,13 +44,13 @@ translations:
         <li>📅 <strong>Calendario de actividades</strong>: Todas las próximas actividades y talleres que organizamos</li>
         <li>📸 <strong>Fotos y resúmenes</strong>: Imágenes y crónicas de los eventos realizados</li>
         <li>💡 <strong>Ideas y propuestas</strong>: Sugerencias para actividades familiares</li>
-        <li>📢 <strong>Noticias importantes</strong>: Comunicados e información relevante para las familias</li>
+        <li>📢 <strong>Notícias importantes</strong>: Comunicados e información relevante para las familias</li>
         <li>🎉 <strong>Celebraciones</strong>: Fiestas, excursiones y eventos especiales</li>
       </ul>
       <h3>¡Participa con nosotros! 💪</h3>
       <p>¡La AFA somos todos! Si tienes ideas, propuestas o quieres colaborar en alguna actividad, no dudes en contactar con nosotros. Juntos hacemos que Bernat Desclot sea un lugar mejor para nuestros hijos.</p>
       <h3>Síguenos 📱</h3>
-      <p>Recuerda que también nos puedes encontrar en las redes sociales donde publicamos fotos, recordatorios y noticias de última hora.</p>
+      <p>Recuerda que también nos puedes encontrar en las redes sociales donde publicamos fotos, recordatorios y notícias de última hora.</p>
       <p>¡Gracias por formar parte de esta gran familia! ❤️</p>
       <hr>
       <p><em>Equipo de la AFA</em></p>
