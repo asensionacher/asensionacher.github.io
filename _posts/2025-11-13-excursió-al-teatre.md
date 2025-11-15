@@ -5,6 +5,7 @@ date: 2025-11-13
 author: "Equip AFA"
 description: "Els nostres nens i nenes d'infantil han anat d'excursió al teatre."
 tags: ["excursió", "I3", "I4", "I5"]
+lang: ca
 ---
 
 ## Els nens d'I-3

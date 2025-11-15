@@ -5,6 +5,7 @@ date: 2025-11-13
 author: "Equip AFA"
 description: "Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l'associació."
 tags: ["notícies", "benvinguda"]
+lang: ca
 ---
 
 ## Hola famílies! 👋
