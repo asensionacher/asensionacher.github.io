@@ -617,6 +617,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Initialize with saved language
-    setLanguage(currentLang);
+    // Initialize with saved language - use a slight delay to ensure DOM is fully ready
+    setTimeout(function() {
+        setLanguage(currentLang);
+    }, 50);
 });
