@@ -5,7 +5,7 @@ const translations = {
     ca: {
         nav: {
             about: "Qui som",
-            activities: "Activitats",
+            events: "Esdeveniments",
             blog: "Blog",
             contact: "Contacte"
         },
@@ -13,7 +13,7 @@ const translations = {
             title: "Benvinguts a l'AFA!",
             subtitle: "Associació de Famílies d'Alumnes",
             description: "Som una comunitat de famílies compromeses amb l'educació i el benestar dels nostres fills. Junts organitzem activitats, esdeveniments i projectes que fan del Bernat Desclot un lloc millor! 🌟",
-            btn_activities: "Veure Activitats 🎉",
+            btn_events: "Veure Esdeveniments 🎉",
             btn_blog: "Llegir Blog 📚"
         },
         about: {
@@ -40,21 +40,6 @@ const translations = {
             party_title: "Festa de Fi d'Any",
             party_date: "20 de desembre, 2025",
             party_desc: "Celebrem junts l'any amb jocs, música i berenar per a totes les famílies. Al pati de l'escola a les 17:00h."
-        },
-        activities: {
-            title: "🎉 Les Nostres Activitats",
-            creative_title: "Tallers Creatius",
-            creative_desc: "Manualitats, pintura i art per desenvolupar la creativitat dels petits artistes.",
-            sports_title: "Esports i Jocs",
-            sports_desc: "Activitats físiques i esportives per mantenir-se actius i saludables mentre es diverteixen.",
-            theater_title: "Teatre i Música",
-            theater_desc: "Expressions artístiques que desenvolupen la confiança i habilitats comunicatives.",
-            reading_title: "Club de Lectura",
-            reading_desc: "Foment de la lectura amb contes i llibres adaptats a cada edat.",
-            excursions_title: "Excursions",
-            excursions_desc: "Sortides educatives a museus, granges escola i espais naturals.",
-            parties_title: "Festes Temàtiques",
-            parties_desc: "Celebracions especials durant l'any: Carnestoltes, Sant Jordi, Final de curs..."
         },
         blog: {
             page_title: "Blog",
@@ -86,7 +71,7 @@ const translations = {
     es: {
         nav: {
             about: "Quiénes somos",
-            activities: "Actividades",
+            events: "Eventos",
             blog: "Blog",
             contact: "Contacto"
         },
@@ -94,7 +79,7 @@ const translations = {
             title: "¡Bienvenidos a la AFA!",
             subtitle: "Asociación de Familias de Alumnos",
             description: "Somos una comunidad de familias comprometidas con la educación y el bienestar de nuestros hijos. ¡Juntos organizamos actividades, eventos y proyectos que hacen de Bernat Desclot un lugar mejor! 🌟",
-            btn_activities: "Ver Actividades 🎉",
+            btn_events: "Ver Actividades 🎉",
             btn_blog: "Leer Blog 📚"
         },
         about: {
@@ -121,21 +106,6 @@ const translations = {
             party_title: "Fiesta de Fin de Año",
             party_date: "20 de diciembre, 2025",
             party_desc: "Celebremos juntos el año con juegos, música y merienda para todas las familias. En el patio de la escuela a las 17:00h."
-        },
-        activities: {
-            title: "🎉 Nuestras Actividades",
-            creative_title: "Talleres Creativos",
-            creative_desc: "Manualidades, pintura y arte para desarrollar la creatividad de los pequeños artistas.",
-            sports_title: "Deportes y Juegos",
-            sports_desc: "Actividades físicas y deportivas para mantenerse activos y saludables mientras se divierten.",
-            theater_title: "Teatro y Música",
-            theater_desc: "Expresiones artísticas que desarrollan la confianza y habilidades comunicativas.",
-            reading_title: "Club de Lectura",
-            reading_desc: "Fomento de la lectura con cuentos y libros adaptados a cada edad.",
-            excursions_title: "Excursiones",
-            excursions_desc: "Salidas educativas a museos, granjas escuela y espacios naturales.",
-            parties_title: "Fiestas Temáticas",
-            parties_desc: "Celebraciones especiales durante el año: Carnaval, Sant Jordi, Fin de curso..."
         },
         blog: {
             page_title: "Blog",
@@ -167,7 +137,7 @@ const translations = {
     en: {
         nav: {
             about: "About Us",
-            activities: "Activities",
+            events: "Events",
             blog: "Blog",
             contact: "Contact"
         },
@@ -175,7 +145,7 @@ const translations = {
             title: "Welcome to the AFA!",
             subtitle: "Parent-Teacher Association",
             description: "We are a community of families committed to the education and well-being of our children. Together we organize activities, events and projects that make Bernat Desclot a better place! 🌟",
-            btn_activities: "See Activities 🎉",
+            btn_events: "See Activities 🎉",
             btn_blog: "Read Blog 📚"
         },
         about: {
@@ -202,21 +172,6 @@ const translations = {
             party_title: "Year-End Party",
             party_date: "December 20, 2025",
             party_desc: "Let's celebrate the year together with games, music and snacks for all families. In the school courtyard at 5:00pm."
-        },
-        activities: {
-            title: "🎉 Our Activities",
-            creative_title: "Creative Workshops",
-            creative_desc: "Crafts, painting and art to develop the creativity of young artists.",
-            sports_title: "Sports and Games",
-            sports_desc: "Physical and sports activities to stay active and healthy while having fun.",
-            theater_title: "Theater and Music",
-            theater_desc: "Artistic expressions that develop confidence and communication skills.",
-            reading_title: "Reading Club",
-            reading_desc: "Promoting reading with stories and books adapted to each age.",
-            excursions_title: "Excursions",
-            excursions_desc: "Educational outings to museums, school farms and natural spaces.",
-            parties_title: "Themed Parties",
-            parties_desc: "Special celebrations throughout the year: Carnival, Sant Jordi, End of school..."
         },
         blog: {
             page_title: "Blog",
@@ -248,7 +203,7 @@ const translations = {
     ar: {
         nav: {
             about: "من نحن",
-            activities: "الأنشطة",
+            events: "الأحداث",
             blog: "المدونة",
             contact: "اتصل بنا"
         },
@@ -256,7 +211,7 @@ const translations = {
             title: "مرحبًا بكم في جمعية أولياء الأمور!",
             subtitle: "جمعية أولياء أمور الطلاب",
             description: "نحن مجتمع من العائلات الملتزمة بتعليم ورفاهية أطفالنا. معًا ننظم الأنشطة والفعاليات والمشاريع التي تجعل مدرسة بيرنات ديسكلوت مكانًا أفضل! 🌟",
-            btn_activities: "شاهد الأنشطة 🎉",
+            btn_events: "شاهد الأنشطة 🎉",
             btn_blog: "اقرأ المدونة 📚"
         },
         about: {
@@ -283,21 +238,6 @@ const translations = {
             party_title: "حفلة نهاية العام",
             party_date: "20 ديسمبر 2025",
             party_desc: "لنحتفل معًا بالعام مع الألعاب والموسيقى والوجبات الخفيفة لجميع العائلات. في فناء المدرسة الساعة 5:00 مساءً."
-        },
-        activities: {
-            title: "🎉 أنشطتنا",
-            creative_title: "ورش عمل إبداعية",
-            creative_desc: "الحرف اليدوية والرسم والفن لتطوير إبداع الفنانين الصغار.",
-            sports_title: "الرياضة والألعاب",
-            sports_desc: "أنشطة بدنية ورياضية للبقاء نشيطين وبصحة جيدة أثناء الاستمتاع.",
-            theater_title: "المسرح والموسيقى",
-            theater_desc: "تعبيرات فنية تطور الثقة ومهارات التواصل.",
-            reading_title: "نادي القراءة",
-            reading_desc: "تعزيز القراءة بالقصص والكتب المناسبة لكل عمر.",
-            excursions_title: "الرحلات",
-            excursions_desc: "رحلات تعليمية إلى المتاحف والمزارع المدرسية والمساحات الطبيعية.",
-            parties_title: "حفلات موضوعية",
-            parties_desc: "احتفالات خاصة على مدار العام: الكرنفال، سانت جوردي، نهاية العام الدراسي..."
         },
         blog: {
             page_title: "المدونة",
@@ -329,7 +269,7 @@ const translations = {
     ur: {
         nav: {
             about: "کون ہیں ہم",
-            activities: "سرگرمیاں",
+            events: "واقعات",
             blog: "بلاگ",
             contact: "رابطہ"
         },
@@ -337,7 +277,7 @@ const translations = {
             title: "والدین ایسوسی ایشن میں خوش آمدید!",
             subtitle: "طلباء کے والدین کی ایسوسی ایشن",
             description: "ہم خاندانوں کی ایک برادری ہیں جو اپنے بچوں کی تعلیم اور فلاح و بہبود کے لیے پرعزم ہیں۔ ہم مل کر سرگرمیاں، تقریبات اور منصوبے منظم کرتے ہیں جو برنات ڈیسکلوٹ کو ایک بہتر جگہ بناتے ہیں! 🌟",
-            btn_activities: "سرگرمیاں دیکھیں 🎉",
+            btn_events: "سرگرمیاں دیکھیں 🎉",
             btn_blog: "بلاگ پڑھیں 📚"
         },
         about: {
@@ -364,21 +304,6 @@ const translations = {
             party_title: "سال کے اختتام کی تقریب",
             party_date: "20 دسمبر، 2025",
             party_desc: "آئیے کھیلوں، موسیقی اور تمام خاندانوں کے لیے ناشتے کے ساتھ سال کا جشن منائیں۔ اسکول کے صحن میں شام 5:00 بجے۔"
-        },
-        activities: {
-            title: "🎉 ہماری سرگرمیاں",
-            creative_title: "تخلیقی ورکشاپس",
-            creative_desc: "نوجوان فنکاروں کی تخلیقی صلاحیتوں کو فروغ دینے کے لیے دستکاری، پینٹنگ اور فن۔",
-            sports_title: "کھیل اور گیمز",
-            sports_desc: "لطف اندوز ہوتے ہوئے فعال اور صحت مند رہنے کے لیے جسمانی اور کھیلوں کی سرگرمیاں۔",
-            theater_title: "تھیٹر اور موسیقی",
-            theater_desc: "فنی اظہار جو اعتماد اور رابطے کی مہارتوں کو فروغ دیتے ہیں۔",
-            reading_title: "ریڈنگ کلب",
-            reading_desc: "ہر عمر کے مطابق کہانیوں اور کتابوں کے ساتھ پڑھنے کو فروغ دینا۔",
-            excursions_title: "سیر",
-            excursions_desc: "عجائب گھروں، اسکول فارموں اور قدرتی جگہوں کے تعلیمی دورے۔",
-            parties_title: "تھیمڈ پارٹیز",
-            parties_desc: "سال بھر خاص تقریبات: کارنیول، سانٹ جوردی، سال کا اختتام..."
         },
         blog: {
             page_title: "بلاگ",

@@ -15,12 +15,12 @@ nav:
     es: "Quiénes somos"
     ar: "من نحن"
     ur: "کون ہیں ہم"
-  activities:
-    ca: "Activitats"
-    en: "Activities"
-    es: "Actividades"
-    ar: "الأنشطة"
-    ur: "سرگرمیاں"
+  events:
+    ca: "Esdeveniments"
+    en: "Events"
+    es: "Eventos"
+    ar: "الأحداث"
+    ur: "واقعات"
   blog:
     ca: "Blog"
     en: "Blog"
@@ -54,12 +54,12 @@ hero:
     es: "Somos una comunidad de familias comprometidas con la educación y el bienestar de nuestros hijos. ¡Juntos organizamos actividades, eventos y proyectos que hacen de Bernat Desclot un lugar mejor! 🌟"
     ar: "نحن مجتمع من العائلات الملتزمة بتعليم ورفاهية أطفالنا. معًا ننظم الأنشطة والفعاليات والمشاريع التي تجعل مدرسة بيرنات ديسكلوت مكانًا أفضل! 🌟"
     ur: "ہم خاندانوں کی ایک برادری ہیں جو اپنے بچوں کی تعلیم اور فلاح و بہبود کے لیے پرعزم ہیں۔ ہم مل کر سرگرمیاں، تقریبات اور منصوبے منظم کرتے ہیں جو برنات ڈیسکلوٹ کو ایک بہتر جگہ بناتے ہیں! 🌟"
-  btn_activities:
-    ca: "Veure Activitats 🎉"
-    en: "See Activities 🎉"
-    es: "Ver Actividades 🎉"
-    ar: "شاهد الأنشطة 🎉"
-    ur: "سرگرمیاں دیکھیں 🎉"
+  btn_events:
+    ca: "Veure Esdeveniments 🎉"
+    en: "See Events 🎉"
+    es: "Ver Eventos 🎉"
+    ar: "شاهد الأحداث 🎉"
+    ur: "واقعات دیکھیں 🎉"
   btn_blog:
     ca: "Llegir Blog 📚"
     en: "Read Blog 📚"
@@ -116,13 +116,13 @@ about:
       ur: "ہم معیاری تعلیم اور مثبت اور بھرپور اسکولی ماحول کے لیے پرعزم ہیں۔"
 
 # Activities section
-activities:
+events:
   title:
-    ca: "🎉 Les Nostres Activitats"
-    en: "🎉 Our Activities"
-    es: "🎉 Nuestras Actividades"
-    ar: "🎉 أنشطتنا"
-    ur: "🎉 ہماری سرگرمیاں"
+    ca: "🎉 Els Nostres Esdeveniments"
+    en: "🎉 Our Events"
+    es: "🎉 Nuestros Eventos"
+    ar: "🎉 أحداثنا"
+    ur: "🎉 ہمارے واقعات"
   creative_workshops:
     title:
       ca: "Tallers Creatius"
