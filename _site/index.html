@@ -165,25 +165,45 @@
         </div>
         <div class="blog-grid">
             
-            <article class="blog-card">
+            <article class="blog-card" 
+                data-post-title-ca="Excursió al teatre dels nens i nenes d&#39;infantil"
+                data-post-title-es="Excursión al teatro de los niños y niñas de infantil"
+                data-post-title-en="Excursion to the theater for preschool children"
+                data-post-title-ar="رحلة أطفال الروضة إلى المسرح"
+                data-post-title-ur="پری اسکول بچوں کا تھیٹر کا دورہ"
+                data-post-desc-ca="Els nostres nens i nenes d&#39;infantil han anat d&#39;excursió al teatre."
+                data-post-desc-es="Nuestros niños y niñas de infantil han ido de excursión al teatro."
+                data-post-desc-en="Our preschool children went on a trip to the theater."
+                data-post-desc-ar="ذهب أطفال الروضة في رحلة إلى المسرح."
+                data-post-desc-ur="ہمارے پری اسکول بچے تھیٹر کے دورے پر گئے۔">
                 <div class="blog-card-header">
                     <span class="blog-date">13/11/2025</span>
                 </div>
                 <h3 class="blog-card-title">
-                    <a href="/blog/2025/11/13/excursio-teatre/">Excursió al teatre dels nens i nenes d'infantil</a>
+                    <a href="/blog/2025/11/13/excursio-teatre/" class="post-title-link">Excursió al teatre dels nens i nenes d'infantil</a>
                 </h3>
-                <p class="blog-card-excerpt">Els nostres nens i nenes d'infantil han anat d'excursió al teatre.</p>
+                <p class="blog-card-excerpt post-description">Els nostres nens i nenes d'infantil han anat d'excursió al teatre.</p>
                 <a href="/blog/2025/11/13/excursio-teatre/" class="read-more" data-i18n="blog.read_more">Llegir més →</a>
             </article>
             
-            <article class="blog-card">
+            <article class="blog-card" 
+                data-post-title-ca="Benvinguts al Nou Blog de l&#39;AFA Bernat Desclot!"
+                data-post-title-es="¡Bienvenidos al Nuevo Blog de la AFA Bernat Desclot!"
+                data-post-title-en="Welcome to the New AFA Bernat Desclot Blog!"
+                data-post-title-ar="مرحباً بكم في مدونة جمعية أولياء الأمور الجديدة لمدرسة بيرنات ديسكلوت!"
+                data-post-title-ur="برنات ڈیسکلوٹ والدین ایسوسی ایشن کے نئے بلاگ میں خوش آمدید!"
+                data-post-desc-ca="Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l&#39;associació."
+                data-post-desc-es="Estrenamos nuestro nuevo blog donde compartiremos todas las actividades, notícias y eventos de la asociación."
+                data-post-desc-en="We&#39;re launching our new blog where we&#39;ll share all the activities, news and events of the association."
+                data-post-desc-ar="نطلق مدونتنا الجديدة حيث سنشارك جميع الأنشطة والأخبار والفعاليات الخاصة بالجمعية."
+                data-post-desc-ur="ہم اپنا نیا بلاگ شروع کر رہے ہیں جہاں ہم ایسوسی ایشن کی تمام سرگرمیاں، خبریں اور تقریبات شیئر کریں گے۔">
                 <div class="blog-card-header">
                     <span class="blog-date">13/11/2025</span>
                 </div>
                 <h3 class="blog-card-title">
-                    <a href="/blog/2025/11/13/benvinguts-al-nou-blog/">Benvinguts al Nou Blog de l'AFA Bernat Desclot!</a>
+                    <a href="/blog/2025/11/13/benvinguts-al-nou-blog/" class="post-title-link">Benvinguts al Nou Blog de l'AFA Bernat Desclot!</a>
                 </h3>
-                <p class="blog-card-excerpt">Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l'associació.</p>
+                <p class="blog-card-excerpt post-description">Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l'associació.</p>
                 <a href="/blog/2025/11/13/benvinguts-al-nou-blog/" class="read-more" data-i18n="blog.read_more">Llegir més →</a>
             </article>
             
@@ -213,6 +233,39 @@
         </div>
     </div>
 </section>
+
+<script>
+// Function to update blog post previews based on language
+window.updateBlogPreviews = function(lang) {
+    document.querySelectorAll('.blog-card[data-post-title-ca]').forEach(card => {
+        // Update title
+        const titleLink = card.querySelector('.post-title-link');
+        const title = card.getAttribute('data-post-title-' + lang);
+        if (titleLink && title) {
+            titleLink.textContent = title;
+        }
+        
+        // Update description
+        const description = card.querySelector('.post-description');
+        const desc = card.getAttribute('data-post-desc-' + lang);
+        if (description && desc) {
+            // Truncate to similar length as original
+            const truncated = desc.length > 120 ? 
+                desc.substring(0, 120) + '...' : 
+                desc;
+            description.textContent = truncated;
+        }
+    });
+};
+
+// Initial update when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+    setTimeout(function() {
+        updateBlogPreviews(currentLang);
+    }, 100);
+});
+</script>
 
     </main>
 

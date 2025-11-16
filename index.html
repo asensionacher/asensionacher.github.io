@@ -93,14 +93,24 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
         </div>
         <div class="blog-grid">
             {% for post in site.posts limit:3 %}
-            <article class="blog-card">
+            <article class="blog-card" 
+                data-post-title-ca="{{ post.translations.ca.title | escape }}"
+                data-post-title-es="{{ post.translations.es.title | escape }}"
+                data-post-title-en="{{ post.translations.en.title | escape }}"
+                data-post-title-ar="{{ post.translations.ar.title | escape }}"
+                data-post-title-ur="{{ post.translations.ur.title | escape }}"
+                data-post-desc-ca="{{ post.translations.ca.description | escape }}"
+                data-post-desc-es="{{ post.translations.es.description | escape }}"
+                data-post-desc-en="{{ post.translations.en.description | escape }}"
+                data-post-desc-ar="{{ post.translations.ar.description | escape }}"
+                data-post-desc-ur="{{ post.translations.ur.description | escape }}">
                 <div class="blog-card-header">
                     <span class="blog-date">{{ post.date | date: "%d/%m/%Y" }}</span>
                 </div>
                 <h3 class="blog-card-title">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    <a href="{{ post.url | relative_url }}" class="post-title-link">{{ post.title }}</a>
                 </h3>
-                <p class="blog-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+                <p class="blog-card-excerpt post-description">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
                 <a href="{{ post.url | relative_url }}" class="read-more" data-i18n="blog.read_more">Llegir més →</a>
             </article>
             {% endfor %}
@@ -130,3 +140,36 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
         </div>
     </div>
 </section>
+
+<script>
+// Function to update blog post previews based on language
+window.updateBlogPreviews = function(lang) {
+    document.querySelectorAll('.blog-card[data-post-title-ca]').forEach(card => {
+        // Update title
+        const titleLink = card.querySelector('.post-title-link');
+        const title = card.getAttribute('data-post-title-' + lang);
+        if (titleLink && title) {
+            titleLink.textContent = title;
+        }
+        
+        // Update description
+        const description = card.querySelector('.post-description');
+        const desc = card.getAttribute('data-post-desc-' + lang);
+        if (description && desc) {
+            // Truncate to similar length as original
+            const truncated = desc.length > 120 ? 
+                desc.substring(0, 120) + '...' : 
+                desc;
+            description.textContent = truncated;
+        }
+    });
+};
+
+// Initial update when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+    setTimeout(function() {
+        updateBlogPreviews(currentLang);
+    }, 100);
+});
+</script>

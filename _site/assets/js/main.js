@@ -386,6 +386,11 @@ window.setLanguage = function(lang) {
     if (typeof window.updatePostTranslations === 'function') {
         window.updatePostTranslations(lang);
     }
+    
+    // Call blog previews update if available (for home page)
+    if (typeof window.updateBlogPreviews === 'function') {
+        window.updateBlogPreviews(lang);
+    }
 };
 
 function getTranslation(key, lang) {
