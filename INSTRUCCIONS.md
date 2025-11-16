@@ -7,7 +7,7 @@ S'ha creat un **lloc web complet per a una AFA** (Associació de Famílies d'Alu
 ### 📄 Pàgines principals
 - **Landing page** (`index.html`): Pàgina d'inici amb informació sobre l'AFA, activitats i contacte
 - **Blog** (`blog/index.html`): Llista de tots els articles del blog
-- **3 posts d'exemple** per començar
+- **2 posts d'exemple** per començar
 
 ### 🎨 Disseny
 - Disseny infantil i colorit amb emojis
