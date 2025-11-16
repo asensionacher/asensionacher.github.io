@@ -307,17 +307,17 @@ footer:
     ar: "جمعية بيرنات ديسكلوت · صُنع بحب 💚"
     ur: "برنات ڈیسکلوٹ ایسوسی ایشن · محبت سے بنایا گیا 💚"
   opensource:
-    ca: "Codi font obert amb llicència MIT"
-    en: "Open source code with MIT license"
-    es: "Código fuente abierto con licencia MIT"
-    ar: "كود مفتوح المصدر مع ترخيص MIT"
-    ur: "MIT لائسنس کے ساتھ اوپن سورس کوڈ"
+    ca: "Llicència GNU GPL v3.0"
+    en: "GNU GPL v3.0 License"
+    es: "Licencia GNU GPL v3.0"
+    ar: "ترخيص GNU GPL v3.0"
+    ur: "GNU GPL v3.0 لائسنس"
   opensource_text:
-    ca: "Lliure per usar i modificar"
-    en: "Free to use and modify"
-    es: "Libre de usar y modificar"
-    ar: "مجاني للاستخدام والتعديل"
-    ur: "استعمال اور ترمیم کے لیے مفت"
+    ca: "Programari lliure amb copyleft"
+    en: "Free software with copyleft"
+    es: "Software libre con copyleft"
+    ar: "برمجيات حرة مع حقوق النسخ المتروكة"
+    ur: "کاپی لیفٹ کے ساتھ مفت سافٹ ویئر"
 
 # Language switcher
 language_switcher:

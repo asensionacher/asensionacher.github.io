@@ -64,7 +64,7 @@ const translations = {
             follow_us: "Segueix-nos",
             made_with_love: "Fet amb molt amor",
             ai_assistant: "i l'ajuda de Claude Sonnet 4.5",
-            open_source: "Codi font obert amb llicència MIT",
+            open_source: "Codi font obert amb llicència GPL-3.0",
             free_to_use: "Lliure per usar i modificar"
         }
     },
@@ -130,7 +130,7 @@ const translations = {
             follow_us: "Síguenos",
             made_with_love: "Hecho con mucho amor",
             ai_assistant: "y la ayuda de Claude Sonnet 4.5",
-            open_source: "Código fuente abierto con licencia MIT",
+            open_source: "Código fuente abierto con licencia GPL-3.0",
             free_to_use: "Libre para usar y modificar"
         }
     },
@@ -196,7 +196,7 @@ const translations = {
             follow_us: "Follow us",
             made_with_love: "Made with lots of love",
             ai_assistant: "and the help of Claude Sonnet 4.5",
-            open_source: "Open source code with MIT license",
+            open_source: "Open source code with GPL-3.0 license",
             free_to_use: "Free to use and modify"
         }
     },
@@ -262,7 +262,7 @@ const translations = {
             follow_us: "تابعنا",
             made_with_love: "صنع بالكثير من الحب",
             ai_assistant: "وبمساعدة Claude Sonnet 4.5",
-            open_source: "كود مفتوح المصدر برخصة MIT",
+            open_source: "كود مفتوح المصدر برخصة GPL-3.0",
             free_to_use: "مجاني للاستخدام والتعديل"
         }
     },
@@ -328,7 +328,7 @@ const translations = {
             follow_us: "ہمیں فالو کریں",
             made_with_love: "بہت محبت سے بنایا گیا",
             ai_assistant: "اور Claude Sonnet 4.5 کی مدد سے",
-            open_source: "MIT لائسنس کے ساتھ اوپن سورس کوڈ",
+            open_source: "GPL-3.0 لائسنس کے ساتھ اوپن سورس کوڈ",
             free_to_use: "استعمال اور ترمیم کے لیے مفت"
         }
     }

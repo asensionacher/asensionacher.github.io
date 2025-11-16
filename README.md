@@ -204,7 +204,20 @@ Si vols contribuir traduccions o millores:
 
 ## Llicència
 
-Codi font obert amb llicència MIT. Lliure per usar i modificar.
+**GNU General Public License v3.0 (GPL-3.0)**
+
+Aquest projecte està llicenciat sota la GPL-3.0, que garanteix:
+
+- ✅ Llibertat d'ús per a qualsevol propòsit
+- ✅ Llibertat d'estudiar i modificar el codi font
+- ✅ Llibertat de distribuir còpies
+- ✅ Llibertat de distribuir versions modificades
+- ✅ **Copyleft**: Totes les versions modificades han de ser també GPL
+- ✅ El codi font ha d'estar disponible
+- ❌ No es pot relicenciar sota termes propietaris
+
+Consulta el fitxer [LICENSE](LICENSE) per més detalls o la llicència completa a:  
+https://www.gnu.org/licenses/gpl-3.0.html
 
 ## Crèdits
 
