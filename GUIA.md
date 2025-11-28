@@ -33,10 +33,7 @@ Per provar el lloc localment abans de publicar:
 
 ```bash
 # Instal·lar dependències
-bundle install
-
-# Executar Jekyll en mode desenvolupament
-bundle exec jekyll serve
+g
 
 # Ara pots veure el lloc a: http://localhost:4000
 ```
