@@ -71,6 +71,9 @@ const translations = {
             subtitle: "Associació de Famílies d'Alumnes",
             tagline: "Junts per als nostres fills ❤️",
             links_title: "Enllaços",
+            legal_title: "Legal",
+            privacy_policy: "Política de Privacitat",
+            cookie_policy: "Política de Cookies",
             follow_us: "Segueix-nos",
             made_with_love: "Fet amb molt amor",
             ai_assistant: "i l'ajuda de Claude Sonnet 4.5",
@@ -80,9 +83,61 @@ const translations = {
         cookies: {
             title: "🍪 Cookies i Privacitat",
             message: "Aquest lloc web utilitza cookies per millorar la vostra experiència i analitzar el trànsit del lloc. Les cookies de Google Analytics ens ajuden a entendre com utilitzeu el nostre lloc web.",
-            accept: "Acceptar cookies",
-            reject: "Rebutjar",
-            learn_more: "Més informació"
+            accept_all: "Acceptar totes",
+            reject_all: "Rebutjar totes",
+            customize: "Personalitzar",
+            learn_more: "Més informació",
+            preferences_title: "⚙️ Preferències de Cookies",
+            preferences_desc: "Pots gestionar les teves preferències de cookies aquí. Les cookies essencials són necessàries per al funcionament del lloc web i no es poden desactivar.",
+            essential_title: "🔐 Cookies Essencials",
+            always_active: "Sempre actives",
+            essential_desc: "Aquestes cookies són necessàries per al funcionament bàsic del lloc web, com la selecció d'idioma i les teves preferències de cookies.",
+            analytics_title: "📊 Cookies Analítiques",
+            optional: "Opcionals",
+            analytics_desc_long: "Utilitzem Google Analytics per entendre com els visitants utilitzen el nostre lloc web. Aquestes cookies recopilen informació anònima sobre el número de visitants, pàgines visitades i temps de permanència.",
+            save_preferences: "Guardar Preferències"
+        },
+        privacy: {
+            cookies_title: "🍪 Política de Cookies",
+            what_are_cookies: "Què són les cookies?",
+            cookies_definition: "Les cookies són petits fitxers de text que es guarden al teu dispositiu quan visites un lloc web. S'utilitzen per millorar la teva experiència de navegació i per a fins analítics.",
+            what_types: "Què tipus de cookies utilitzem?",
+            essential_cookies: "Cookies essencials",
+            language_pref: "Preferència d'idioma:",
+            language_pref_desc: "Guardem el teu idioma preferit per mostrar-te el contingut en la llengua que has triat.",
+            cookie_consent: "Consentiment de cookies:",
+            cookie_consent_desc: "Guardem la teva elecció sobre l'acceptació o rebuig de cookies.",
+            analytics_cookies: "Cookies analítiques (Google Analytics)",
+            analytics_desc: "Utilitzem Google Analytics per entendre com els visitants utilitzen el nostre lloc web. Aquestes cookies recopilen informació de forma anònima, incloent:",
+            visitors_count: "Nombre de visitants",
+            pages_visited: "Pàgines visitades",
+            time_spent: "Temps de permanència",
+            visit_source: "Origen de les visites",
+            important: "Important:",
+            ip_anonymization: "Tenim activada l'anonimització d'IP, el que significa que la teva adreça IP no s'emmagatzema completa.",
+            how_manage: "Com gestionar les cookies?",
+            manage_desc: "Pots acceptar o rebutjar les cookies mitjançant el banner que apareix quan visites el nostre lloc web per primera vegada. També pots canviar la teva decisió en qualsevol moment:",
+            reset_button: "Reconfigurar les meves preferències de cookies",
+            more_info_ga: "Més informació sobre Google Analytics",
+            more_info_ga_desc: "Per obtenir més informació sobre com Google Analytics gestiona la privacitat, visita:",
+            google_policy: "Política de Privacitat de Google",
+            privacy_title: "🔒 Política de Privacitat",
+            who_we_are: "Qui som?",
+            who_we_are_desc: "Som l'Associació de Famílies d'Alumnes (AFA) de l'Escola Bernat Desclot. El nostre lloc web és",
+            what_data: "Quines dades recollim?",
+            what_data_desc: "Aquest lloc web no recull dades personals dels usuaris més enllà de:",
+            analytics_data: "Dades analítiques anònimes (si acceptes les cookies de Google Analytics)",
+            preferences_data: "Preferències d'idioma i cookies (guardat localment al teu navegador)",
+            no_share: "No compartim les teves dades",
+            no_share_desc: "No compartim, venem ni cedim les teves dades a tercers, excepte Google Analytics si has acceptat les cookies analítiques.",
+            your_rights: "Els teus drets",
+            your_rights_intro: "Tens dret a:",
+            right_reject: "Rebutjar les cookies analítiques",
+            right_delete: "Eliminar les cookies del teu navegador en qualsevol moment",
+            right_request: "Sol·licitar informació sobre les dades que puguin estar emmagatzemades",
+            contact_title: "Contacte",
+            contact_desc: "Si tens qualsevol pregunta sobre la nostra política de privacitat, pots contactar-nos a:",
+            last_updated: "Última actualització:"
         }
     },
     es: {
@@ -154,6 +209,9 @@ const translations = {
             subtitle: "Asociación de Familias de Alumnos",
             tagline: "Juntos por nuestros hijos ❤️",
             links_title: "Enlaces",
+            legal_title: "Legal",
+            privacy_policy: "Política de Privacidad",
+            cookie_policy: "Política de Cookies",
             follow_us: "Síguenos",
             made_with_love: "Hecho con mucho amor",
             ai_assistant: "y la ayuda de Claude Sonnet 4.5",
@@ -163,9 +221,61 @@ const translations = {
         cookies: {
             title: "🍪 Cookies y Privacidad",
             message: "Este sitio web utiliza cookies para mejorar su experiencia y analizar el tráfico del sitio. Las cookies de Google Analytics nos ayudan a entender cómo utiliza nuestro sitio web.",
-            accept: "Aceptar cookies",
-            reject: "Rechazar",
-            learn_more: "Más información"
+            accept_all: "Aceptar todas",
+            reject_all: "Rechazar todas",
+            customize: "Personalizar",
+            learn_more: "Más información",
+            preferences_title: "⚙️ Preferencias de Cookies",
+            preferences_desc: "Puedes gestionar tus preferencias de cookies aquí. Las cookies esenciales son necesarias para el funcionamiento del sitio web y no se pueden desactivar.",
+            essential_title: "🔐 Cookies Esenciales",
+            always_active: "Siempre activas",
+            essential_desc: "Estas cookies son necesarias para el funcionamiento básico del sitio web, como la selección de idioma y tus preferencias de cookies.",
+            analytics_title: "📊 Cookies Analíticas",
+            optional: "Opcionales",
+            analytics_desc_long: "Utilizamos Google Analytics para entender cómo los visitantes utilizan nuestro sitio web. Estas cookies recopilan información anónima sobre el número de visitantes, páginas visitadas y tiempo de permanencia.",
+            save_preferences: "Guardar Preferencias"
+        },
+        privacy: {
+            cookies_title: "🍪 Política de Cookies",
+            what_are_cookies: "¿Qué son las cookies?",
+            cookies_definition: "Las cookies son pequeños archivos de texto que se guardan en tu dispositivo cuando visitas un sitio web. Se utilizan para mejorar tu experiencia de navegación y para fines analíticos.",
+            what_types: "¿Qué tipo de cookies utilizamos?",
+            essential_cookies: "Cookies esenciales",
+            language_pref: "Preferencia de idioma:",
+            language_pref_desc: "Guardamos tu idioma preferido para mostrarte el contenido en el idioma que has elegido.",
+            cookie_consent: "Consentimiento de cookies:",
+            cookie_consent_desc: "Guardamos tu elección sobre la aceptación o rechazo de cookies.",
+            analytics_cookies: "Cookies analíticas (Google Analytics)",
+            analytics_desc: "Utilizamos Google Analytics para entender cómo los visitantes utilizan nuestro sitio web. Estas cookies recopilan información de forma anónima, incluyendo:",
+            visitors_count: "Número de visitantes",
+            pages_visited: "Páginas visitadas",
+            time_spent: "Tiempo de permanencia",
+            visit_source: "Origen de las visitas",
+            important: "Importante:",
+            ip_anonymization: "Tenemos activada la anonimización de IP, lo que significa que tu dirección IP no se almacena completa.",
+            how_manage: "¿Cómo gestionar las cookies?",
+            manage_desc: "Puedes aceptar o rechazar las cookies mediante el banner que aparece cuando visitas nuestro sitio web por primera vez. También puedes cambiar tu decisión en cualquier momento:",
+            reset_button: "Reconfigurar mis preferencias de cookies",
+            more_info_ga: "Más información sobre Google Analytics",
+            more_info_ga_desc: "Para obtener más información sobre cómo Google Analytics gestiona la privacidad, visita:",
+            google_policy: "Política de Privacidad de Google",
+            privacy_title: "🔒 Política de Privacidad",
+            who_we_are: "¿Quiénes somos?",
+            who_we_are_desc: "Somos la Asociación de Familias de Alumnos (AFA) de la Escuela Bernat Desclot. Nuestro sitio web es",
+            what_data: "¿Qué datos recopilamos?",
+            what_data_desc: "Este sitio web no recopila datos personales de los usuarios más allá de:",
+            analytics_data: "Datos analíticos anónimos (si aceptas las cookies de Google Analytics)",
+            preferences_data: "Preferencias de idioma y cookies (guardado localmente en tu navegador)",
+            no_share: "No compartimos tus datos",
+            no_share_desc: "No compartimos, vendemos ni cedemos tus datos a terceros, excepto Google Analytics si has aceptado las cookies analíticas.",
+            your_rights: "Tus derechos",
+            your_rights_intro: "Tienes derecho a:",
+            right_reject: "Rechazar las cookies analíticas",
+            right_delete: "Eliminar las cookies de tu navegador en cualquier momento",
+            right_request: "Solicitar información sobre los datos que puedan estar almacenados",
+            contact_title: "Contacto",
+            contact_desc: "Si tienes alguna pregunta sobre nuestra política de privacidad, puedes contactarnos en:",
+            last_updated: "Última actualización:"
         }
     },
     en: {
@@ -237,6 +347,9 @@ const translations = {
             subtitle: "Parent-Teacher Association",
             tagline: "Together for our children ❤️",
             links_title: "Links",
+            legal_title: "Legal",
+            privacy_policy: "Privacy Policy",
+            cookie_policy: "Cookie Policy",
             follow_us: "Follow us",
             made_with_love: "Made with lots of love",
             ai_assistant: "and the help of Claude Sonnet 4.5",
@@ -246,9 +359,61 @@ const translations = {
         cookies: {
             title: "🍪 Cookies & Privacy",
             message: "This website uses cookies to improve your experience and analyze site traffic. Google Analytics cookies help us understand how you use our website.",
-            accept: "Accept cookies",
-            reject: "Reject",
-            learn_more: "Learn more"
+            accept_all: "Accept all",
+            reject_all: "Reject all",
+            customize: "Customize",
+            learn_more: "Learn more",
+            preferences_title: "⚙️ Cookie Preferences",
+            preferences_desc: "You can manage your cookie preferences here. Essential cookies are necessary for the website to function and cannot be disabled.",
+            essential_title: "🔐 Essential Cookies",
+            always_active: "Always active",
+            essential_desc: "These cookies are necessary for the basic functioning of the website, such as language selection and your cookie preferences.",
+            analytics_title: "📊 Analytics Cookies",
+            optional: "Optional",
+            analytics_desc_long: "We use Google Analytics to understand how visitors use our website. These cookies collect anonymous information about the number of visitors, pages visited, and time spent.",
+            save_preferences: "Save Preferences"
+        },
+        privacy: {
+            cookies_title: "🍪 Cookie Policy",
+            what_are_cookies: "What are cookies?",
+            cookies_definition: "Cookies are small text files that are saved on your device when you visit a website. They are used to improve your browsing experience and for analytical purposes.",
+            what_types: "What types of cookies do we use?",
+            essential_cookies: "Essential cookies",
+            language_pref: "Language preference:",
+            language_pref_desc: "We save your preferred language to show you content in the language you have chosen.",
+            cookie_consent: "Cookie consent:",
+            cookie_consent_desc: "We save your choice about accepting or rejecting cookies.",
+            analytics_cookies: "Analytical cookies (Google Analytics)",
+            analytics_desc: "We use Google Analytics to understand how visitors use our website. These cookies collect information anonymously, including:",
+            visitors_count: "Number of visitors",
+            pages_visited: "Pages visited",
+            time_spent: "Time spent on site",
+            visit_source: "Source of visits",
+            important: "Important:",
+            ip_anonymization: "We have IP anonymization enabled, which means your IP address is not stored in full.",
+            how_manage: "How to manage cookies?",
+            manage_desc: "You can accept or reject cookies through the banner that appears when you visit our website for the first time. You can also change your decision at any time:",
+            reset_button: "Reset my cookie preferences",
+            more_info_ga: "More information about Google Analytics",
+            more_info_ga_desc: "For more information about how Google Analytics manages privacy, visit:",
+            google_policy: "Google Privacy Policy",
+            privacy_title: "🔒 Privacy Policy",
+            who_we_are: "Who are we?",
+            who_we_are_desc: "We are the Parent-Teacher Association (PTA) of Bernat Desclot School. Our website is",
+            what_data: "What data do we collect?",
+            what_data_desc: "This website does not collect personal data from users beyond:",
+            analytics_data: "Anonymous analytical data (if you accept Google Analytics cookies)",
+            preferences_data: "Language and cookie preferences (saved locally in your browser)",
+            no_share: "We don't share your data",
+            no_share_desc: "We do not share, sell, or transfer your data to third parties, except for Google Analytics if you have accepted analytical cookies.",
+            your_rights: "Your rights",
+            your_rights_intro: "You have the right to:",
+            right_reject: "Reject analytical cookies",
+            right_delete: "Delete cookies from your browser at any time",
+            right_request: "Request information about data that may be stored",
+            contact_title: "Contact",
+            contact_desc: "If you have any questions about our privacy policy, you can contact us at:",
+            last_updated: "Last updated:"
         }
     },
     ar: {
@@ -320,6 +485,9 @@ const translations = {
             subtitle: "جمعية أولياء أمور الطلاب",
             tagline: "معاً من أجل أطفالنا ❤️",
             links_title: "روابط",
+            legal_title: "قانوني",
+            privacy_policy: "سياسة الخصوصية",
+            cookie_policy: "سياسة ملفات تعريف الارتباط",
             follow_us: "تابعنا",
             made_with_love: "صنع بالكثير من الحب",
             ai_assistant: "وبمساعدة Claude Sonnet 4.5",
@@ -329,9 +497,61 @@ const translations = {
         cookies: {
             title: "🍪 ملفات تعريف الارتباط والخصوصية",
             message: "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك وتحليل حركة المرور على الموقع. تساعدنا ملفات تعريف الارتباط من Google Analytics على فهم كيفية استخدامك لموقعنا.",
-            accept: "قبول ملفات تعريف الارتباط",
-            reject: "رفض",
-            learn_more: "معرفة المزيد"
+            accept_all: "قبول الكل",
+            reject_all: "رفض الكل",
+            customize: "تخصيص",
+            learn_more: "معرفة المزيد",
+            preferences_title: "⚙️ تفضيلات ملفات تعريف الارتباط",
+            preferences_desc: "يمكنك إدارة تفضيلات ملفات تعريف الارتباط الخاصة بك هنا. ملفات تعريف الارتباط الأساسية ضرورية لعمل الموقع ولا يمكن تعطيلها.",
+            essential_title: "🔐 ملفات تعريف الارتباط الأساسية",
+            always_active: "نشطة دائمًا",
+            essential_desc: "هذه الملفات ضرورية للعمل الأساسي للموقع، مثل اختيار اللغة وتفضيلات ملفات تعريف الارتباط الخاصة بك.",
+            analytics_title: "📊 ملفات تعريف الارتباط التحليلية",
+            optional: "اختيارية",
+            analytics_desc_long: "نستخدم Google Analytics لفهم كيفية استخدام الزوار لموقعنا. تجمع هذه الملفات معلومات مجهولة عن عدد الزوار والصفحات التي تمت زيارتها والوقت المستغرق.",
+            save_preferences: "حفظ التفضيلات"
+        },
+        privacy: {
+            cookies_title: "🍪 سياسة ملفات تعريف الارتباط",
+            what_are_cookies: "ما هي ملفات تعريف الارتباط؟",
+            cookies_definition: "ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم حفظها على جهازك عند زيارة موقع ويب. يتم استخدامها لتحسين تجربة التصفح الخاصة بك ولأغراض تحليلية.",
+            what_types: "ما أنواع ملفات تعريف الارتباط التي نستخدمها؟",
+            essential_cookies: "ملفات تعريف الارتباط الأساسية",
+            language_pref: "تفضيل اللغة:",
+            language_pref_desc: "نحفظ لغتك المفضلة لإظهار المحتوى باللغة التي اخترتها.",
+            cookie_consent: "موافقة ملفات تعريف الارتباط:",
+            cookie_consent_desc: "نحفظ اختيارك بشأن قبول أو رفض ملفات تعريف الارتباط.",
+            analytics_cookies: "ملفات تعريف الارتباط التحليلية (Google Analytics)",
+            analytics_desc: "نستخدم Google Analytics لفهم كيفية استخدام الزوار لموقعنا. تجمع ملفات تعريف الارتباط هذه معلومات بشكل مجهول، بما في ذلك:",
+            visitors_count: "عدد الزوار",
+            pages_visited: "الصفحات التي تمت زيارتها",
+            time_spent: "وقت البقاء في الموقع",
+            visit_source: "مصدر الزيارات",
+            important: "مهم:",
+            ip_anonymization: "لدينا إخفاء هوية IP مفعل، مما يعني أن عنوان IP الخاص بك لا يتم تخزينه بالكامل.",
+            how_manage: "كيفية إدارة ملفات تعريف الارتباط؟",
+            manage_desc: "يمكنك قبول أو رفض ملفات تعريف الارتباط من خلال اللافتة التي تظهر عند زيارة موقعنا لأول مرة. يمكنك أيضًا تغيير قرارك في أي وقت:",
+            reset_button: "إعادة تعيين تفضيلات ملفات تعريف الارتباط",
+            more_info_ga: "مزيد من المعلومات حول Google Analytics",
+            more_info_ga_desc: "لمزيد من المعلومات حول كيفية إدارة Google Analytics للخصوصية، قم بزيارة:",
+            google_policy: "سياسة خصوصية Google",
+            privacy_title: "🔒 سياسة الخصوصية",
+            who_we_are: "من نحن؟",
+            who_we_are_desc: "نحن جمعية أولياء أمور الطلاب في مدرسة بيرنات ديسكلوت. موقعنا هو",
+            what_data: "ما البيانات التي نجمعها؟",
+            what_data_desc: "لا يجمع هذا الموقع بيانات شخصية من المستخدمين بخلاف:",
+            analytics_data: "بيانات تحليلية مجهولة (إذا قبلت ملفات تعريف الارتباط من Google Analytics)",
+            preferences_data: "تفضيلات اللغة وملفات تعريف الارتباط (محفوظة محليًا في متصفحك)",
+            no_share: "لا نشارك بياناتك",
+            no_share_desc: "نحن لا نشارك أو نبيع أو ننقل بياناتك إلى أطراف ثالثة، باستثناء Google Analytics إذا كنت قد قبلت ملفات تعريف الارتباط التحليلية.",
+            your_rights: "حقوقك",
+            your_rights_intro: "لديك الحق في:",
+            right_reject: "رفض ملفات تعريف الارتباط التحليلية",
+            right_delete: "حذف ملفات تعريف الارتباط من متصفحك في أي وقت",
+            right_request: "طلب معلومات حول البيانات التي قد يتم تخزينها",
+            contact_title: "اتصل بنا",
+            contact_desc: "إذا كان لديك أي أسئلة حول سياسة الخصوصية الخاصة بنا، يمكنك الاتصال بنا على:",
+            last_updated: "آخر تحديث:"
         }
     },
     ur: {
@@ -399,22 +619,77 @@ const translations = {
             school_title: "اسکول میں",
             school_desc: "دفتر میں والدین ایسوسی ایشن کے بارے میں پوچھیں!"
         },
+        cookies: {
+            title: "🍪 کوکیز اور پرائیویسی",
+            message: "یہ ویب سائٹ آپ کے تجربے کو بہتر بنانے اور سائٹ ٹریفک کا تجزیہ کرنے کے لیے کوکیز استعمال کرتی ہے۔ Google Analytics کوکیز ہمیں یہ سمجھنے میں مدد کرتی ہیں کہ آپ ہماری ویب سائٹ کو کیسے استعمال کرتے ہیں۔",
+            accept_all: "سب قبول کریں",
+            reject_all: "سب مسترد کریں",
+            customize: "حسب ضرورت بنائیں",
+            learn_more: "مزید جانیں",
+            preferences_title: "⚙️ کوکی ترجیحات",
+            preferences_desc: "آپ یہاں اپنی کوکی ترجیحات کا انتظام کر سکتے ہیں۔ ضروری کوکیز ویب سائٹ کے کام کے لیے ضروری ہیں اور انہیں غیر فعال نہیں کیا جا سکتا۔",
+            essential_title: "🔐 ضروری کوکیز",
+            always_active: "ہمیشہ فعال",
+            essential_desc: "یہ کوکیز ویب سائٹ کے بنیادی کام کے لیے ضروری ہیں، جیسے زبان کا انتخاب اور آپ کی کوکی ترجیحات۔",
+            analytics_title: "📊 تجزیاتی کوکیز",
+            optional: "اختیاری",
+            analytics_desc_long: "ہم Google Analytics استعمال کرتے ہیں تاکہ یہ سمجھ سکیں کہ زائرین ہماری ویب سائٹ کو کیسے استعمال کرتے ہیں۔ یہ کوکیز زائرین کی تعداد، دیکھے گئے صفحات اور گزارے گئے وقت کے بارے میں گمنام معلومات جمع کرتی ہیں۔",
+            save_preferences: "ترجیحات محفوظ کریں"
+        },
         footer: {
             subtitle: "طلباء کے والدین کی ایسوسی ایشن",
             tagline: "ہمارے بچوں کے لیے مل کر ❤️",
             links_title: "لنکس",
+            legal_title: "قانونی",
+            privacy_policy: "پرائیویسی پالیسی",
+            cookie_policy: "کوکی پالیسی",
             follow_us: "ہمیں فالو کریں",
             made_with_love: "بہت محبت سے بنایا گیا",
             ai_assistant: "اور Claude Sonnet 4.5 کی مدد سے",
             open_source: "GPL-3.0 لائسنس کے ساتھ اوپن سورس کوڈ",
             free_to_use: "استعمال اور ترمیم کے لیے مفت"
         },
-        cookies: {
-            title: "🍪 کوکیز اور پرائیویسی",
-            message: "یہ ویب سائٹ آپ کے تجربے کو بہتر بنانے اور سائٹ ٹریفک کا تجزیہ کرنے کے لیے کوکیز استعمال کرتی ہے۔ Google Analytics کوکیز ہمیں یہ سمجھنے میں مدد کرتی ہیں کہ آپ ہماری ویب سائٹ کو کیسے استعمال کرتے ہیں۔",
-            accept: "کوکیز قبول کریں",
-            reject: "مسترد کریں",
-            learn_more: "مزید جانیں"
+        privacy: {
+            cookies_title: "🍪 کوکی پالیسی",
+            what_are_cookies: "کوکیز کیا ہیں؟",
+            cookies_definition: "کوکیز چھوٹی ٹیکسٹ فائلیں ہیں جو آپ کی ڈیوائس پر محفوظ ہوتی ہیں جب آپ کسی ویب سائٹ کو دیکھتے ہیں۔ انہیں آپ کے براؤزنگ کے تجربے کو بہتر بنانے اور تجزیاتی مقاصد کے لیے استعمال کیا جاتا ہے۔",
+            what_types: "ہم کس قسم کی کوکیز استعمال کرتے ہیں؟",
+            essential_cookies: "ضروری کوکیز",
+            language_pref: "زبان کی ترجیح:",
+            language_pref_desc: "ہم آپ کی پسندیدہ زبان کو محفوظ کرتے ہیں تاکہ آپ کو اس زبان میں مواد دکھایا جا سکے جو آپ نے منتخب کی ہے۔",
+            cookie_consent: "کوکی رضامندی:",
+            cookie_consent_desc: "ہم کوکیز کو قبول یا مسترد کرنے کے بارے میں آپ کے انتخاب کو محفوظ کرتے ہیں۔",
+            analytics_cookies: "تجزیاتی کوکیز (Google Analytics)",
+            analytics_desc: "ہم Google Analytics استعمال کرتے ہیں تاکہ یہ سمجھ سکیں کہ زائرین ہماری ویب سائٹ کو کیسے استعمال کرتے ہیں۔ یہ کوکیز گمنام طریقے سے معلومات جمع کرتی ہیں، بشمول:",
+            visitors_count: "زائرین کی تعداد",
+            pages_visited: "دیکھے گئے صفحات",
+            time_spent: "سائٹ پر گزارا گیا وقت",
+            visit_source: "دوروں کا ذریعہ",
+            important: "اہم:",
+            ip_anonymization: "ہمارے پاس IP گمنامی فعال ہے، جس کا مطلب ہے کہ آپ کا IP پتہ مکمل طور پر محفوظ نہیں ہوتا۔",
+            how_manage: "کوکیز کا انتظام کیسے کریں؟",
+            manage_desc: "آپ کوکیز کو قبول یا مسترد کر سکتے ہیں اس بینر کے ذریعے جو پہلی بار ہماری ویب سائٹ دیکھنے پر ظاہر ہوتا ہے۔ آپ کسی بھی وقت اپنا فیصلہ بدل بھی سکتے ہیں:",
+            reset_button: "میری کوکی ترجیحات دوبارہ ترتیب دیں",
+            more_info_ga: "Google Analytics کے بارے میں مزید معلومات",
+            more_info_ga_desc: "Google Analytics کس طرح پرائیویسی کا انتظام کرتا ہے اس کے بارے میں مزید معلومات کے لیے، ملاحظہ کریں:",
+            google_policy: "Google پرائیویسی پالیسی",
+            privacy_title: "🔒 پرائیویسی پالیسی",
+            who_we_are: "ہم کون ہیں؟",
+            who_we_are_desc: "ہم برنات ڈیسکلوٹ اسکول کی والدین ایسوسی ایشن ہیں۔ ہماری ویب سائٹ ہے",
+            what_data: "ہم کون سا ڈیٹا جمع کرتے ہیں؟",
+            what_data_desc: "یہ ویب سائٹ صارفین سے ذاتی ڈیٹا جمع نہیں کرتی سوائے:",
+            analytics_data: "گمنام تجزیاتی ڈیٹا (اگر آپ Google Analytics کوکیز قبول کرتے ہیں)",
+            preferences_data: "زبان اور کوکی ترجیحات (آپ کے براؤزر میں مقامی طور پر محفوظ)",
+            no_share: "ہم آپ کا ڈیٹا شیئر نہیں کرتے",
+            no_share_desc: "ہم آپ کا ڈیٹا تیسرے فریقوں کے ساتھ شیئر، فروخت یا منتقل نہیں کرتے، سوائے Google Analytics کے اگر آپ نے تجزیاتی کوکیز قبول کی ہیں۔",
+            your_rights: "آپ کے حقوق",
+            your_rights_intro: "آپ کو حق ہے:",
+            right_reject: "تجزیاتی کوکیز کو مسترد کرنے کا",
+            right_delete: "کسی بھی وقت اپنے براؤزر سے کوکیز حذف کرنے کا",
+            right_request: "اس ڈیٹا کے بارے میں معلومات کی درخواست کرنے کا جو محفوظ ہو سکتا ہے",
+            contact_title: "رابطہ",
+            contact_desc: "اگر آپ کے پاس ہماری پرائیویسی پالیسی کے بارے میں کوئی سوال ہے، تو آپ ہم سے رابطہ کر سکتے ہیں:",
+            last_updated: "آخری تازہ کاری:"
         }
     }
 };
@@ -641,38 +916,133 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check if consent has already been given
     const cookieConsent = localStorage.getItem('cookieConsent');
+    const analyticsConsent = localStorage.getItem('analyticsConsent');
     const consentBanner = document.querySelector('.cookie-consent-banner');
+    const preferencesModal = document.getElementById('cookie-preferences-modal');
+    
+    console.log('Cookie Consent:', cookieConsent);
+    console.log('Banner element:', consentBanner);
     
     if (!cookieConsent && consentBanner) {
         // Show the banner after a short delay
         setTimeout(function() {
+            console.log('Showing cookie banner');
             consentBanner.classList.add('show');
         }, 1000);
+    } else {
+        console.log('Banner not shown. Consent:', cookieConsent, 'Banner exists:', !!consentBanner);
     }
     
-    // Handle accept button
-    const acceptBtn = document.getElementById('cookie-accept');
-    if (acceptBtn) {
-        acceptBtn.addEventListener('click', function() {
+    // Handle accept all button
+    const acceptAllBtn = document.getElementById('cookie-accept-all');
+    if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', function() {
             localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('analyticsConsent', 'true');
             if (consentBanner) {
                 consentBanner.classList.remove('show');
             }
-            // Enable Google Analytics if not already enabled
             enableGoogleAnalytics();
         });
     }
     
-    // Handle reject button
-    const rejectBtn = document.getElementById('cookie-reject');
-    if (rejectBtn) {
-        rejectBtn.addEventListener('click', function() {
+    // Handle reject all button
+    const rejectAllBtn = document.getElementById('cookie-reject-all');
+    if (rejectAllBtn) {
+        rejectAllBtn.addEventListener('click', function() {
             localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('analyticsConsent', 'false');
             if (consentBanner) {
                 consentBanner.classList.remove('show');
             }
-            // Disable Google Analytics
             disableGoogleAnalytics();
+        });
+    }
+    
+    // Handle customize button
+    const customizeBtn = document.getElementById('cookie-customize');
+    if (customizeBtn && preferencesModal) {
+        customizeBtn.addEventListener('click', function() {
+            consentBanner.classList.remove('show');
+            preferencesModal.style.display = 'flex';
+            // Add a small delay to trigger the CSS transition
+            setTimeout(function() {
+                preferencesModal.classList.add('show');
+            }, 10);
+            
+            // Set checkbox state based on saved preferences
+            const analyticsCheckbox = document.getElementById('cookie-analytics');
+            if (analyticsCheckbox) {
+                analyticsCheckbox.checked = analyticsConsent === 'true';
+            }
+        });
+    }
+    
+    // Handle modal close button
+    const modalCloseBtn = document.getElementById('cookie-modal-close');
+    if (modalCloseBtn && preferencesModal) {
+        modalCloseBtn.addEventListener('click', function() {
+            preferencesModal.classList.remove('show');
+            setTimeout(function() {
+                preferencesModal.style.display = 'none';
+            }, 300); // Wait for animation to finish
+            // Show banner again if no consent has been given
+            if (!cookieConsent && consentBanner) {
+                consentBanner.classList.add('show');
+            }
+        });
+    }
+    
+    // Handle save preferences button
+    const savePreferencesBtn = document.getElementById('cookie-save-preferences');
+    if (savePreferencesBtn && preferencesModal) {
+        savePreferencesBtn.addEventListener('click', function() {
+            const analyticsCheckbox = document.getElementById('cookie-analytics');
+            const analyticsEnabled = analyticsCheckbox ? analyticsCheckbox.checked : false;
+            
+            localStorage.setItem('cookieConsent', 'customized');
+            localStorage.setItem('analyticsConsent', analyticsEnabled.toString());
+            
+            if (analyticsEnabled) {
+                enableGoogleAnalytics();
+            } else {
+                disableGoogleAnalytics();
+            }
+            
+            preferencesModal.classList.remove('show');
+            setTimeout(function() {
+                preferencesModal.style.display = 'none';
+            }, 300);
+        });
+    }
+    
+    // Handle accept all from modal
+    const acceptAllModalBtn = document.getElementById('cookie-accept-all-modal');
+    if (acceptAllModalBtn && preferencesModal) {
+        acceptAllModalBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('analyticsConsent', 'true');
+            enableGoogleAnalytics();
+            preferencesModal.classList.remove('show');
+            setTimeout(function() {
+                preferencesModal.style.display = 'none';
+            }, 300);
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (preferencesModal) {
+        preferencesModal.addEventListener('click', function(e) {
+            if (e.target === preferencesModal) {
+                preferencesModal.classList.remove('show');
+                setTimeout(function() {
+                    preferencesModal.style.display = 'none';
+                }, 300);
+                // Show banner again if no consent has been given
+                if (!cookieConsent && consentBanner) {
+                    consentBanner.classList.add('show');
+                }
+            }
         });
     }
     
@@ -699,9 +1069,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Apply consent on page load
-    if (cookieConsent === 'rejected') {
+    if (analyticsConsent === 'false') {
         disableGoogleAnalytics();
-    } else if (cookieConsent === 'accepted') {
+    } else if (analyticsConsent === 'true') {
         enableGoogleAnalytics();
     }
 });

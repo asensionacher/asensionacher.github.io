@@ -1,5 +1,5 @@
 <!-- Cookie Consent Banner -->
-<div id="cookie-consent-banner" class="cookie-consent-banner" style="display: none;">
+<div id="cookie-consent-banner" class="cookie-consent-banner">
     <div class="cookie-consent-content">
         <div class="cookie-consent-text">
             <h3 data-i18n="cookies.title">🍪 Cookies i Privacitat</h3>
@@ -9,13 +9,65 @@
             </p>
         </div>
         <div class="cookie-consent-buttons">
-            <button id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookies.accept">
-                Acceptar cookies
+            <button id="cookie-accept-all" class="cookie-btn cookie-btn-accept" data-i18n="cookies.accept_all">
+                Acceptar totes
             </button>
-            <button id="cookie-reject" class="cookie-btn cookie-btn-reject" data-i18n="cookies.reject">
-                Rebutjar
+            <button id="cookie-customize" class="cookie-btn cookie-btn-customize" data-i18n="cookies.customize">
+                Personalitzar
             </button>
-            <a href="#" class="cookie-learn-more" data-i18n="cookies.learn_more">Més informació</a>
+            <button id="cookie-reject-all" class="cookie-btn cookie-btn-reject" data-i18n="cookies.reject_all">
+                Rebutjar totes
+            </button>
+            <a href="{{ '/privacitat/' | relative_url }}" class="cookie-learn-more" data-i18n="cookies.learn_more">Més informació</a>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Preferences Modal -->
+<div id="cookie-preferences-modal" class="cookie-modal" style="display: none;">
+    <div class="cookie-modal-content">
+        <div class="cookie-modal-header">
+            <h2 data-i18n="cookies.preferences_title">⚙️ Preferències de Cookies</h2>
+            <button id="cookie-modal-close" class="cookie-modal-close">&times;</button>
+        </div>
+        <div class="cookie-modal-body">
+            <p data-i18n="cookies.preferences_desc">Pots gestionar les teves preferències de cookies aquí. Les cookies essencials són necessàries per al funcionament del lloc web i no es poden desactivar.</p>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="cookie-essential" checked disabled>
+                        <span class="cookie-slider"></span>
+                    </label>
+                    <div class="cookie-option-info">
+                        <h4 data-i18n="cookies.essential_title">🔐 Cookies Essencials</h4>
+                        <span class="cookie-badge cookie-required" data-i18n="cookies.always_active">Sempre actives</span>
+                    </div>
+                </div>
+                <p class="cookie-option-desc" data-i18n="cookies.essential_desc">Aquestes cookies són necessàries per al funcionament bàsic del lloc web, com la selecció d'idioma i les teves preferències de cookies.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="cookie-analytics">
+                        <span class="cookie-slider"></span>
+                    </label>
+                    <div class="cookie-option-info">
+                        <h4 data-i18n="cookies.analytics_title">📊 Cookies Analítiques</h4>
+                        <span class="cookie-badge cookie-optional" data-i18n="cookies.optional">Opcionals</span>
+                    </div>
+                </div>
+                <p class="cookie-option-desc" data-i18n="cookies.analytics_desc_long">Utilitzem Google Analytics per entendre com els visitants utilitzen el nostre lloc web. Aquestes cookies recopilen informació anònima sobre el número de visitants, pàgines visitades i temps de permanència.</p>
+            </div>
+        </div>
+        <div class="cookie-modal-footer">
+            <button id="cookie-save-preferences" class="cookie-btn cookie-btn-primary" data-i18n="cookies.save_preferences">
+                Guardar Preferències
+            </button>
+            <button id="cookie-accept-all-modal" class="cookie-btn cookie-btn-accept" data-i18n="cookies.accept_all">
+                Acceptar Totes
+            </button>
         </div>
     </div>
 </div>
