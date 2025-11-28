@@ -2,13 +2,38 @@
 title: "AFA Bernat Desclot"
 description: "Associació de Famílies d'Alumnes - Junts per als nostres fills"
 baseurl: ""
-url: "https://asensionacher.github.io"
+url: "https://afaescolabernatdesclot.org"
 lang: ca
 
 # Autor
 author:
   name: "AFA Bernat Desclot"
   email: "afaescolabernatdesclot@gmail.com"
+
+# SEO Configuration
+logo: /assets/images/logo-bernat-desclot-camiseta-amarilla.webp
+social:
+  name: AFA Bernat Desclot
+  links:
+    - https://www.facebook.com/profile.php?id=100080273986818
+    - https://www.instagram.com/ampaescolabernatdesclot
+    - https://x.com/adesclot
+
+# Google Analytics
+google_analytics: G-83MQ5DYNRJ  # Reemplaza con tu ID de Google Analytics
+
+# Twitter Card
+twitter:
+  card: summary_large_image
+  username: adesclot
+
+# Open Graph / Facebook
+og_image: /assets/images/logo-bernat-desclot-camiseta-amarilla.webp
+
+# Webmaster Verifications
+webmaster_verifications:
+  google: "tu-codigo-de-verificacion-de-google"
+  bing: "tu-codigo-de-verificacion-de-bing"
 
 # Configuració de construcció
 markdown: kramdown

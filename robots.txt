@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Disallow admin areas
+Disallow: /vendor/
+Disallow: /.bundle/
+Disallow: /.sass-cache/
+Disallow: /.git/

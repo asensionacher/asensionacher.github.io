@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.logo | absolute_url }}",
+  "description": "{{ site.description }}",
+  "email": "{{ site.author.email }}",
+  "sameAs": [
+    {% if site.social.links %}
+      {% for link in site.social.links %}
+        "{{ link }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES",
+    "addressLocality": "Barcelona"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "{{ site.author.email }}",
+    "contactType": "General Inquiries"
+  }
+}
+</script>
