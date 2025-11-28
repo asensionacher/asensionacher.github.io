@@ -2,24 +2,24 @@
    Variables i Colors
    ============================================ */
 :root {
-    --color-primary: #FF6B9D;
-    --color-secondary: #C44569;
-    --color-accent: #FFA502;
+    --color-primary: #FFD700;
+    --color-secondary: #FFC107;
+    --color-accent: #001F3F;
     --color-success: #26DE81;
-    --color-info: #45AAF2;
-    --color-warning: #FD79A8;
+    --color-info: #003366;
+    --color-warning: #FFB300;
     
-    --color-bg: #FFF5F7;
+    --color-bg: #FFF9E6;
     --color-bg-alt: #FFFFFF;
-    --color-text: #2C3A47;
-    --color-text-light: #778CA3;
+    --color-text: #001F3F;
+    --color-text-light: #003366;
     
     --font-primary: 'Baloo 2', cursive;
     --font-secondary: 'Nunito', sans-serif;
     
-    --shadow-sm: 0 2px 10px rgba(255, 107, 157, 0.1);
-    --shadow-md: 0 4px 20px rgba(255, 107, 157, 0.15);
-    --shadow-lg: 0 8px 30px rgba(255, 107, 157, 0.2);
+    --shadow-sm: 0 2px 10px rgba(255, 215, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(255, 215, 0, 0.15);
+    --shadow-lg: 0 8px 30px rgba(255, 215, 0, 0.2);
     
     --radius: 20px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -164,17 +164,17 @@ img {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(255, 107, 157, 0.1);
+    background: rgba(255, 215, 0, 0.1);
     border: 2px solid var(--color-primary);
     border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .language-btn:hover {
-    background: rgba(255, 107, 157, 0.2);
+    background: rgba(255, 215, 0, 0.2);
     transform: translateY(-2px);
 }
 
@@ -235,7 +235,7 @@ img {
 }
 
 .language-dropdown li.active {
-    background: rgba(255, 107, 157, 0.1);
+    background: rgba(255, 215, 0, 0.1);
     font-weight: 700;
 }
 
@@ -251,7 +251,7 @@ img {
    Hero Section
    ============================================ */
 .hero {
-    background: linear-gradient(135deg, #FFF5F7 0%, #FFE8F0 100%);
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFFAED 100%);
     padding: 6rem 0;
     position: relative;
     overflow: hidden;
@@ -264,7 +264,7 @@ img {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -465,7 +465,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 31, 63, 0.3);
 }
 
 .event-day {
