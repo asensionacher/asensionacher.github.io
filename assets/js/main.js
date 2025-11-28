@@ -76,6 +76,13 @@ const translations = {
             ai_assistant: "i l'ajuda de Claude Sonnet 4.5",
             open_source: "Codi font obert amb llicència GPL-3.0",
             free_to_use: "Lliure per usar i modificar"
+        },
+        cookies: {
+            title: "🍪 Cookies i Privacitat",
+            message: "Aquest lloc web utilitza cookies per millorar la vostra experiència i analitzar el trànsit del lloc. Les cookies de Google Analytics ens ajuden a entendre com utilitzeu el nostre lloc web.",
+            accept: "Acceptar cookies",
+            reject: "Rebutjar",
+            learn_more: "Més informació"
         }
     },
     es: {
@@ -152,6 +159,13 @@ const translations = {
             ai_assistant: "y la ayuda de Claude Sonnet 4.5",
             open_source: "Código fuente abierto con licencia GPL-3.0",
             free_to_use: "Libre para usar y modificar"
+        },
+        cookies: {
+            title: "🍪 Cookies y Privacidad",
+            message: "Este sitio web utiliza cookies para mejorar su experiencia y analizar el tráfico del sitio. Las cookies de Google Analytics nos ayudan a entender cómo utiliza nuestro sitio web.",
+            accept: "Aceptar cookies",
+            reject: "Rechazar",
+            learn_more: "Más información"
         }
     },
     en: {
@@ -228,6 +242,13 @@ const translations = {
             ai_assistant: "and the help of Claude Sonnet 4.5",
             open_source: "Open source code with GPL-3.0 license",
             free_to_use: "Free to use and modify"
+        },
+        cookies: {
+            title: "🍪 Cookies & Privacy",
+            message: "This website uses cookies to improve your experience and analyze site traffic. Google Analytics cookies help us understand how you use our website.",
+            accept: "Accept cookies",
+            reject: "Reject",
+            learn_more: "Learn more"
         }
     },
     ar: {
@@ -304,6 +325,13 @@ const translations = {
             ai_assistant: "وبمساعدة Claude Sonnet 4.5",
             open_source: "كود مفتوح المصدر برخصة GPL-3.0",
             free_to_use: "مجاني للاستخدام والتعديل"
+        },
+        cookies: {
+            title: "🍪 ملفات تعريف الارتباط والخصوصية",
+            message: "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك وتحليل حركة المرور على الموقع. تساعدنا ملفات تعريف الارتباط من Google Analytics على فهم كيفية استخدامك لموقعنا.",
+            accept: "قبول ملفات تعريف الارتباط",
+            reject: "رفض",
+            learn_more: "معرفة المزيد"
         }
     },
     ur: {
@@ -380,6 +408,13 @@ const translations = {
             ai_assistant: "اور Claude Sonnet 4.5 کی مدد سے",
             open_source: "GPL-3.0 لائسنس کے ساتھ اوپن سورس کوڈ",
             free_to_use: "استعمال اور ترمیم کے لیے مفت"
+        },
+        cookies: {
+            title: "🍪 کوکیز اور پرائیویسی",
+            message: "یہ ویب سائٹ آپ کے تجربے کو بہتر بنانے اور سائٹ ٹریفک کا تجزیہ کرنے کے لیے کوکیز استعمال کرتی ہے۔ Google Analytics کوکیز ہمیں یہ سمجھنے میں مدد کرتی ہیں کہ آپ ہماری ویب سائٹ کو کیسے استعمال کرتے ہیں۔",
+            accept: "کوکیز قبول کریں",
+            reject: "مسترد کریں",
+            learn_more: "مزید جانیں"
         }
     }
 };
@@ -601,4 +636,72 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         setLanguage(currentLang);
     }, 50);
+    
+    // ===== Cookie Consent Banner =====
+    
+    // Check if consent has already been given
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    const consentBanner = document.querySelector('.cookie-consent-banner');
+    
+    if (!cookieConsent && consentBanner) {
+        // Show the banner after a short delay
+        setTimeout(function() {
+            consentBanner.classList.add('show');
+        }, 1000);
+    }
+    
+    // Handle accept button
+    const acceptBtn = document.getElementById('cookie-accept');
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            if (consentBanner) {
+                consentBanner.classList.remove('show');
+            }
+            // Enable Google Analytics if not already enabled
+            enableGoogleAnalytics();
+        });
+    }
+    
+    // Handle reject button
+    const rejectBtn = document.getElementById('cookie-reject');
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            if (consentBanner) {
+                consentBanner.classList.remove('show');
+            }
+            // Disable Google Analytics
+            disableGoogleAnalytics();
+        });
+    }
+    
+    // Function to enable Google Analytics
+    function enableGoogleAnalytics() {
+        // Set consent mode to granted
+        if (window.gtag) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+    
+    // Function to disable Google Analytics
+    function disableGoogleAnalytics() {
+        // Set consent mode to denied
+        if (window.gtag) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        // Disable Google Analytics tracking
+        window['ga-disable-G-83MQ5DYNRJ'] = true;
+    }
+    
+    // Apply consent on page load
+    if (cookieConsent === 'rejected') {
+        disableGoogleAnalytics();
+    } else if (cookieConsent === 'accepted') {
+        enableGoogleAnalytics();
+    }
 });

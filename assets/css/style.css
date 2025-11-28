@@ -1293,3 +1293,120 @@ html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3 {
     display: flex;
     flex-direction: column;
 }
+
+/* ============================================
+   Cookie Consent Banner
+   ============================================ */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 1.5rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cookie-consent-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cookie-consent-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.cookie-consent-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--color-primary);
+    opacity: 0.9;
+}
+
+.cookie-consent-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    white-space: nowrap;
+}
+
+.cookie-btn-accept {
+    background: var(--color-primary);
+    color: var(--color-accent);
+}
+
+.cookie-btn-accept:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.cookie-btn-reject {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.cookie-btn-reject:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.cookie-learn-more {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.cookie-learn-more:hover {
+    color: var(--color-secondary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .cookie-consent-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cookie-consent-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cookie-btn {
+        width: 100%;
+    }
+}

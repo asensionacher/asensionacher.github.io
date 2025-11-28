@@ -1,14 +1,29 @@
 {% if site.google_analytics and jekyll.environment == 'production' %}
-<!-- Google Analytics -->
+<!-- Google Analytics with Cookie Consent -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  
+  // Set default consent to denied
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics }}', {
     'anonymize_ip': true,
     'cookie_flags': 'SameSite=None;Secure'
   });
+  
+  // Check if consent was previously given
+  const cookieConsent = localStorage.getItem('cookieConsent');
+  if (cookieConsent === 'accepted') {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
 </script>
 <!-- End Google Analytics -->
 {% endif %}
