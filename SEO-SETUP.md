@@ -87,8 +87,8 @@ Para configurar el dominio:
 ## Características SEO Implementadas
 
 ✅ Meta tags completos (title, description, keywords, author)
-✅ Open Graph tags (Facebook, LinkedIn)
-✅ Twitter Card tags
+✅ Open Graph tags (Facebook, LinkedIn, WhatsApp)
+✅ Twitter Card tags (summary_large_image)
 ✅ Canonical URLs
 ✅ Sitemap.xml automático
 ✅ Robots.txt
@@ -98,6 +98,37 @@ Para configurar el dominio:
 ✅ URLs amigables
 ✅ Favicon y Apple Touch Icon
 ✅ Soporte multiidioma
+✅ Social Media Cards configuradas
+
+## Tarjetas de Redes Sociales
+
+Se han implementado meta tags completas para:
+- Facebook (Open Graph)
+- Twitter/X (Twitter Cards)
+- LinkedIn
+- WhatsApp
+- Telegram
+
+### Probar las Tarjetas Sociales
+
+1. **Facebook Sharing Debugger:**
+   - URL: https://developers.facebook.com/tools/debug/
+   - Introduce: `https://afaescolabernatdesclot.org`
+   - Haz clic en "Debug" y luego "Scrape Again"
+
+2. **Twitter Card Validator:**
+   - URL: https://cards-dev.twitter.com/validator
+   - Introduce tu URL y verifica la preview
+
+3. **LinkedIn Post Inspector:**
+   - URL: https://www.linkedin.com/post-inspector/
+   - Verifica cómo se mostrará en LinkedIn
+
+4. **Open Graph Check:**
+   - URL: https://www.opengraph.xyz/
+   - Verificación universal de meta tags
+
+Ver `SOCIAL-CARDS.md` para más detalles sobre cómo crear imágenes sociales y personalizar tarjetas.
 
 ## Próximos Pasos
 

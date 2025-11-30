@@ -4,6 +4,7 @@ title: "Benvinguts al Nou Blog de l'AFA Bernat Desclot!"
 date: 2025-11-13
 author: "Equip AFA"
 description: "Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l'associació."
+image: /assets/images/logo-bernat-desclot-camiseta-amarilla.webp
 tags: ["notícies", "benvinguda"]
 pinned: true
 translations:
