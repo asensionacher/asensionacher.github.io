@@ -92,8 +92,11 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
             <a href="{{ '/blog/' | relative_url }}" class="view-all" data-i18n="blog.view_all">Veure tots els articles →</a>
         </div>
         <div class="blog-grid">
-            {% for post in site.posts limit:3 %}
-            <article class="blog-card" 
+            {% assign pinned_posts = site.posts | where: "pinned", true %}
+            {% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" %}
+            {% assign all_posts = pinned_posts | concat: regular_posts %}
+            {% for post in all_posts limit:3 %}
+            <article class="blog-card{% if post.pinned %} blog-card-pinned{% endif %}" 
                 data-post-title-ca="{{ post.translations.ca.title | escape }}"
                 data-post-title-es="{{ post.translations.es.title | escape }}"
                 data-post-title-en="{{ post.translations.en.title | escape }}"
@@ -105,6 +108,7 @@ description: Associació de Famílies d'Alumnes - Junts per als nostres fills
                 data-post-desc-ar="{{ post.translations.ar.description | escape }}"
                 data-post-desc-ur="{{ post.translations.ur.description | escape }}">
                 <div class="blog-card-header">
+                    {% if post.pinned %}<span class="pinned-badge" title="Destacat">⭐</span>{% endif %}
                     <span class="blog-date">{{ post.date | date: "%d/%m/%Y" }}</span>
                 </div>
                 <h3 class="blog-card-title">

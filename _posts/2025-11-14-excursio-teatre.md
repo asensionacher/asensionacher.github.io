@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Excursió al teatre dels nens i nenes d'infantil"
-date: 2025-11-13
+date: 2025-11-14
 author: "Equip AFA"
 description: "Els nostres nens i nenes d'infantil han anat d'excursió al teatre."
 tags: ["excursió", "I3", "I4", "I5"]

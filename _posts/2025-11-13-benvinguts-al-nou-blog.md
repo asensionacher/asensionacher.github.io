@@ -5,6 +5,7 @@ date: 2025-11-13
 author: "Equip AFA"
 description: "Estrenem el nostre nou blog on compartirem totes les activitats, notícies i esdeveniments de l'associació."
 tags: ["notícies", "benvinguda"]
+pinned: true
 translations:
   ca:
     title: "Benvinguts al Nou Blog de l'AFA Bernat Desclot!"

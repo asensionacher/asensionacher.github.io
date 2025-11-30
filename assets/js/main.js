@@ -58,7 +58,13 @@ const translations = {
             view_all: "Veure tots els articles →",
             read_more: "Llegir més →",
             back: "← Torna al blog",
-            no_posts: "Encara no hi ha articles al blog."
+            no_posts: "Encara no hi ha articles al blog.",
+            filter_by_tag: "Filtrar per etiqueta",
+            filter_by_year: "Filtrar per any",
+            all_tags: "Tots",
+            all_years: "Tots els anys",
+            clear_filters: "Esborrar filtres",
+            no_results: "No s'han trobat articles amb aquests filtres."
         },
         contact: {
             title: "📮 Contacta amb Nosaltres",
@@ -196,7 +202,13 @@ const translations = {
             view_all: "Ver todos los artículos →",
             read_more: "Leer más →",
             back: "← Volver al blog",
-            no_posts: "Todavía no hay artículos en el blog."
+            no_posts: "Todavía no hay artículos en el blog.",
+            filter_by_tag: "Filtrar por etiqueta",
+            filter_by_year: "Filtrar por año",
+            all_tags: "Todos",
+            all_years: "Todos los años",
+            clear_filters: "Borrar filtros",
+            no_results: "No se han encontrado artículos con estos filtros."
         },
         contact: {
             title: "📮 Contáctanos",
@@ -334,7 +346,13 @@ const translations = {
             view_all: "View all articles →",
             read_more: "Read more →",
             back: "← Back to blog",
-            no_posts: "There are no articles in the blog yet."
+            no_posts: "There are no articles in the blog yet.",
+            filter_by_tag: "Filter by tag",
+            filter_by_year: "Filter by year",
+            all_tags: "All",
+            all_years: "All years",
+            clear_filters: "Clear filters",
+            no_results: "No articles found with these filters."
         },
         contact: {
             title: "📮 Contact Us",
@@ -472,7 +490,13 @@ const translations = {
             view_all: "عرض جميع المقالات ←",
             read_more: "اقرأ المزيد ←",
             back: "→ العودة إلى المدونة",
-            no_posts: "لا توجد مقالات في المدونة بعد."
+            no_posts: "لا توجد مقالات في المدونة بعد.",
+            filter_by_tag: "تصفية حسب الوسم",
+            filter_by_year: "تصفية حسب السنة",
+            all_tags: "الكل",
+            all_years: "جميع السنوات",
+            clear_filters: "مسح المرشحات",
+            no_results: "لم يتم العثور على مقالات بهذه المرشحات."
         },
         contact: {
             title: "📮 اتصل بنا",
@@ -610,7 +634,13 @@ const translations = {
             view_all: "تمام مضامین دیکھیں ←",
             read_more: "مزید پڑھیں ←",
             back: "→ بلاگ پر واپس",
-            no_posts: "ابھی بلاگ میں کوئی مضامین نہیں ہیں۔"
+            no_posts: "ابھی بلاگ میں کوئی مضامین نہیں ہیں۔",
+            filter_by_tag: "ٹیگ کے مطابق فلٹر کریں",
+            filter_by_year: "سال کے مطابق فلٹر کریں",
+            all_tags: "سب",
+            all_years: "تمام سال",
+            clear_filters: "فلٹرز صاف کریں",
+            no_results: "ان فلٹرز کے ساتھ کوئی مضامین نہیں ملے۔"
         },
         contact: {
             title: "📮 ہم سے رابطہ کریں",
