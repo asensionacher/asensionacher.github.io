@@ -944,35 +944,59 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== Cookie Consent Banner =====
     
+    // Debug function to check cookie status
+    window.checkCookieStatus = function() {
+        const status = {
+            cookieConsent: localStorage.getItem('cookieConsent'),
+            analyticsConsent: localStorage.getItem('analyticsConsent'),
+            gaDisabled: window['ga-disable-G-83MQ5DYNRJ'],
+            gtagExists: typeof gtag !== 'undefined',
+            bannerVisible: document.querySelector('.cookie-consent-banner')?.classList.contains('show')
+        };
+        console.table(status);
+        console.log('📊 Estado de las cookies:', status);
+        return status;
+    };
+    
     // Check if consent has already been given
     const cookieConsent = localStorage.getItem('cookieConsent');
     const analyticsConsent = localStorage.getItem('analyticsConsent');
     const consentBanner = document.querySelector('.cookie-consent-banner');
     const preferencesModal = document.getElementById('cookie-preferences-modal');
     
-    console.log('Cookie Consent:', cookieConsent);
-    console.log('Banner element:', consentBanner);
+    console.log('🍪 Inicializando sistema de cookies...');
+    console.log('📝 Cookie Consent:', cookieConsent);
+    console.log('📊 Analytics Consent:', analyticsConsent);
+    console.log('🎨 Banner element:', consentBanner);
     
     if (!cookieConsent && consentBanner) {
         // Show the banner after a short delay
         setTimeout(function() {
-            console.log('Showing cookie banner');
+            console.log('✅ Mostrando banner de cookies');
             consentBanner.classList.add('show');
         }, 1000);
     } else {
-        console.log('Banner not shown. Consent:', cookieConsent, 'Banner exists:', !!consentBanner);
+        console.log('ℹ️ Banner no mostrado. Consent:', cookieConsent, 'Banner exists:', !!consentBanner);
     }
     
     // Handle accept all button
     const acceptAllBtn = document.getElementById('cookie-accept-all');
     if (acceptAllBtn) {
         acceptAllBtn.addEventListener('click', function() {
+            console.log('✅ Usuario ACEPTÓ todas las cookies');
             localStorage.setItem('cookieConsent', 'accepted');
             localStorage.setItem('analyticsConsent', 'true');
+            console.log('💾 Guardado en localStorage:', {
+                cookieConsent: 'accepted',
+                analyticsConsent: 'true'
+            });
             if (consentBanner) {
                 consentBanner.classList.remove('show');
             }
             enableGoogleAnalytics();
+            console.log('📊 Google Analytics habilitado');
+            // Mostrar estado actual
+            setTimeout(checkCookieStatus, 100);
         });
     }
     
@@ -980,12 +1004,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const rejectAllBtn = document.getElementById('cookie-reject-all');
     if (rejectAllBtn) {
         rejectAllBtn.addEventListener('click', function() {
+            console.log('❌ Usuario RECHAZÓ todas las cookies');
             localStorage.setItem('cookieConsent', 'rejected');
             localStorage.setItem('analyticsConsent', 'false');
+            console.log('💾 Guardado en localStorage:', {
+                cookieConsent: 'rejected',
+                analyticsConsent: 'false'
+            });
             if (consentBanner) {
                 consentBanner.classList.remove('show');
             }
             disableGoogleAnalytics();
+            console.log('🚫 Google Analytics deshabilitado');
+            // Mostrar estado actual
+            setTimeout(checkCookieStatus, 100);
         });
     }
     
@@ -1030,18 +1062,29 @@ document.addEventListener('DOMContentLoaded', function() {
             const analyticsCheckbox = document.getElementById('cookie-analytics');
             const analyticsEnabled = analyticsCheckbox ? analyticsCheckbox.checked : false;
             
+            console.log('⚙️ Usuario guardó preferencias personalizadas');
+            console.log('📊 Analytics habilitado:', analyticsEnabled);
+            
             localStorage.setItem('cookieConsent', 'customized');
             localStorage.setItem('analyticsConsent', analyticsEnabled.toString());
+            console.log('💾 Guardado en localStorage:', {
+                cookieConsent: 'customized',
+                analyticsConsent: analyticsEnabled.toString()
+            });
             
             if (analyticsEnabled) {
                 enableGoogleAnalytics();
+                console.log('📊 Google Analytics habilitado');
             } else {
                 disableGoogleAnalytics();
+                console.log('🚫 Google Analytics deshabilitado');
             }
             
             preferencesModal.classList.remove('show');
             setTimeout(function() {
                 preferencesModal.style.display = 'none';
+                // Mostrar estado actual
+                checkCookieStatus();
             }, 300);
         });
     }
@@ -1050,12 +1093,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const acceptAllModalBtn = document.getElementById('cookie-accept-all-modal');
     if (acceptAllModalBtn && preferencesModal) {
         acceptAllModalBtn.addEventListener('click', function() {
+            console.log('✅ Usuario ACEPTÓ todas las cookies (desde modal)');
             localStorage.setItem('cookieConsent', 'accepted');
             localStorage.setItem('analyticsConsent', 'true');
+            console.log('💾 Guardado en localStorage:', {
+                cookieConsent: 'accepted',
+                analyticsConsent: 'true'
+            });
             enableGoogleAnalytics();
+            console.log('📊 Google Analytics habilitado');
             preferencesModal.classList.remove('show');
             setTimeout(function() {
                 preferencesModal.style.display = 'none';
+                // Mostrar estado actual
+                checkCookieStatus();
             }, 300);
         });
     }
@@ -1078,30 +1129,53 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to enable Google Analytics
     function enableGoogleAnalytics() {
+        console.log('🔧 Habilitando Google Analytics...');
         // Set consent mode to granted
         if (window.gtag) {
             gtag('consent', 'update', {
                 'analytics_storage': 'granted'
             });
+            console.log('✅ Consentimiento de Analytics actualizado a: granted');
+        } else {
+            console.warn('⚠️ gtag no está disponible');
         }
+        // Asegurar que GA está habilitado
+        window['ga-disable-G-83MQ5DYNRJ'] = false;
+        console.log('✅ GA tracking habilitado (ga-disable = false)');
     }
     
     // Function to disable Google Analytics
     function disableGoogleAnalytics() {
+        console.log('🔧 Deshabilitando Google Analytics...');
         // Set consent mode to denied
         if (window.gtag) {
             gtag('consent', 'update', {
                 'analytics_storage': 'denied'
             });
+            console.log('✅ Consentimiento de Analytics actualizado a: denied');
+        } else {
+            console.warn('⚠️ gtag no está disponible');
         }
         // Disable Google Analytics tracking
         window['ga-disable-G-83MQ5DYNRJ'] = true;
+        console.log('✅ GA tracking deshabilitado (ga-disable = true)');
     }
     
     // Apply consent on page load
+    console.log('🔄 Aplicando consentimiento guardado...');
     if (analyticsConsent === 'false') {
+        console.log('🚫 Aplicando: Analytics DESHABILITADO');
         disableGoogleAnalytics();
     } else if (analyticsConsent === 'true') {
+        console.log('📊 Aplicando: Analytics HABILITADO');
         enableGoogleAnalytics();
+    } else {
+        console.log('ℹ️ No hay consentimiento previo guardado');
     }
+    
+    // Mostrar estado inicial después de un breve delay
+    setTimeout(function() {
+        console.log('📋 Estado inicial de cookies:');
+        checkCookieStatus();
+    }, 500);
 });

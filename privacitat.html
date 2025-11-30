@@ -137,18 +137,69 @@ permalink: /privacitat/
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('reset-cookies').addEventListener('click', function() {
-        localStorage.removeItem('cookieConsent');
-        const messages = {
-            'ca': 'Preferències de cookies restablertes. La pàgina es recarregarà.',
-            'es': 'Preferencias de cookies restablecidas. La página se recargará.',
-            'en': 'Cookie preferences reset. The page will reload.',
-            'ar': 'تم إعادة تعيين تفضيلات ملفات تعريف الارتباط. سيتم إعادة تحميل الصفحة.',
-            'ur': 'کوکی ترجیحات دوبارہ ترتیب دی گئیں۔ صفحہ دوبارہ لوڈ ہوگا۔'
-        };
-        const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
-        alert(messages[currentLang] || messages['ca']);
-        location.reload();
-    });
+    const resetBtn = document.getElementById('reset-cookies');
+    
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+            console.log('🔄 Reseteando preferencias de cookies...');
+            
+            // Guardar estado anterior
+            const oldConsent = localStorage.getItem('cookieConsent');
+            const oldAnalytics = localStorage.getItem('analyticsConsent');
+            console.log('📋 Estado anterior:', {
+                cookieConsent: oldConsent,
+                analyticsConsent: oldAnalytics
+            });
+            
+            // Eliminar preferencias
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('analyticsConsent');
+            console.log('✅ Preferencias eliminadas de localStorage');
+            
+            // Mensajes multiidioma
+            const messages = {
+                'ca': 'Preferències de cookies restablertes. La pàgina es recarregarà.',
+                'es': 'Preferencias de cookies restablecidas. La página se recargará.',
+                'en': 'Cookie preferences reset. The page will reload.',
+                'ar': 'تم إعادة تعيين تفضيلات ملفات تعريف الارتباط. سيتم إعادة تحميل الصفحة.',
+                'ur': 'کوکی ترجیحات دوبارہ ترتیب دی گئیں۔ صفحہ دوبارہ لوڈ ہوگا۔'
+            };
+            const currentLang = localStorage.getItem('preferredLanguage') || 'ca';
+            alert(messages[currentLang] || messages['ca']);
+            
+            console.log('🔄 Recargando página...');
+            location.reload();
+        });
+    }
+    
+    // Añadir función global para verificar cookies desde consola
+    window.verificarCookies = function() {
+        console.log('\n🍪 ===== VERIFICACIÓN DE COOKIES =====');
+        console.log('📝 cookieConsent:', localStorage.getItem('cookieConsent'));
+        console.log('📊 analyticsConsent:', localStorage.getItem('analyticsConsent'));
+        console.log('🌐 preferredLanguage:', localStorage.getItem('preferredLanguage'));
+        console.log('🚫 ga-disable:', window['ga-disable-G-83MQ5DYNRJ']);
+        console.log('📦 gtag exists:', typeof gtag !== 'undefined');
+        
+        // Mostrar todas las cookies del navegador
+        console.log('\n🍪 Cookies del navegador:');
+        if (document.cookie) {
+            const cookies = document.cookie.split(';');
+            cookies.forEach(cookie => {
+                console.log('  ', cookie.trim());
+            });
+        } else {
+            console.log('   No hay cookies');
+        }
+        
+        console.log('\n💡 Uso: Ejecuta "verificarCookies()" en la consola para ver el estado');
+        console.log('💡 Uso: Ejecuta "checkCookieStatus()" para ver una tabla del estado');
+        console.log('=====================================\n');
+    };
+    
+    // Mostrar automáticamente al cargar la página de privacidad
+    console.log('💡 Página de privacidad cargada');
+    console.log('💡 Ejecuta "verificarCookies()" en la consola para ver el estado de las cookies');
+    console.log('💡 Ejecuta "checkCookieStatus()" para ver una tabla del estado');
 });
 </script>
